@@ -66,11 +66,11 @@ export default function StatsCounter({
   return (
     <div ref={ref} className={`text-center md:text-left ${className}`}>
       <div className="font-mono text-3xl font-extrabold tracking-tight text-white md:text-4xl lg:text-5xl">
-        <span className="text-emerald-400">{prefix}</span>
+        <span className="text-sky-400">{prefix}</span>
         <span className="bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text text-transparent">
           {displayValue}
         </span>
-        <span className="text-emerald-400">{suffix}</span>
+        <span className="text-sky-400">{suffix}</span>
       </div>
       <div className="mt-1 text-sm font-semibold tracking-wide text-slate-300 md:text-base">
         {label}

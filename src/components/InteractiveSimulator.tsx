@@ -42,11 +42,11 @@ const SCENARIOS: Scenario[] = [
   {
     id: "port-dwell",
     category: "Ocean & Port Visibility",
-    title: "Port of Long Beach 72-Hour Berth Congestion",
+    title: "Port of Long Beach Congestion Sentinel",
     badge: "IQUA / Platform Sentinel",
     severity: "CRITICAL",
     anomaly: {
-      rawSignal: "AIS Marine Beacon #9421 + Terminal Queue Wait Index: 8.4 days",
+      rawSignal: "AIS Marine Beacon #9421 + Terminal Berth Dwell Surge Index: Severe",
       rootCause: "Berth allocation delay at Pier G affecting Container HVIU-882194.",
       impactRisk: "3 manufacturing assembly lines face part starvation in 18 hours.",
       potentialLoss: "$145,000 detention & demurrage + $280,000 line stoppage"
@@ -55,14 +55,14 @@ const SCENARIOS: Scenario[] = [
       confidence: "98.7%",
       model: "HiView Multi-Modal Transit Neural Predictor v4",
       executionSteps: [
-        "Identified impending berth bottleneck 48 hrs before pilot vessel docking",
+        "Identified impending berth bottleneck before pilot vessel docking",
         "Queried pre-cleared bonded drayage carrier with immediate chassis availability",
         "Autonomous off-dock terminal gate pass generated via API connector",
         "Re-routed inland rail segment to dedicated expedited team-driver tractor"
       ],
-      outcome: "Container cleared terminal 54 hours ahead of standard queue. Line stoppage fully averted.",
+      outcome: "Container cleared terminal ahead of congestion queue. Line stoppage fully averted.",
       costAvoided: "$425,000",
-      timeSaved: "54 Hours"
+      timeSaved: "Disruption Averted"
     }
   },
   {
@@ -124,7 +124,7 @@ const SCENARIOS: Scenario[] = [
     badge: "MIST Multi-Echelon Balancing",
     severity: "WARNING",
     anomaly: {
-      rawSignal: "Southeast DC stockout velocity 4.2x vs Midwest DC carrying 68 days of excess buffer",
+      rawSignal: "Southeast DC stockout velocity 4.2x vs Midwest DC carrying excess buffer inventory",
       rootCause: "Sudden regional retail promotional spike combined with supplier lead-time extension.",
       impactRisk: "Missed retail order fulfillment SLA and $85,000 customer cancellation penalties.",
       potentialLoss: "$110,000 lost revenue + 12% drop in quarterly vendor score"
@@ -136,11 +136,11 @@ const SCENARIOS: Scenario[] = [
         "Simulated 500+ inter-hub transfer permutations against diesel freight rates",
         "Calculated optimal transfer of 4,200 units from Midwest DC to Atlanta DC",
         "Triggered automated transfer order directly into Manhattan WMOS",
-        "Dynamically tuned safety stock threshold from 14 days to 22 days for next quarter"
+        "Dynamically rebalanced safety stock threshold to match real-time seasonal demand"
       ],
       outcome: "99.8% OTIF maintained across all Southeast retail partners without placing emergency OEM orders.",
       costAvoided: "$110,000",
-      timeSaved: "3 Weeks"
+      timeSaved: "Instant Rebalancing"
     }
   }
 ];
@@ -170,22 +170,22 @@ export default function InteractiveSimulator() {
   };
 
   return (
-    <div className="relative rounded-3xl border border-white/10 bg-slate-950/80 p-6 md:p-10 backdrop-blur-2xl shadow-2xl overflow-hidden">
+    <div className="relative rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/90 via-[#0B0F19]/95 to-[#070A12]/95 p-6 md:p-10 backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_16px_40px_rgba(0,0,0,0.6)] overflow-hidden">
       {/* Decorative background glow */}
-      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" />
-      <div className="pointer-events-none absolute -left-20 -bottom-20 h-96 w-96 rounded-full bg-amber-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-cyan-500/15 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 -bottom-20 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
 
       {/* Header */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-white/10">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/50 px-3 py-1 text-xs font-semibold text-emerald-300">
-            <Cpu className="h-3.5 w-3.5 text-emerald-400 animate-spin" style={{ animationDuration: "6s" }} />
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-950/60 px-3.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider text-cyan-300 shadow-[0_0_15px_rgba(0,240,255,0.15)]">
+            <Cpu className="h-3.5 w-3.5 text-cyan-400 animate-spin" style={{ animationDuration: "6s" }} />
             <span>Interactive Disruption Simulator</span>
           </div>
-          <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-            See How HiView AI <span className="bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">Scores, Then Acts</span> In Real-Time
+          <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl tracking-tight">
+            See How HiView AI <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">Scores, Then Acts</span> In Real-Time
           </h3>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-xs sm:text-sm text-slate-300">
             Select a live enterprise disruption scenario to watch the autonomous AI engine identify, triage, and resolve anomalies.
           </p>
         </div>
@@ -197,13 +197,13 @@ export default function InteractiveSimulator() {
               <button
                 key={s.id}
                 onClick={() => handleSimulate(s.id)}
-                className={`rounded-xl px-3.5 py-2 text-xs font-semibold transition-all duration-200 flex items-center gap-2 ${
+                className={`rounded-xl px-4 py-2.5 text-xs font-black transition-all duration-200 flex items-center gap-2 ${
                   isSelected
-                    ? "bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/25 border border-emerald-400/50"
-                    : "bg-slate-900/80 text-slate-300 hover:bg-slate-800 border border-white/5"
+                    ? "bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/25 border border-cyan-400"
+                    : "bg-slate-900/90 text-slate-300 hover:bg-slate-800 hover:text-white border border-white/10"
                 }`}
               >
-                <span className={`h-2 w-2 rounded-full ${isSelected ? "bg-white" : "bg-emerald-400"}`} />
+                <span className={`h-2 w-2 rounded-full ${isSelected ? "bg-slate-950" : "bg-cyan-400"}`} />
                 {s.category}
               </button>
             );
@@ -215,72 +215,72 @@ export default function InteractiveSimulator() {
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column: Anomaly Ingestion & Threat Analysis */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="rounded-2xl border border-red-500/20 bg-red-950/20 p-5 backdrop-blur-md">
-            <div className="flex items-center justify-between">
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-rose-400">
-                <AlertTriangle className="h-4 w-4 text-rose-400" />
+          <div className="rounded-2xl border border-rose-500/30 bg-rose-950/20 p-6 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(244,63,94,0.2),0_8px_24px_rgba(0,0,0,0.4)]">
+            <div className="flex items-center justify-between pb-3 border-b border-rose-500/20">
+              <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-rose-400 font-mono">
+                <AlertTriangle className="h-4 w-4 text-rose-400 animate-pulse" />
                 Live Ingestion Stream
               </span>
-              <span className="rounded-full bg-rose-500/20 px-2.5 py-0.5 text-xs font-mono font-semibold text-rose-300">
+              <span className="rounded-md bg-rose-950/80 px-2.5 py-0.5 text-[10px] font-mono font-black text-rose-300 border border-rose-500/30">
                 {currentScenario.severity}
               </span>
             </div>
 
-            <h4 className="mt-3 text-lg font-bold text-white">
+            <h4 className="mt-4 text-lg font-black text-white tracking-tight">
               {currentScenario.title}
             </h4>
             
             <div className="mt-4 space-y-2 text-xs">
-              <div className="rounded-lg bg-black/40 p-3 font-mono text-slate-300 border border-white/5">
-                <span className="text-rose-400 font-semibold">SIGNAL:</span> {currentScenario.anomaly.rawSignal}
+              <div className="rounded-xl bg-slate-950/80 p-3.5 font-mono text-slate-200 border border-white/10">
+                <span className="text-rose-400 font-bold">SIGNAL:</span> {currentScenario.anomaly.rawSignal}
               </div>
-              <div className="rounded-lg bg-black/40 p-3 font-mono text-slate-300 border border-white/5">
-                <span className="text-amber-400 font-semibold">ROOT CAUSE:</span> {currentScenario.anomaly.rootCause}
+              <div className="rounded-xl bg-slate-950/80 p-3.5 font-mono text-slate-200 border border-white/10">
+                <span className="text-amber-400 font-bold">ROOT CAUSE:</span> {currentScenario.anomaly.rootCause}
               </div>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-red-500/20 grid grid-cols-2 gap-3">
+            <div className="mt-4 pt-4 border-t border-rose-500/20 grid grid-cols-2 gap-3">
               <div>
-                <div className="text-[11px] uppercase font-bold text-slate-400">Operational Risk</div>
+                <div className="text-[10px] uppercase font-bold text-slate-400 font-mono">Operational Risk</div>
                 <div className="mt-0.5 text-xs font-medium text-slate-200">{currentScenario.anomaly.impactRisk}</div>
               </div>
               <div>
-                <div className="text-[11px] uppercase font-bold text-rose-400">Potential Loss</div>
-                <div className="mt-0.5 text-sm font-mono font-bold text-rose-400">{currentScenario.anomaly.potentialLoss}</div>
+                <div className="text-[10px] uppercase font-bold text-rose-400 font-mono">Potential Loss</div>
+                <div className="mt-0.5 text-sm font-mono font-black text-rose-400">{currentScenario.anomaly.potentialLoss}</div>
               </div>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/5 bg-slate-900/50 p-4 text-xs text-slate-400 flex items-center justify-between">
+          <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-4 text-xs text-slate-300 flex items-center justify-between font-mono">
             <span className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-emerald-400" />
+              <ShieldCheck className="h-4 w-4 text-cyan-400" />
               Governed by Human-in-the-Loop Policies
             </span>
-            <span className="font-mono text-emerald-400">SOC 2 TYPE II</span>
+            <span className="font-bold text-cyan-400">SOC 2 TYPE II</span>
           </div>
         </div>
 
         {/* Right Column: Autonomous Action Engine */}
         <div className="lg:col-span-7">
-          <div className="rounded-2xl border border-emerald-500/30 bg-slate-900/90 p-6 backdrop-blur-xl relative overflow-hidden shadow-xl">
+          <div className="rounded-2xl border border-cyan-500/30 bg-slate-900/95 p-6 md:p-8 backdrop-blur-2xl relative overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_16px_40px_rgba(0,0,0,0.6)]">
             {/* Header info */}
             <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10">
               <div className="flex items-center gap-2">
-                <Zap className="h-4 w-4 text-emerald-400" />
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-300 font-mono">
+                <Zap className="h-4 w-4 text-cyan-400" />
+                <span className="text-xs font-black uppercase tracking-wider text-cyan-300 font-mono">
                   {currentScenario.badge}
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="text-xs text-slate-400 font-mono">
-                  Confidence: <strong className="text-emerald-400">{currentScenario.aiAction.confidence}</strong>
+                <span className="text-xs text-slate-300 font-mono">
+                  Confidence: <strong className="text-cyan-400 font-black">{currentScenario.aiAction.confidence}</strong>
                 </span>
                 <button
                   onClick={() => handleSimulate(activeScenarioId)}
                   disabled={isRunning}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 px-2.5 py-1 text-xs font-medium transition"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 px-3 py-1.5 text-xs font-bold transition border border-cyan-500/30"
                 >
-                  <RefreshCw className={`h-3 w-3 ${isRunning ? "animate-spin" : ""}`} />
+                  <RefreshCw className={`h-3.5 w-3.5 ${isRunning ? "animate-spin" : ""}`} />
                   Re-Run
                 </button>
               </div>
@@ -288,7 +288,7 @@ export default function InteractiveSimulator() {
 
             {/* Execution Steps */}
             <div className="mt-5 space-y-3">
-              <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
                 Autonomous Action Steps
               </div>
 
@@ -299,23 +299,23 @@ export default function InteractiveSimulator() {
                     key={idx}
                     initial={{ opacity: 0, x: 10 }}
                     animate={{ opacity: isExecuted ? 1 : 0.4, x: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className={`flex items-start gap-3 rounded-xl p-3 text-xs transition-all ${
+                    transition={{ duration: 0.25 }}
+                    className={`flex items-start gap-3 rounded-xl p-3.5 text-xs transition-all ${
                       isExecuted
-                        ? "bg-slate-800/80 border border-emerald-500/30 text-slate-200"
-                        : "bg-slate-950/40 border border-white/5 text-slate-500"
+                        ? "bg-slate-800/90 border border-cyan-500/40 text-slate-100 shadow-sm"
+                        : "bg-slate-950/50 border border-white/5 text-slate-500"
                     }`}
                   >
                     <div className="mt-0.5">
                       {isExecuted ? (
-                        <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
+                        <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
                       ) : (
-                        <div className="h-4 w-4 rounded-full border border-slate-600 flex items-center justify-center text-[9px] text-slate-500">
+                        <div className="h-4 w-4 rounded-full border border-slate-600 flex items-center justify-center text-[9px] text-slate-500 font-mono">
                           {idx + 1}
                         </div>
                       )}
                     </div>
-                    <div className="flex-1 font-mono">{step}</div>
+                    <div className="flex-1 font-mono font-medium leading-relaxed">{step}</div>
                   </motion.div>
                 );
               })}
@@ -325,29 +325,29 @@ export default function InteractiveSimulator() {
             <AnimatePresence>
               {stepIndex >= 3 && (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4 }}
-                  className="mt-6 rounded-xl border border-emerald-500/40 bg-emerald-950/30 p-4 text-xs"
+                  transition={{ duration: 0.35 }}
+                  className="mt-6 rounded-2xl border border-emerald-500/40 bg-emerald-950/30 p-5 text-xs shadow-[inset_0_1px_0_rgba(16,185,129,0.2)]"
                 >
-                  <div className="flex items-center gap-2 text-emerald-400 font-bold uppercase tracking-wider">
+                  <div className="flex items-center gap-2 text-emerald-400 font-black uppercase tracking-wider font-mono">
                     <Sparkles className="h-4 w-4 text-emerald-400" />
                     Verified Execution Outcome
                   </div>
-                  <p className="mt-1 text-slate-200 font-medium">
+                  <p className="mt-1.5 text-slate-100 font-semibold leading-relaxed">
                     {currentScenario.aiAction.outcome}
                   </p>
 
                   <div className="mt-4 pt-3 border-t border-emerald-500/20 grid grid-cols-2 gap-4">
                     <div>
-                      <span className="text-[10px] uppercase font-bold text-slate-400">Hard Cost Avoided</span>
-                      <div className="font-mono text-xl font-extrabold text-emerald-400">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 font-mono">Hard Cost Avoided</span>
+                      <div className="font-mono text-2xl font-black text-emerald-400">
                         {currentScenario.aiAction.costAvoided}
                       </div>
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase font-bold text-slate-400">Time Saved / Disruption Prevented</span>
-                      <div className="font-mono text-xl font-extrabold text-emerald-400">
+                      <span className="text-[10px] uppercase font-bold text-slate-400 font-mono">Disruption Prevented</span>
+                      <div className="font-mono text-2xl font-black text-cyan-400">
                         {currentScenario.aiAction.timeSaved}
                       </div>
                     </div>

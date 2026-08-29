@@ -29,7 +29,7 @@ export const PRODUCTS: ProductItem[] = [
     description: "Go beyond rigid message translation. EDIFAI embeds AI into the transaction lifecycle for automatic schema validation, continuous anomaly detection, and automated error recovery.",
     href: "/products/edifai",
     iconName: "Network",
-    color: "from-emerald-500 to-teal-600",
+    color: "from-sky-500 to-blue-600",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
     features: [
       "AI-Assisted Adaptive Data Mapping (X12, EDIFACT, XML, JSON)",
@@ -69,7 +69,7 @@ export const PRODUCTS: ProductItem[] = [
     description: "Multimodal perishable and fresh/frozen tracking with real-time predictive ETAs, IoT temperature excursion alerts, and multi-stakeholder customs compliance.",
     href: "/products/iqua",
     iconName: "ThermometerSnowflake",
-    color: "from-teal-500 to-teal-600",
+    color: "from-blue-500 to-blue-600",
     image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=1200",
     features: [
       "Real-time predictive ETA monitoring across Air, Ocean & Reefer",
@@ -109,7 +109,7 @@ export const PRODUCTS: ProductItem[] = [
     description: "Empower carriers and logistics teams to discover profitable loads, optimize per-mile net revenue, eliminate empty deadheads, and automate dispatch validation.",
     href: "/products/fairmiles",
     iconName: "Truck",
-    color: "from-emerald-500 to-teal-600",
+    color: "from-sky-500 to-blue-600",
     image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=1200",
     features: [
       "AI-powered load matching based on equipment, lane preference & deadhead",
@@ -164,11 +164,11 @@ export const PRODUCTS: ProductItem[] = [
     ],
     detailedContent: {
       heroTitle: "Perfect Inventory Levels Across Every Node in Your Network",
-      heroSubtitle: "Stop relying on static 30-day min/max spreadsheets. MIST dynamically tunes safety stock buffers based on actual supplier lead-time fluctuations.",
+      heroSubtitle: "Stop relying on rigid manual min/max spreadsheets. MIST dynamically tunes safety stock buffers based on actual supplier lead-time fluctuations.",
       coreProblem: "Supply volatility causes companies to over-purchase safety stock, locking up millions in working capital while still suffering stockouts on critical components.",
       aiSolution: "MIST continuously monitors supplier fulfillment reliability, transit delays, and consumption velocity to dynamically balance inventory across multi-echelon networks.",
       capabilities: [
-        { title: "Dynamic Safety Stock Engine", desc: "Replaces static buffers with statistical models adjusting daily for demand volatility and supplier lead-time risk.", icon: "Sliders" },
+        { title: "Dynamic Safety Stock Engine", desc: "Replaces static buffers with statistical models adjusting continuously for demand volatility and supplier lead-time risk.", icon: "Sliders" },
         { title: "Multi-Echelon Balancing", desc: "Identifies inter-facility inventory transfer opportunities before triggering expensive emergency rush orders.", icon: "Share2" },
         { title: "Supplier Lead-Time Sentinel", desc: "Scores vendor reliability based on actual historical delivery variance rather than theoretical contract dates.", icon: "CheckCircle2" },
         { title: "Obsolescence & Expiry Safeguard", desc: "Identifies slow-moving SKUs and recommends markdown or redistribution strategies before write-downs occur.", icon: "AlertTriangle" }
@@ -200,7 +200,7 @@ export const PRODUCTS: ProductItem[] = [
     metrics: [
       { value: "95%+", label: "Forecast Accuracy" },
       { value: "28%", label: "Reduction in Finished Goods Waste" },
-      { value: "15 Days", label: "Advanced Disruption Horizon" }
+      { value: "Proactive", label: "Continuous Disruption Foresight" }
     ],
     detailedContent: {
       heroTitle: "Anticipate Market Demand Before It Happens",
@@ -229,7 +229,7 @@ export const PRODUCTS: ProductItem[] = [
     description: "Federate multi-site legacy and cloud WMS systems (Manhattan, Blue Yonder, HighJump, SAP EWM) into a unified operational control layer with dynamic pick path optimization.",
     href: "/products/wms",
     iconName: "Warehouse",
-    color: "from-teal-600 to-emerald-600",
+    color: "from-blue-600 to-sky-600",
     image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=1200",
     features: [
       "Multi-site WMS federation into a single pane of operational glass",
@@ -269,7 +269,7 @@ export const PRODUCTS: ProductItem[] = [
     description: "Monitor purchase order lifecycles from issuance to final settlement. Uncover hidden accessorial fees, demurrage, and tariff impacts to protect gross margins.",
     href: "/products/po-tracker",
     iconName: "Receipt",
-    color: "from-teal-500 to-emerald-600",
+    color: "from-blue-500 to-sky-600",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=1200",
     features: [
       "End-to-end PO lifecycle tracking from manufacturer to billing settlement",
@@ -325,7 +325,7 @@ export const CORE_USPS = [
     number: "02",
     badge: "Predictive Forecasting",
     title: "Predictive Analytics, Not Just Reactive Alerts",
-    headline: "Anticipate Logistics Bottlenecks 15 Days Before They Cascade.",
+    headline: "Anticipate Logistics Bottlenecks Proactively Before They Cascade.",
     description: "Stop fighting fires after goods are delayed. HiView analyzes thousands of live data points—port congestion, weather, AIS ocean traffic, supplier lead times—to resolve disruptions in advance.",
     keyPoints: [
       "95%+ Forecast & ETA prediction accuracy",
@@ -357,7 +357,7 @@ export const CORE_USPS = [
     number: "04",
     badge: "Ecosystem Interop",
     title: "100+ Enterprise Connectors (Zero Rip & Replace)",
-    headline: "Seamless Integration With Your Existing Tech Stack in Days.",
+    headline: "Rapid, Non-Disruptive Integration With Your Existing Tech Stack.",
     description: "Keep your existing SAP, Oracle, Manhattan WMS, and FourKites systems. HiView sits as an intelligent orchestration layer on top with pre-built bi-directional connectors.",
     keyPoints: [
       "Pre-built connectors for SAP S/4HANA, Oracle Cloud, NetSuite, Dynamics 365",

@@ -30,7 +30,7 @@ export default function HiViewLogo({
       {/* Precision HiView Geometric Eye / Horizon Apex Vector Icon */}
       <div className="relative shrink-0 flex items-center justify-center">
         {/* Ambient Glow */}
-        <div className="absolute inset-0 rounded-xl bg-emerald-400/20 blur-md transition-all duration-300 group-hover:bg-emerald-400/35 group-hover:blur-lg" />
+        <div className="absolute inset-0 rounded-xl bg-sky-400/20 blur-md transition-all duration-300 group-hover:bg-sky-400/35 group-hover:blur-lg" />
 
         <svg
           width={currentSize.icon}
@@ -43,14 +43,14 @@ export default function HiViewLogo({
           <defs>
             {/* Primary Cyan-to-Blue Linear Gradient */}
             <linearGradient id="hvGradientPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#34d399" />
+              <stop offset="0%" stopColor="#38bdf8" />
               <stop offset="50%" stopColor="#0077ff" />
               <stop offset="100%" stopColor="#f59e0b" />
             </linearGradient>
 
             {/* Accent Glowing Gradient */}
             <linearGradient id="hvGradientAccent" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#34d399" />
+              <stop offset="0%" stopColor="#38bdf8" />
               <stop offset="100%" stopColor="#38bdf8" />
             </linearGradient>
 
@@ -108,8 +108,8 @@ export default function HiViewLogo({
           />
 
           {/* Real-time AI Sentinel Pulse Node at Horizon Intersect */}
-          <circle cx="24" cy="24" r="3" fill="#34d399" />
-          <circle cx="24" cy="24" r="5" stroke="#34d399" strokeWidth="1" strokeOpacity="0.5" className="animate-ping" style={{ transformOrigin: "24px 24px" }} />
+          <circle cx="24" cy="24" r="3" fill="#38bdf8" />
+          <circle cx="24" cy="24" r="5" stroke="#38bdf8" strokeWidth="1" strokeOpacity="0.5" className="animate-ping" style={{ transformOrigin: "24px 24px" }} />
         </svg>
       </div>
 
@@ -118,12 +118,12 @@ export default function HiViewLogo({
         <div className="flex items-center gap-1.5 font-sans tracking-tight">
           <div className={`font-extrabold ${currentSize.text} text-white flex items-center`}>
             <span>Hi</span>
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-slate-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-slate-100 bg-clip-text text-transparent">
               View
             </span>
           </div>
           <div className="flex items-center">
-            <span className={`font-mono font-bold ${currentSize.badge} rounded-md bg-emerald-950/80 px-1.5 py-0.5 text-emerald-400 border border-emerald-500/30 shadow-sm shadow-emerald-500/20`}>
+            <span className={`font-mono font-bold ${currentSize.badge} rounded-md bg-sky-950/80 px-1.5 py-0.5 text-sky-400 border border-sky-500/30 shadow-sm shadow-sky-500/20`}>
               .ai
             </span>
           </div>

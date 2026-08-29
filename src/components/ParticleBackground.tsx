@@ -33,7 +33,7 @@ export default function ParticleBackground() {
 
     window.addEventListener("resize", handleResize);
 
-    const colors = ["#34d399", "#f59e0b", "#2dd4bf", "#10b981"];
+    const colors = ["#38bdf8", "#f59e0b", "#60a5fa", "#0ea5e9"];
     const nodeCount = Math.min(Math.floor(width / 24), 55);
     const nodes: NodePoint[] = [];
 
@@ -73,7 +73,7 @@ export default function ParticleBackground() {
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
             const alpha = (1 - dist / 140) * 0.15;
-            ctx.strokeStyle = `rgba(52, 211, 153, ${alpha})`;
+            ctx.strokeStyle = `rgba(56, 189, 248, ${alpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }

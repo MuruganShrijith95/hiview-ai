@@ -84,17 +84,17 @@ export default function CareersPage() {
     <div className="space-y-24 sm:space-y-32 pb-24">
       {/* Hero */}
       <section className="relative pt-12 pb-16 text-center">
-        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[750px] rounded-full bg-emerald-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[750px] rounded-full bg-sky-500/15 blur-3xl" />
 
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur-md mb-6">
-            <Users className="h-3.5 w-3.5 text-emerald-400" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md mb-6">
+            <Users className="h-3.5 w-3.5 text-sky-400" />
             <span>Join Our Global Team</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
             Build The Future Of{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-amber-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Autonomous Logistics AI
             </span>
           </h1>
@@ -116,7 +116,7 @@ export default function CareersPage() {
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <GlowCard className="p-6 space-y-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-sky-400">
               <Zap className="h-5 w-5" />
             </div>
             <h4 className="text-base font-bold text-white">Innovation First</h4>
@@ -136,7 +136,7 @@ export default function CareersPage() {
           </GlowCard>
 
           <GlowCard className="p-6 space-y-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-sky-400">
               <Heart className="h-5 w-5" />
             </div>
             <h4 className="text-base font-bold text-white">Customer Obsession</h4>
@@ -146,7 +146,7 @@ export default function CareersPage() {
           </GlowCard>
 
           <GlowCard className="p-6 space-y-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/20 text-teal-400">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400">
               <Globe2 className="h-5 w-5" />
             </div>
             <h4 className="text-base font-bold text-white">Global Collaboration</h4>
@@ -174,7 +174,7 @@ export default function CareersPage() {
               onClick={() => setSelectedDept(dept)}
               className={`rounded-xl px-4 py-2 text-xs font-semibold transition ${
                 selectedDept === dept
-                  ? "bg-emerald-500 text-slate-950 font-bold"
+                  ? "bg-sky-500 text-slate-950 font-bold"
                   : "bg-slate-900 text-slate-400 hover:text-white border border-white/5"
               }`}
             >
@@ -190,12 +190,12 @@ export default function CareersPage() {
               <div className="space-y-1">
                 <div className="flex flex-wrap items-center gap-2">
                   <h4 className="text-base font-bold text-white">{role.title}</h4>
-                  <span className="rounded bg-emerald-950 px-2 py-0.5 text-[10px] font-mono text-emerald-300 border border-emerald-500/30">
+                  <span className="rounded bg-sky-950 px-2 py-0.5 text-[10px] font-mono text-sky-300 border border-sky-500/30">
                     {role.type}
                   </span>
                 </div>
                 <div className="text-xs text-slate-400 flex items-center gap-3">
-                  <span className="text-emerald-400 font-mono">{role.department}</span>
+                  <span className="text-sky-400 font-mono">{role.department}</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><MapPin className="h-3 w-3 text-slate-500" /> {role.location}</span>
                 </div>
@@ -204,7 +204,7 @@ export default function CareersPage() {
 
               <a
                 href={`mailto:careers@hiview.ai?subject=Application for ${encodeURIComponent(role.title)}`}
-                className="inline-flex items-center gap-1.5 rounded-xl bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 px-5 py-2.5 text-xs font-bold text-slate-200 transition shrink-0"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-slate-800 hover:bg-sky-500 hover:text-slate-950 px-5 py-2.5 text-xs font-bold text-slate-200 transition shrink-0"
               >
                 <span>Apply Now</span>
                 <ArrowRight className="h-3.5 w-3.5" />

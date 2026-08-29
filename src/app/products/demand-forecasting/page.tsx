@@ -45,7 +45,7 @@ export default function DemandForecastingProductPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="hover-shine inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 px-8 py-3.5 text-xs font-extrabold text-white shadow-lg shadow-amber-500/25 hover:from-amber-400 hover:to-orange-500 transition"
+              className="hover-shine inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-sky-600 px-8 py-3.5 text-xs font-extrabold text-white shadow-lg shadow-amber-500/25 hover:from-cyan-400 hover:to-sky-500 transition"
             >
               <span>Test AI Demand Sensing Sandbox</span>
               <ArrowRight className="h-3.5 w-3.5" />
@@ -62,7 +62,7 @@ export default function DemandForecastingProductPage() {
               glowColor="rgba(245, 158, 11, 0.25)"
               floatingBadges={[
                 { title: "SKU Forecast Precision", value: "95.8% Accuracy", position: "top-right", icon: Sparkles },
-                { title: "Disruption Horizon", value: "15 Days Advance", position: "bottom-left", icon: Target },
+                { title: "Disruption Horizon", value: "Proactive Foresight", position: "bottom-left", icon: Target },
                 { title: "Finished Goods Waste", value: "-28% Reduction", position: "bottom-right", icon: TrendingUp }
               ]}
             />
@@ -161,7 +161,7 @@ export default function DemandForecastingProductPage() {
           <div className="mt-6">
             <Link
               href="/demo"
-              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
+              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
             >
               <span>Schedule Forecasting Demo</span>
               <ArrowRight className="h-3.5 w-3.5" />

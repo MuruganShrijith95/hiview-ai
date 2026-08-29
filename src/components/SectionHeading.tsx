@@ -26,27 +26,30 @@ export default function SectionHeading({
     >
       {badge && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className={`inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-300 backdrop-blur-md ${centered ? "mx-auto" : ""} mb-4`}
+          transition={{ duration: 0.4 }}
+          className={`inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-950/60 px-3.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider text-cyan-300 shadow-[0_0_15px_rgba(0,240,255,0.15)] backdrop-blur-xl ${centered ? "mx-auto" : ""} mb-4`}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+          </span>
           <span>{badge}</span>
         </motion.div>
       )}
 
       <motion.h2
-        initial={{ opacity: 0, y: 15 }}
+        initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.1 }}
-        className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl"
+        transition={{ duration: 0.5, delay: 0.08 }}
+        className="text-2xl font-black tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15]"
       >
         {title}{" "}
         {highlightText && (
-          <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-amber-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">
             {highlightText}
           </span>
         )}
@@ -54,11 +57,11 @@ export default function SectionHeading({
 
       {subtitle && (
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-4 text-base leading-relaxed text-slate-400 sm:text-lg"
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mt-4 text-sm sm:text-base leading-relaxed text-slate-300 font-normal"
         >
           {subtitle}
         </motion.p>

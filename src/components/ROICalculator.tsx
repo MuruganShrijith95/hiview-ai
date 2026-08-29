@@ -24,7 +24,7 @@ export default function ROICalculator() {
           <div>
             <div className="flex items-center justify-between text-sm font-semibold text-white">
               <span>Annual Freight & Logistics Spend</span>
-              <span className="font-mono text-emerald-400 font-bold">${annualSpend}M / yr</span>
+              <span className="font-mono text-sky-400 font-bold">${annualSpend}M / yr</span>
             </div>
             <input
               type="range"
@@ -33,7 +33,7 @@ export default function ROICalculator() {
               step={5}
               value={annualSpend}
               onChange={(e) => setAnnualSpend(Number(e.target.value))}
-              className="mt-3 w-full accent-emerald-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
+              className="mt-3 w-full accent-sky-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
             />
             <div className="mt-1 flex justify-between text-[10px] font-mono text-slate-500">
               <span>$5M</span>
@@ -45,7 +45,7 @@ export default function ROICalculator() {
           <div>
             <div className="flex items-center justify-between text-sm font-semibold text-white">
               <span>Monthly Shipments / Transactions</span>
-              <span className="font-mono text-emerald-400 font-bold">{shipmentsPerMonth.toLocaleString()} / mo</span>
+              <span className="font-mono text-sky-400 font-bold">{shipmentsPerMonth.toLocaleString()} / mo</span>
             </div>
             <input
               type="range"
@@ -54,7 +54,7 @@ export default function ROICalculator() {
               step={500}
               value={shipmentsPerMonth}
               onChange={(e) => setShipmentsPerMonth(Number(e.target.value))}
-              className="mt-3 w-full accent-emerald-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
+              className="mt-3 w-full accent-sky-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
             />
             <div className="mt-1 flex justify-between text-[10px] font-mono text-slate-500">
               <span>500</span>
@@ -66,7 +66,7 @@ export default function ROICalculator() {
           <div>
             <div className="flex items-center justify-between text-sm font-semibold text-white">
               <span>Operating Distribution Hubs / Plants</span>
-              <span className="font-mono text-emerald-400 font-bold">{facilitiesCount} Nodes</span>
+              <span className="font-mono text-sky-400 font-bold">{facilitiesCount} Nodes</span>
             </div>
             <input
               type="range"
@@ -75,7 +75,7 @@ export default function ROICalculator() {
               step={1}
               value={facilitiesCount}
               onChange={(e) => setFacilitiesCount(Number(e.target.value))}
-              className="mt-3 w-full accent-emerald-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
+              className="mt-3 w-full accent-sky-400 cursor-pointer h-2 bg-slate-800 rounded-lg"
             />
             <div className="mt-1 flex justify-between text-[10px] font-mono text-slate-500">
               <span>1 Node</span>
@@ -87,23 +87,23 @@ export default function ROICalculator() {
 
         {/* Right Calculated ROI Card */}
         <div className="lg:col-span-6">
-          <div className="rounded-2xl border border-emerald-500/30 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 p-6 md:p-8 shadow-2xl relative overflow-hidden">
+          <div className="rounded-2xl border border-sky-500/30 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 p-6 md:p-8 shadow-2xl relative overflow-hidden">
             <div className="flex items-center justify-between text-xs text-slate-400 pb-4 border-b border-white/10 font-mono">
               <span>ESTIMATED ANNUAL ENTERPRISE ROI</span>
-              <span className="text-emerald-400 font-bold">PROVEN PAYBACK &lt; 90 DAYS</span>
+              <span className="text-cyan-400 font-bold">PROVEN RAPID PAYBACK</span>
             </div>
 
             <div className="my-6">
               <div className="text-xs uppercase font-bold text-slate-400">Total Projected Annual Value</div>
               <div className="mt-1 font-mono text-4xl sm:text-5xl font-extrabold text-white">
-                <span className="text-emerald-400">$</span>{totalAnnualValue}
+                <span className="text-sky-400">$</span>{totalAnnualValue}
               </div>
             </div>
 
             <div className="space-y-3 text-xs border-t border-white/10 pt-4">
               <div className="flex items-center justify-between">
                 <span className="text-slate-300 flex items-center gap-2">
-                  <DollarSign className="h-3.5 w-3.5 text-emerald-400" />
+                  <DollarSign className="h-3.5 w-3.5 text-sky-400" />
                   Detention & Demurrage Averted
                 </span>
                 <span className="font-mono font-bold text-white">${annualDetentionDemurrageCut}</span>
@@ -117,7 +117,7 @@ export default function ROICalculator() {
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-300 flex items-center gap-2">
-                  <TrendingUp className="h-3.5 w-3.5 text-emerald-400" />
+                  <TrendingUp className="h-3.5 w-3.5 text-sky-400" />
                   Working Capital Buffer Unlocked
                 </span>
                 <span className="font-mono font-bold text-white">${workingCapitalFreed}</span>
@@ -127,7 +127,7 @@ export default function ROICalculator() {
             <div className="mt-6 pt-4 border-t border-white/10">
               <Link
                 href="/demo"
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 py-3 text-xs font-bold text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-400 hover:to-teal-500 transition"
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/25 hover:from-sky-400 hover:to-blue-500 transition"
               >
                 Validate ROI with Your Historical Data
                 <ArrowRight className="h-3.5 w-3.5" />

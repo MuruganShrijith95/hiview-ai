@@ -27,7 +27,7 @@ export default function IntegrationOrbit() {
               onClick={() => setSelectedCategory(cat)}
               className={`rounded-xl px-4 py-2 text-xs font-semibold transition-all duration-200 ${
                 isSelected
-                  ? "bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/25 font-bold"
+                  ? "bg-sky-500 text-slate-950 shadow-md shadow-sky-500/25 font-bold"
                   : "bg-slate-900/80 text-slate-400 hover:bg-slate-800 hover:text-white border border-white/5"
               }`}
             >
@@ -45,9 +45,9 @@ export default function IntegrationOrbit() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.25, delay: idx * 0.03 }}
-            className="group flex flex-col items-center justify-center rounded-2xl border border-white/5 bg-slate-900/40 p-5 text-center transition-all duration-300 hover:border-emerald-500/30 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-emerald-500/10"
+            className="group flex flex-col items-center justify-center rounded-2xl border border-white/5 bg-slate-900/40 p-5 text-center transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-sky-500/10"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
               {item.category === "ERP" && <Database className="h-6 w-6" />}
               {item.category === "WMS" && <Warehouse className="h-6 w-6" />}
               {item.category === "Telematics" && <Radio className="h-6 w-6" />}
@@ -68,12 +68,12 @@ export default function IntegrationOrbit() {
       {/* Footer reassurance banner */}
       <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
         <div className="flex items-center gap-2">
-          <CheckCircle2 className="h-4 w-4 text-emerald-400" />
-          <span>Don&apos;t see your ERP/WMS? HiView builds bespoke connectors with guaranteed 14-day SLA.</span>
+          <CheckCircle2 className="h-4 w-4 text-cyan-400" />
+          <span>Don&apos;t see your ERP/WMS? HiView rapidly delivers bespoke connectors tailored to your enterprise architecture.</span>
         </div>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold"
+          className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 font-semibold"
         >
           Request Integration Specs <ArrowRight className="h-3 w-3" />
         </Link>

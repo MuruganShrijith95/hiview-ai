@@ -78,7 +78,7 @@ export default function Navbar() {
             >
               <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition">
                 <span>Products</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "products" ? "rotate-180 text-emerald-400" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "products" ? "rotate-180 text-sky-400" : ""}`} />
               </button>
 
               <AnimatePresence>
@@ -98,16 +98,16 @@ export default function Navbar() {
                           href={prod.href}
                           className="flex items-start gap-3 rounded-xl p-3 hover:bg-slate-900 transition border border-transparent hover:border-white/5 group"
                         >
-                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-850 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-850 text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
                             <IconComponent className="h-4 w-4" />
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2">
-                              <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors">
+                              <span className="text-xs font-bold text-white group-hover:text-sky-300 transition-colors">
                                 {prod.name}
                               </span>
                               {prod.badge && (
-                                <span className="text-[9px] font-mono font-semibold rounded bg-emerald-950/60 px-1.5 py-0.5 text-emerald-400 border border-emerald-500/20">
+                                <span className="text-[9px] font-mono font-semibold rounded bg-sky-950/60 px-1.5 py-0.5 text-sky-400 border border-sky-500/20">
                                   {prod.badge}
                                 </span>
                               )}
@@ -122,10 +122,10 @@ export default function Navbar() {
 
                     <div className="col-span-2 mt-2 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-400 px-2">
                       <span className="flex items-center gap-1.5">
-                        <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
+                        <Sparkles className="h-3.5 w-3.5 text-sky-400" />
                         All products unified by the Autonomous Control Tower
                       </span>
-                      <Link href="/products" className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                      <Link href="/products" className="text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1">
                         View Product Matrix <ArrowRight className="h-3 w-3" />
                       </Link>
                     </div>
@@ -138,7 +138,7 @@ export default function Navbar() {
             <Link
               href="/platform"
               className={`link-underline px-3 py-2 text-sm font-medium transition ${
-                pathname === "/platform" ? "text-emerald-400" : "text-slate-300 hover:text-white"
+                pathname === "/platform" ? "text-sky-400" : "text-slate-300 hover:text-white"
               }`}
             >
               Platform
@@ -152,7 +152,7 @@ export default function Navbar() {
             >
               <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition">
                 <span>Solutions</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "solutions" ? "rotate-180 text-emerald-400" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "solutions" ? "rotate-180 text-sky-400" : ""}`} />
               </button>
 
               <AnimatePresence>
@@ -172,10 +172,10 @@ export default function Navbar() {
                       >
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-bold text-white group-hover:text-emerald-300 transition-colors">
+                            <span className="text-xs font-bold text-white group-hover:text-sky-300 transition-colors">
                               {ind.name}
                             </span>
-                            <span className="text-[10px] font-mono text-emerald-400 font-semibold">
+                            <span className="text-[10px] font-mono text-sky-400 font-semibold">
                               {ind.impact}
                             </span>
                           </div>
@@ -198,7 +198,7 @@ export default function Navbar() {
             >
               <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-300 hover:text-white transition">
                 <span>Company</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "company" ? "rotate-180 text-emerald-400" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "company" ? "rotate-180 text-sky-400" : ""}`} />
               </button>
 
               <AnimatePresence>
@@ -221,7 +221,7 @@ export default function Navbar() {
                       className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-300 hover:bg-slate-900 hover:text-white transition"
                     >
                       <span>Careers</span>
-                      <span className="rounded bg-emerald-950 px-1.5 py-0.5 text-[9px] font-mono text-emerald-400 border border-emerald-500/20">
+                      <span className="rounded bg-sky-950 px-1.5 py-0.5 text-[9px] font-mono text-sky-400 border border-sky-500/20">
                         Hiring
                       </span>
                     </Link>
@@ -245,7 +245,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               className={`link-underline px-3 py-2 text-sm font-medium transition ${
-                pathname === "/contact" ? "text-emerald-400" : "text-slate-300 hover:text-white"
+                pathname === "/contact" ? "text-sky-400" : "text-slate-300 hover:text-white"
               }`}
             >
               Contact
@@ -256,13 +256,13 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/40 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-amber-500/10 px-4 py-2 text-xs font-bold text-emerald-300 hover:border-emerald-400 hover:text-white transition shadow-lg shadow-emerald-500/10"
+              className="inline-flex items-center gap-2 rounded-xl border border-sky-500/40 bg-gradient-to-r from-sky-500/10 via-blue-500/10 to-amber-500/10 px-4 py-2 text-xs font-bold text-sky-300 hover:border-sky-400 hover:text-white transition shadow-lg shadow-sky-500/10"
             >
               <span>Explore Sandbox</span>
             </Link>
             <Link
               href="/demo"
-              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-400 hover:to-teal-500 transition"
+              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-sky-500/25 hover:from-sky-400 hover:to-blue-500 transition"
             >
               <span>Book Live Demo</span>
               <ArrowRight className="h-3.5 w-3.5" />
@@ -324,7 +324,7 @@ export default function Navbar() {
               <div className="pt-4 border-t border-white/10 space-y-2">
                 <Link
                   href="/demo"
-                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 py-2.5 text-xs font-bold text-white shadow-lg"
+                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 py-2.5 text-xs font-bold text-white shadow-lg"
                 >
                   Book Live Demo
                 </Link>

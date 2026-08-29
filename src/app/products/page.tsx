@@ -36,17 +36,17 @@ export default function ProductsPage() {
     <div className="space-y-24 sm:space-y-32 pb-24">
       {/* Hero */}
       <section className="relative pt-12 pb-16 text-center">
-        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[750px] rounded-full bg-emerald-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[750px] rounded-full bg-sky-500/15 blur-3xl" />
 
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur-md mb-6">
-            <Layers className="h-3.5 w-3.5 text-emerald-400" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md mb-6">
+            <Layers className="h-3.5 w-3.5 text-sky-400" />
             <span>The HiView AI Product Suite</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
             Seven Specialized Engines.{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-amber-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               One Unified Control Tower.
             </span>
           </h1>
@@ -76,11 +76,11 @@ export default function ProductsPage() {
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-800 text-emerald-400 border border-white/10">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-800 text-sky-400 border border-white/10">
                       <IconComponent className="h-6 w-6" />
                     </div>
                     {prod.badge && (
-                      <span className="text-[10px] font-mono font-bold uppercase rounded-full bg-emerald-950/80 px-3 py-1 text-emerald-300 border border-emerald-500/30">
+                      <span className="text-[10px] font-mono font-bold uppercase rounded-full bg-sky-950/80 px-3 py-1 text-sky-300 border border-sky-500/30">
                         {prod.badge}
                       </span>
                     )}
@@ -89,7 +89,7 @@ export default function ProductsPage() {
                   <h3 className="mt-6 text-2xl font-bold text-white">
                     {prod.name}
                   </h3>
-                  <div className="mt-1 text-xs font-semibold text-emerald-400">
+                  <div className="mt-1 text-xs font-semibold text-sky-400">
                     {prod.tagline}
                   </div>
 
@@ -100,7 +100,7 @@ export default function ProductsPage() {
                   <div className="mt-6 pt-5 border-t border-white/5 space-y-2.5">
                     {prod.features.map((feat, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-xs text-slate-300">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-3.5 w-3.5 text-sky-400 shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -108,12 +108,12 @@ export default function ProductsPage() {
                 </div>
 
                 <div className="mt-8 pt-5 border-t border-white/10 flex items-center justify-between">
-                  <div className="text-xs font-mono font-bold text-emerald-400">
+                  <div className="text-xs font-mono font-bold text-sky-400">
                     {prod.metrics[0]?.value} {prod.metrics[0]?.label}
                   </div>
                   <Link
                     href={prod.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition group"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-sky-300 transition group"
                   >
                     <span>Product Specs</span>
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -127,7 +127,7 @@ export default function ProductsPage() {
 
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-emerald-500/30 bg-gradient-to-r from-emerald-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
+        <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white">
             Need a Tailored Multi-Product Deployment?
           </h2>
@@ -137,7 +137,7 @@ export default function ProductsPage() {
           <div className="mt-6">
             <Link
               href="/demo"
-              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
+              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
             >
               <span>Schedule Custom Solution Review</span>
               <ArrowRight className="h-3.5 w-3.5" />

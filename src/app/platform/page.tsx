@@ -71,7 +71,7 @@ const LAYERS: Layer[] = [
     layerNumber: "03",
     name: "Predictive Neural Modeling & Anomaly Detection",
     badge: "AI Prediction Engine",
-    headline: "Anticipate Disruption Cascades 15 Days Before Impact",
+    headline: "Anticipate Disruption Cascades Proactively Before Impact",
     description: "Deep learning neural networks and multivariate time-series models detect nonlinear patterns that human planners miss: impending port terminal congestion, reefer temperature decay curves, and seasonal demand spikes.",
     techComponents: [
       "Transformer-based transit milestone ETA predictor",
@@ -122,17 +122,17 @@ export default function PlatformPage() {
     <div className="space-y-24 sm:space-y-32 pb-24">
       {/* Hero Section */}
       <section className="relative pt-12 pb-16 text-center">
-        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[800px] rounded-full bg-emerald-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[800px] rounded-full bg-sky-500/15 blur-3xl" />
 
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs font-semibold text-emerald-300 backdrop-blur-md mb-6">
-            <Cpu className="h-3.5 w-3.5 text-emerald-400" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md mb-6">
+            <Cpu className="h-3.5 w-3.5 text-sky-400" />
             <span>The Autonomous Control Tower 2.0</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
             The 5-Layer Architecture of an{" "}
-            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-amber-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Intelligent Execution Network
             </span>
           </h1>
@@ -164,14 +164,14 @@ export default function PlatformPage() {
                   onClick={() => setSelectedLayerIndex(idx)}
                   className={`w-full flex items-start gap-4 rounded-2xl p-5 text-left transition-all duration-300 relative ${
                     isSelected
-                      ? "bg-slate-900 border border-emerald-500/50 shadow-xl shadow-emerald-500/10"
+                      ? "bg-slate-900 border border-sky-500/50 shadow-xl shadow-sky-500/10"
                       : "bg-slate-950/50 border border-white/5 hover:bg-slate-900/60 hover:border-white/15"
                   }`}
                 >
                   <div
                     className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
                       isSelected
-                        ? "bg-emerald-500 text-slate-950 font-bold"
+                        ? "bg-sky-500 text-slate-950 font-bold"
                         : "bg-slate-850 text-slate-400"
                     }`}
                   >
@@ -180,7 +180,7 @@ export default function PlatformPage() {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono font-bold tracking-wider text-emerald-400 uppercase">
+                      <span className="text-[10px] font-mono font-bold tracking-wider text-sky-400 uppercase">
                         LAYER {layer.layerNumber}
                       </span>
                       <span className="text-[10px] font-mono text-slate-500">
@@ -205,13 +205,13 @@ export default function PlatformPage() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-3xl border border-emerald-500/30 bg-slate-900/80 p-8 backdrop-blur-2xl shadow-2xl relative overflow-hidden"
+                className="rounded-3xl border border-sky-500/30 bg-slate-900/80 p-8 backdrop-blur-2xl shadow-2xl relative overflow-hidden"
               >
                 <div className="flex items-center justify-between pb-4 border-b border-white/10">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/50 px-3 py-1 text-xs font-semibold text-emerald-300">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/50 px-3 py-1 text-xs font-semibold text-sky-300">
                     <span>{activeLayer.badge}</span>
                   </div>
-                  <span className="font-mono text-xs text-emerald-400 font-bold">
+                  <span className="font-mono text-xs text-sky-400 font-bold">
                     {activeLayer.metrics}
                   </span>
                 </div>
@@ -234,7 +234,7 @@ export default function PlatformPage() {
                         key={i}
                         className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-slate-950/60 p-3 text-xs text-slate-200"
                       >
-                        <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
                         <span>{comp}</span>
                       </div>
                     ))}
@@ -247,7 +247,7 @@ export default function PlatformPage() {
                   </span>
                   <Link
                     href="/demo"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-sky-300 transition"
                   >
                     <span>Test This Layer In Sandbox</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -302,7 +302,7 @@ export default function PlatformPage() {
                 </div>
 
                 <div className="rounded-xl bg-slate-950 p-4 border border-white/5 text-slate-300 space-y-1.5 text-[11px]">
-                  <div className="text-emerald-400 font-bold">✓ COMPILED INTO 3 AUTOMATED EVENT AGENTS:</div>
+                  <div className="text-sky-400 font-bold">✓ COMPILED INTO 3 AUTOMATED EVENT AGENTS:</div>
                   <div>• Event Trigger: AIS Port Dwell &gt; 48.0 hrs on BOM Class &apos;Tier-1&apos;</div>
                   <div>• Action 1: Dispatched API Webhook to Drayage Partner #CH-9912</div>
                   <div>• Action 2: Triggered Priority Rail Slot Reservation in ERP</div>
@@ -329,7 +329,7 @@ export default function PlatformPage() {
 
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-emerald-500/30 bg-gradient-to-r from-emerald-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
+        <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white">
             Ready to Experience the Autonomous Platform?
           </h2>
@@ -339,7 +339,7 @@ export default function PlatformPage() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/demo"
-              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
+              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
             >
               <span>Schedule Architecture Demo</span>
               <ArrowRight className="h-3.5 w-3.5" />
