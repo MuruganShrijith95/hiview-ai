@@ -13,7 +13,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/10 bg-slate-950/95 text-slate-400 overflow-hidden">
+    <footer className="relative border-t border-slate-300/10 bg-slate-950/95 text-slate-400 overflow-hidden">
       {/* Subtle top ambient glow */}
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-64 w-[600px] rounded-full bg-sky-500/10 blur-3xl" />
 
@@ -25,26 +25,26 @@ export default function Footer() {
             <HiViewLogo size="lg" />
 
             <p className="text-xs leading-relaxed text-slate-400">
-              The autonomous supply chain platform that <span className="text-white font-semibold">scores, then acts</span>. Turning fragmented logistics signals into predictive decisions across suppliers, carriers, and distribution centers.
+              The autonomous supply chain platform that <span className="text-ink font-semibold">scores, then acts</span>. Turning fragmented logistics signals into predictive decisions across suppliers, carriers, and distribution centers.
             </p>
 
             {/* Recognition Badge */}
             <div className="rounded-xl border border-sky-500/30 bg-sky-950/30 p-3 text-xs text-slate-300 flex items-start gap-2.5">
               <Award className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
               <div>
-                <strong className="text-white">TAG 2026 Top 40</strong> Most Innovative Technology Company in Georgia.
+                <strong className="text-ink">TAG 2026 Top 40</strong> Most Innovative Technology Company in Georgia.
               </div>
             </div>
 
             {/* Compliance Badges */}
             <div className="flex flex-wrap items-center gap-2 pt-2 text-[10px] font-mono text-slate-500">
-              <span className="rounded border border-white/10 px-2 py-1 bg-slate-900/60 flex items-center gap-1">
+              <span className="rounded border border-slate-300/10 px-2 py-1 bg-slate-900/60 flex items-center gap-1">
                 <ShieldCheck className="h-3 w-3 text-sky-400" /> SOC 2 TYPE II
               </span>
-              <span className="rounded border border-white/10 px-2 py-1 bg-slate-900/60">
+              <span className="rounded border border-slate-300/10 px-2 py-1 bg-slate-900/60">
                 ISO 27001
               </span>
-              <span className="rounded border border-white/10 px-2 py-1 bg-slate-900/60">
+              <span className="rounded border border-slate-300/10 px-2 py-1 bg-slate-900/60">
                 GxP / FDA 21 CFR
               </span>
             </div>
@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* Products Column */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-ink">
               Platform Modules
             </div>
             <ul className="space-y-2 text-xs">
@@ -74,7 +74,7 @@ export default function Footer() {
 
           {/* Solutions Column */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-ink">
               Industry Solutions
             </div>
             <ul className="space-y-2 text-xs">
@@ -85,7 +85,7 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li className="pt-2 border-t border-white/5">
+              <li className="pt-2 border-t border-slate-300/5">
                 <Link href="/platform" className="hover:text-sky-300 transition flex items-center gap-1 text-sky-400 font-semibold">
                   Autonomous Control Tower <ArrowUpRight className="h-3 w-3" />
                 </Link>
@@ -95,7 +95,7 @@ export default function Footer() {
 
           {/* Company Column */}
           <div className="lg:col-span-2 space-y-3">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-white">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-ink">
               Company
             </div>
             <ul className="space-y-2 text-xs">
@@ -132,16 +132,16 @@ export default function Footer() {
         </div>
 
         {/* Global Offices Strip */}
-        <div className="mt-12 pt-8 border-t border-white/10">
+        <div className="mt-12 pt-8 border-t border-slate-300/10">
           <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-4 flex items-center gap-2">
             <MapPin className="h-3.5 w-3.5 text-sky-400" />
             Global Hubs & Footprint
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
             {COMPANY_INFO.offices.map((office, idx) => (
-              <div key={idx} className="rounded-xl border border-white/5 bg-slate-900/40 p-3.5">
+              <div key={idx} className="rounded-xl border border-slate-300/5 bg-slate-900/40 p-3.5">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-white">{office.city}</span>
+                  <span className="font-bold text-ink">{office.city}</span>
                   <span className="text-[9px] font-mono rounded bg-slate-800 px-1.5 py-0.5 text-sky-400">
                     {office.badge}
                   </span>
@@ -155,7 +155,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="mt-10 pt-6 border-t border-slate-300/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
             <span className="font-mono text-slate-400">All Systems Operational • 99.99% SLA Uptime</span>

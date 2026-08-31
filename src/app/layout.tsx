@@ -47,9 +47,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${plusJakarta.variable} dark scroll-smooth`}
+      className={`${inter.variable} ${plusJakarta.variable} scroll-smooth`}
     >
-      <body className="min-h-screen bg-[#18233f] text-slate-100 antialiased flex flex-col selection:bg-cyan-500/20 selection:text-cyan-300">
+      <body className="min-h-screen bg-white text-slate-300 antialiased flex flex-col selection:bg-sky-400/20 selection:text-ink">
         <Live3DBackground />
         <Navbar />
         <main className="flex-1 relative z-10 pt-20">

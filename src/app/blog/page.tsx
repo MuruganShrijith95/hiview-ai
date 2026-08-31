@@ -78,7 +78,7 @@ export default function BlogPage() {
             <span>Research & Industry Insights</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             Supply Chain AI{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Whitepapers & Thought Leadership
@@ -106,7 +106,7 @@ export default function BlogPage() {
                 <span className="text-xs text-slate-500 font-mono">• {featuredArticle.date}</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-ink leading-tight">
                 {featuredArticle.title}
               </h2>
 
@@ -138,12 +138,12 @@ export default function BlogPage() {
           {otherArticles.map((art, idx) => (
             <GlowCard key={idx} className="p-6 flex flex-col justify-between h-full space-y-4">
               <div>
-                <div className="flex items-center justify-between text-xs text-slate-400 pb-3 border-b border-white/5 font-mono">
+                <div className="flex items-center justify-between text-xs text-slate-400 pb-3 border-b border-slate-300/5 font-mono">
                   <span className="text-sky-400 font-semibold">{art.category}</span>
                   <span>{art.readTime}</span>
                 </div>
 
-                <h3 className="mt-4 text-lg font-bold text-white leading-snug">
+                <h3 className="mt-4 text-lg font-bold text-ink leading-snug">
                   {art.title}
                 </h3>
 
@@ -152,7 +152,7 @@ export default function BlogPage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+              <div className="pt-4 border-t border-slate-300/5 flex items-center justify-between text-xs">
                 <span className="text-slate-500 font-mono">{art.date}</span>
                 <Link href="/demo" className="text-sky-400 hover:text-sky-300 font-bold flex items-center gap-1">
                   <span>Read</span>

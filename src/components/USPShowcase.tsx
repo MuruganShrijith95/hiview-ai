@@ -24,9 +24,9 @@ export default function USPShowcase() {
   const IconComponent = ICONS[activeTab] || Activity;
 
   return (
-    <div className="relative rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/90 via-[#0B0F19]/95 to-[#070A12]/95 p-6 md:p-10 backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_16px_40px_rgba(0,0,0,0.5)]">
+    <div className="relative rounded-3xl border border-slate-300/10 bg-gradient-to-b from-white via-white to-slate-900 p-6 md:p-10 backdrop-blur-2xl shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)]">
       {/* Top USP Tab Switcher */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 pb-8 border-b border-white/10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 pb-8 border-b border-slate-300/10">
         {CORE_USPS.map((usp, idx) => {
           const isSelected = activeTab === idx;
           const TabIcon = ICONS[idx];
@@ -36,8 +36,8 @@ export default function USPShowcase() {
               onClick={() => setActiveTab(idx)}
               className={`group flex items-start gap-3 rounded-2xl p-4 text-left transition-all duration-300 relative ${
                 isSelected
-                  ? "bg-slate-850/95 border border-cyan-400/50 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_8px_24px_rgba(0,240,255,0.15)]"
-                  : "bg-slate-950/60 border border-white/5 hover:bg-slate-900/80 hover:border-white/15"
+                  ? "bg-slate-850/95 border border-cyan-400/50 shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)]"
+                  : "bg-slate-950/60 border border-slate-300/5 hover:bg-slate-900/80 hover:border-slate-300/15"
               }`}
             >
               <div
@@ -53,7 +53,7 @@ export default function USPShowcase() {
                 <div className={`text-[10px] font-mono font-extrabold tracking-wider uppercase transition-colors ${isSelected ? "text-cyan-400" : "text-slate-500"}`}>
                   USP {usp.number}
                 </div>
-                <div className={`mt-0.5 text-xs font-black truncate transition-colors ${isSelected ? "text-white" : "text-slate-300"}`}>
+                <div className={`mt-0.5 text-xs font-black truncate transition-colors ${isSelected ? "text-ink" : "text-slate-300"}`}>
                   {usp.title}
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function USPShowcase() {
                 <span>{currentUsp.badge}</span>
               </div>
 
-              <h3 className="text-2xl font-black text-white sm:text-3xl lg:text-4xl leading-tight">
+              <h3 className="text-2xl font-black text-ink sm:text-3xl lg:text-4xl leading-tight">
                 {currentUsp.headline}
               </h3>
 
@@ -99,7 +99,7 @@ export default function USPShowcase() {
                 {currentUsp.keyPoints.map((point, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-2.5 rounded-xl border border-white/10 bg-slate-950/70 p-3.5 text-xs font-medium text-slate-200 shadow-sm"
+                    className="flex items-start gap-2.5 rounded-xl border border-slate-300/10 bg-slate-950/70 p-3.5 text-xs font-medium text-slate-200 shadow-sm"
                   >
                     <CheckCircle className="h-4 w-4 shrink-0 text-cyan-400 mt-0.5" />
                     <span>{point}</span>
@@ -117,7 +117,7 @@ export default function USPShowcase() {
                 </Link>
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-slate-900/80 px-6 py-3 text-xs font-black text-slate-200 hover:bg-slate-800 hover:text-white transition"
+                  className="inline-flex items-center gap-2 rounded-xl border border-slate-300/15 bg-slate-900/80 px-6 py-3 text-xs font-black text-slate-200 hover:bg-slate-800 hover:text-ink transition"
                 >
                   <span>Request Live Proof</span>
                 </Link>
@@ -126,10 +126,10 @@ export default function USPShowcase() {
 
             {/* Right Visual Metric Card */}
             <div className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-slate-900 via-[#0B0F19] to-slate-950 p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_16px_40px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
+              <div className="relative overflow-hidden rounded-2xl border border-cyan-500/30 bg-gradient-to-br from-white via-slate-900 to-white p-8 shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)] backdrop-blur-2xl">
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-cyan-500/20 blur-2xl pointer-events-none" />
                 
-                <div className="flex items-center justify-between text-xs text-slate-400 pb-4 border-b border-white/10 font-mono font-bold">
+                <div className="flex items-center justify-between text-xs text-slate-400 pb-4 border-b border-slate-300/10 font-mono font-bold">
                   <span>METRIC VERIFICATION</span>
                   <span className="text-cyan-400 font-extrabold">TAG 2026 BENCHMARK</span>
                 </div>
@@ -138,12 +138,12 @@ export default function USPShowcase() {
                   <div className="font-mono text-6xl sm:text-7xl font-black tracking-tight bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">
                     {currentUsp.stat}
                   </div>
-                  <div className="mt-3 text-sm font-bold tracking-wide text-white">
+                  <div className="mt-3 text-sm font-bold tracking-wide text-ink">
                     {currentUsp.statLabel}
                   </div>
                 </div>
 
-                <div className="rounded-xl bg-slate-950/80 p-4 border border-white/10 text-xs text-slate-300 space-y-2.5 font-mono">
+                <div className="rounded-xl bg-slate-950/80 p-4 border border-slate-300/10 text-xs text-slate-300 space-y-2.5 font-mono">
                   <div className="flex items-center justify-between">
                     <span className="text-slate-400">Autonomous Execution SLA</span>
                     <span className="text-cyan-400 font-bold">99.98%</span>

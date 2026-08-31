@@ -17,12 +17,12 @@ export default function ROICalculator() {
   const totalAnnualValue = ((annualSpend * 1000000 * 0.077) + (shipmentsPerMonth * 12 * 8.5 * 0.7)).toLocaleString("en-US", { maximumFractionDigits: 0 });
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-slate-900/60 p-6 md:p-10 backdrop-blur-xl">
+    <div className="rounded-3xl border border-slate-300/10 bg-slate-900/60 p-6 md:p-10 backdrop-blur-xl">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Interactive Sliders */}
         <div className="lg:col-span-6 space-y-6">
           <div>
-            <div className="flex items-center justify-between text-sm font-semibold text-white">
+            <div className="flex items-center justify-between text-sm font-semibold text-ink">
               <span>Annual Freight & Logistics Spend</span>
               <span className="font-mono text-sky-400 font-bold">${annualSpend}M / yr</span>
             </div>
@@ -43,7 +43,7 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <div className="flex items-center justify-between text-sm font-semibold text-white">
+            <div className="flex items-center justify-between text-sm font-semibold text-ink">
               <span>Monthly Shipments / Transactions</span>
               <span className="font-mono text-sky-400 font-bold">{shipmentsPerMonth.toLocaleString()} / mo</span>
             </div>
@@ -64,7 +64,7 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <div className="flex items-center justify-between text-sm font-semibold text-white">
+            <div className="flex items-center justify-between text-sm font-semibold text-ink">
               <span>Operating Distribution Hubs / Plants</span>
               <span className="font-mono text-sky-400 font-bold">{facilitiesCount} Nodes</span>
             </div>
@@ -88,43 +88,43 @@ export default function ROICalculator() {
         {/* Right Calculated ROI Card */}
         <div className="lg:col-span-6">
           <div className="rounded-2xl border border-sky-500/30 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 p-6 md:p-8 shadow-2xl relative overflow-hidden">
-            <div className="flex items-center justify-between text-xs text-slate-400 pb-4 border-b border-white/10 font-mono">
+            <div className="flex items-center justify-between text-xs text-slate-400 pb-4 border-b border-slate-300/10 font-mono">
               <span>ESTIMATED ANNUAL ENTERPRISE ROI</span>
               <span className="text-cyan-400 font-bold">PROVEN RAPID PAYBACK</span>
             </div>
 
             <div className="my-6">
               <div className="text-xs uppercase font-bold text-slate-400">Total Projected Annual Value</div>
-              <div className="mt-1 font-mono text-4xl sm:text-5xl font-extrabold text-white">
+              <div className="mt-1 font-mono text-4xl sm:text-5xl font-extrabold text-ink">
                 <span className="text-sky-400">$</span>{totalAnnualValue}
               </div>
             </div>
 
-            <div className="space-y-3 text-xs border-t border-white/10 pt-4">
+            <div className="space-y-3 text-xs border-t border-slate-300/10 pt-4">
               <div className="flex items-center justify-between">
                 <span className="text-slate-300 flex items-center gap-2">
                   <DollarSign className="h-3.5 w-3.5 text-sky-400" />
                   Detention & Demurrage Averted
                 </span>
-                <span className="font-mono font-bold text-white">${annualDetentionDemurrageCut}</span>
+                <span className="font-mono font-bold text-ink">${annualDetentionDemurrageCut}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-300 flex items-center gap-2">
                   <Clock className="h-3.5 w-3.5 text-amber-400" />
                   EDI & Operations Admin Hours Saved
                 </span>
-                <span className="font-mono font-bold text-white">${annualEDIWorkloadSavings}</span>
+                <span className="font-mono font-bold text-ink">${annualEDIWorkloadSavings}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-300 flex items-center gap-2">
                   <TrendingUp className="h-3.5 w-3.5 text-sky-400" />
                   Working Capital Buffer Unlocked
                 </span>
-                <span className="font-mono font-bold text-white">${workingCapitalFreed}</span>
+                <span className="font-mono font-bold text-ink">${workingCapitalFreed}</span>
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="mt-6 pt-4 border-t border-slate-300/10">
               <Link
                 href="/demo"
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/25 hover:from-sky-400 hover:to-blue-500 transition"

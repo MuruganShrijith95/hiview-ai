@@ -33,7 +33,7 @@ export default function ParticleBackground() {
 
     window.addEventListener("resize", handleResize);
 
-    const colors = ["#38bdf8", "#f59e0b", "#60a5fa", "#0ea5e9"];
+    const colors = ["#38bdf8", "#1d4ed8", "#60a5fa", "#0ea5e9"];
     const nodeCount = Math.min(Math.floor(width / 24), 55);
     const nodes: NodePoint[] = [];
 

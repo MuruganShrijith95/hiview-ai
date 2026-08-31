@@ -44,7 +44,7 @@ export default function ProductsPage() {
             <span>The HiView AI Product Suite</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             Seven Specialized Engines.{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               One Unified Control Tower.
@@ -76,7 +76,7 @@ export default function ProductsPage() {
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-800 text-sky-400 border border-white/10">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-800 text-sky-400 border border-slate-300/10">
                       <IconComponent className="h-6 w-6" />
                     </div>
                     {prod.badge && (
@@ -86,7 +86,7 @@ export default function ProductsPage() {
                     )}
                   </div>
 
-                  <h3 className="mt-6 text-2xl font-bold text-white">
+                  <h3 className="mt-6 text-2xl font-bold text-ink">
                     {prod.name}
                   </h3>
                   <div className="mt-1 text-xs font-semibold text-sky-400">
@@ -97,7 +97,7 @@ export default function ProductsPage() {
                     {prod.description}
                   </p>
 
-                  <div className="mt-6 pt-5 border-t border-white/5 space-y-2.5">
+                  <div className="mt-6 pt-5 border-t border-slate-300/5 space-y-2.5">
                     {prod.features.map((feat, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-xs text-slate-300">
                         <CheckCircle2 className="h-3.5 w-3.5 text-sky-400 shrink-0 mt-0.5" />
@@ -107,7 +107,7 @@ export default function ProductsPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-5 border-t border-white/10 flex items-center justify-between">
+                <div className="mt-8 pt-5 border-t border-slate-300/10 flex items-center justify-between">
                   <div className="text-xs font-mono font-bold text-sky-400">
                     {prod.metrics[0]?.value} {prod.metrics[0]?.label}
                   </div>
@@ -128,7 +128,7 @@ export default function ProductsPage() {
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
             Need a Tailored Multi-Product Deployment?
           </h2>
           <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">

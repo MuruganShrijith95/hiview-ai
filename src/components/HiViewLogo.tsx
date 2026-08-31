@@ -45,7 +45,7 @@ export default function HiViewLogo({
             <linearGradient id="hvGradientPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#38bdf8" />
               <stop offset="50%" stopColor="#0077ff" />
-              <stop offset="100%" stopColor="#f59e0b" />
+              <stop offset="100%" stopColor="#1d4ed8" />
             </linearGradient>
 
             {/* Accent Glowing Gradient */}
@@ -116,7 +116,7 @@ export default function HiViewLogo({
       {/* HiView AI Wordmark */}
       {showWordmark && (
         <div className="flex items-center gap-1.5 font-sans tracking-tight">
-          <div className={`font-extrabold ${currentSize.text} text-white flex items-center`}>
+          <div className={`font-extrabold ${currentSize.text} text-ink flex items-center`}>
             <span>Hi</span>
             <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-slate-100 bg-clip-text text-transparent">
               View

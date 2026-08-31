@@ -32,10 +32,10 @@ interface TelemetryNode {
 }
 
 const MODES: { id: ControlTowerMode; label: string; icon: any; accentColor: string }[] = [
-  { id: "maritime", label: "Global Maritime", icon: Ship, accentColor: "#00f0ff" },
+  { id: "maritime", label: "Global Maritime", icon: Ship, accentColor: "#0284c7" },
   { id: "air", label: "Cold-Chain Air", icon: Plane, accentColor: "#3b82f6" },
-  { id: "ground", label: "Intermodal Freight", icon: Truck, accentColor: "#10b981" },
-  { id: "edifai", label: "EDIFAI Data Neural", icon: Network, accentColor: "#a855f7" }
+  { id: "ground", label: "Intermodal Freight", icon: Truck, accentColor: "#0ea5e9" },
+  { id: "edifai", label: "EDIFAI Data Neural", icon: Network, accentColor: "#1d4ed8" }
 ];
 
 const MODE_TELEMETRY: Record<ControlTowerMode, {
@@ -280,7 +280,7 @@ export default function HeroParallaxTower() {
         </div>
 
         {/* Mode Selector Tabs */}
-        <div className="flex items-center gap-1.5 rounded-2xl border border-white/10 bg-slate-950/80 p-1.5 backdrop-blur-xl shadow-lg">
+        <div className="flex items-center gap-1.5 rounded-2xl border border-slate-300/10 bg-slate-950/80 p-1.5 backdrop-blur-xl shadow-lg">
           {MODES.map((mode) => {
             const isSelected = activeMode === mode.id;
             const Icon = mode.icon;
@@ -294,7 +294,7 @@ export default function HeroParallaxTower() {
                 className={`flex items-center gap-2 rounded-xl px-3 py-1.5 text-xs font-mono font-bold transition-all duration-200 ${
                   isSelected
                     ? "bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/30 font-black"
-                    : "text-slate-400 hover:text-white hover:bg-slate-900/60"
+                    : "text-slate-400 hover:text-ink hover:bg-slate-900/60"
                 }`}
               >
                 <Icon className="h-3.5 w-3.5" />
@@ -326,7 +326,7 @@ export default function HeroParallaxTower() {
             rotateY
           }}
           transition={{ type: "spring", damping: 25, stiffness: 220 }}
-          className="relative overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_20px_60px_rgba(0,0,0,0.8)] aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/10] flex flex-col justify-between p-6 sm:p-8 backdrop-blur-2xl"
+          className="relative overflow-hidden rounded-3xl border border-slate-300/15 bg-slate-950 shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)] aspect-[16/10] sm:aspect-[16/9] md:aspect-[21/10] flex flex-col justify-between p-6 sm:p-8 backdrop-blur-2xl"
         >
           {/* Background High-Res Photographic Asset with Smooth Mode Fade */}
           <AnimatePresence mode="wait">
@@ -359,7 +359,7 @@ export default function HeroParallaxTower() {
                 <Cpu className="h-3 w-3 text-cyan-400" />
                 <span>SENTINEL AI ENGINE • {livePulse}ms LATENCY</span>
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl font-black text-white tracking-tight drop-shadow-md">
+              <h3 className="text-base sm:text-lg md:text-xl font-black text-ink tracking-tight drop-shadow-md">
                 {currentModeData.headline}
               </h3>
               <p className="text-xs text-slate-300 font-medium hidden sm:block leading-relaxed">
@@ -368,7 +368,7 @@ export default function HeroParallaxTower() {
             </div>
 
             {/* Live System Status Widget */}
-            <div className="hidden lg:flex items-center gap-3 rounded-2xl border border-white/15 bg-slate-950/85 p-3 backdrop-blur-xl shadow-xl font-mono text-xs text-left">
+            <div className="hidden lg:flex items-center gap-3 rounded-2xl border border-slate-300/15 bg-slate-950/85 p-3 backdrop-blur-xl shadow-xl font-mono text-xs text-left">
               <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
                 <Globe2 className="h-4 w-4 animate-pulse" />
               </div>
@@ -411,17 +411,17 @@ export default function HeroParallaxTower() {
                     className={`mt-2 min-w-[190px] sm:min-w-[220px] rounded-2xl border bg-slate-950/90 p-3 shadow-2xl backdrop-blur-2xl text-left transition-all duration-200 ${
                       isSelected
                         ? "border-cyan-400 shadow-[0_0_20px_rgba(0,240,255,0.4)] scale-105"
-                        : "border-white/15 hover:border-cyan-500/40"
+                        : "border-slate-300/15 hover:border-cyan-500/40"
                     }`}
                   >
-                    <div className="flex items-center justify-between gap-2 pb-1 border-b border-white/10 font-mono text-[9px] font-bold">
+                    <div className="flex items-center justify-between gap-2 pb-1 border-b border-slate-300/10 font-mono text-[9px] font-bold">
                       <span className="text-slate-400 uppercase tracking-wider truncate">{node.title}</span>
                       <span className="rounded bg-cyan-950 px-1.5 py-0.5 text-cyan-300 border border-cyan-500/30 shrink-0">
                         {node.badge}
                       </span>
                     </div>
 
-                    <div className="mt-1.5 font-mono text-xs font-black text-white">
+                    <div className="mt-1.5 font-mono text-xs font-black text-ink">
                       {node.metric}
                     </div>
 
@@ -435,7 +435,7 @@ export default function HeroParallaxTower() {
           </div>
 
           {/* Bottom Live Metrics Cockpit Strip */}
-          <div className="relative z-20 grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-white/10 bg-slate-950/80 -mx-6 -mb-6 sm:-mx-8 sm:-mb-8 p-4 sm:p-5 backdrop-blur-xl text-left">
+          <div className="relative z-20 grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-slate-300/10 bg-slate-950/80 -mx-6 -mb-6 sm:-mx-8 sm:-mb-8 p-4 sm:p-5 backdrop-blur-xl text-left">
             {currentModeData.liveStats.map((stat, i) => (
               <div key={i} className="space-y-0.5">
                 <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400">

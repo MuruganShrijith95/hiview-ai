@@ -137,7 +137,7 @@ export default function SolutionsPage() {
             <span>Tailored Enterprise Solutions</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             Engineered For Your Industry&apos;s{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Specific Supply Chain Vulnerabilities
@@ -153,7 +153,7 @@ export default function SolutionsPage() {
       {/* Industry Tabs Selector & Deep Dive */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Horizontal Industry Switcher */}
-        <div className="flex flex-wrap items-center justify-center gap-3 pb-8 border-b border-white/10">
+        <div className="flex flex-wrap items-center justify-center gap-3 pb-8 border-b border-slate-300/10">
           {detailedIndustries.map((ind) => {
             const isSelected = activeTab === ind.id;
             const TabIcon = icons[ind.id] || Factory;
@@ -164,7 +164,7 @@ export default function SolutionsPage() {
                 className={`flex items-center gap-2.5 rounded-2xl px-5 py-3 text-xs font-bold transition-all duration-300 ${
                   isSelected
                     ? "bg-sky-500 text-slate-950 shadow-lg shadow-sky-500/25"
-                    : "bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-white border border-white/5"
+                    : "bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-ink border border-slate-300/5"
                 }`}
               >
                 <TabIcon className="h-4 w-4" />
@@ -187,14 +187,14 @@ export default function SolutionsPage() {
             >
               {/* Main Headline & Description */}
               <div className="rounded-3xl border border-sky-500/30 bg-slate-900/80 p-8 sm:p-12 backdrop-blur-2xl shadow-2xl">
-                <div className="flex items-center gap-3 text-sky-400 pb-4 border-b border-white/10">
+                <div className="flex items-center gap-3 text-sky-400 pb-4 border-b border-slate-300/10">
                   <IconComponent className="h-6 w-6" />
                   <span className="text-xs font-mono font-bold uppercase tracking-wider">
                     {currentInd.name} Solution Blueprint
                   </span>
                 </div>
 
-                <h2 className="mt-5 text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                <h2 className="mt-5 text-2xl sm:text-3xl font-extrabold text-ink leading-tight">
                   {currentInd.headline}
                 </h2>
 
@@ -203,14 +203,14 @@ export default function SolutionsPage() {
                 </p>
 
                 {/* Hard Metrics */}
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 rounded-2xl border border-white/10 bg-slate-950/60 p-6">
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 rounded-2xl border border-slate-300/10 bg-slate-950/60 p-6">
                   {currentInd.stats.map((st, i) => (
                     <StatsCounter key={i} value={st.value} label={st.label} />
                   ))}
                 </div>
 
                 {/* Specific Capabilities Delivered */}
-                <div className="mt-10 pt-8 border-t border-white/10">
+                <div className="mt-10 pt-8 border-t border-slate-300/10">
                   <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-4">
                     Enterprise Capabilities Delivered
                   </div>
@@ -218,7 +218,7 @@ export default function SolutionsPage() {
                     {currentInd.solutionsProvided.map((sol, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-3 rounded-xl border border-white/5 bg-slate-950/40 p-4 text-xs text-slate-200"
+                        className="flex items-start gap-3 rounded-xl border border-slate-300/5 bg-slate-950/40 p-4 text-xs text-slate-200"
                       >
                         <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
                         <span>{sol}</span>
@@ -228,7 +228,7 @@ export default function SolutionsPage() {
                 </div>
 
                 {/* Action CTA */}
-                <div className="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+                <div className="mt-10 pt-6 border-t border-slate-300/10 flex flex-wrap items-center justify-between gap-4">
                   <div className="text-xs text-slate-400 flex items-center gap-2">
                     <ShieldCheck className="h-4 w-4 text-sky-400" />
                     <span>Includes industry-specific pre-built connectors & compliance presets.</span>
@@ -250,7 +250,7 @@ export default function SolutionsPage() {
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
             Don&apos;t See Your Exact Vertical?
           </h2>
           <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">

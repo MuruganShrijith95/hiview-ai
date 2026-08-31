@@ -130,7 +130,7 @@ export default function PlatformPage() {
             <span>The Autonomous Control Tower 2.0</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             The 5-Layer Architecture of an{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Intelligent Execution Network
@@ -165,7 +165,7 @@ export default function PlatformPage() {
                   className={`w-full flex items-start gap-4 rounded-2xl p-5 text-left transition-all duration-300 relative ${
                     isSelected
                       ? "bg-slate-900 border border-sky-500/50 shadow-xl shadow-sky-500/10"
-                      : "bg-slate-950/50 border border-white/5 hover:bg-slate-900/60 hover:border-white/15"
+                      : "bg-slate-950/50 border border-slate-300/5 hover:bg-slate-900/60 hover:border-slate-300/15"
                   }`}
                 >
                   <div
@@ -187,7 +187,7 @@ export default function PlatformPage() {
                         {layer.metrics}
                       </span>
                     </div>
-                    <div className={`mt-1 text-sm font-bold truncate ${isSelected ? "text-white" : "text-slate-300"}`}>
+                    <div className={`mt-1 text-sm font-bold truncate ${isSelected ? "text-ink" : "text-slate-300"}`}>
                       {layer.name}
                     </div>
                   </div>
@@ -207,7 +207,7 @@ export default function PlatformPage() {
                 transition={{ duration: 0.3 }}
                 className="rounded-3xl border border-sky-500/30 bg-slate-900/80 p-8 backdrop-blur-2xl shadow-2xl relative overflow-hidden"
               >
-                <div className="flex items-center justify-between pb-4 border-b border-white/10">
+                <div className="flex items-center justify-between pb-4 border-b border-slate-300/10">
                   <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/50 px-3 py-1 text-xs font-semibold text-sky-300">
                     <span>{activeLayer.badge}</span>
                   </div>
@@ -216,7 +216,7 @@ export default function PlatformPage() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-2xl font-bold text-white leading-snug">
+                <h3 className="mt-5 text-2xl font-bold text-ink leading-snug">
                   {activeLayer.headline}
                 </h3>
 
@@ -224,7 +224,7 @@ export default function PlatformPage() {
                   {activeLayer.description}
                 </p>
 
-                <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
+                <div className="mt-6 pt-6 border-t border-slate-300/10 space-y-3">
                   <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
                     Core Technical Components & Protocols
                   </div>
@@ -232,7 +232,7 @@ export default function PlatformPage() {
                     {activeLayer.techComponents.map((comp, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-2.5 rounded-xl border border-white/5 bg-slate-950/60 p-3 text-xs text-slate-200"
+                        className="flex items-start gap-2.5 rounded-xl border border-slate-300/5 bg-slate-950/60 p-3 text-xs text-slate-200"
                       >
                         <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
                         <span>{comp}</span>
@@ -241,7 +241,7 @@ export default function PlatformPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+                <div className="mt-8 pt-6 border-t border-slate-300/10 flex items-center justify-between">
                   <span className="text-xs text-slate-400">
                     Protected by Multi-Tier Security
                   </span>
@@ -261,14 +261,14 @@ export default function PlatformPage() {
 
       {/* Natural Language Policy Engine Showcase */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-8 sm:p-12 backdrop-blur-xl">
+        <div className="rounded-3xl border border-slate-300/10 bg-slate-950/80 p-8 sm:p-12 backdrop-blur-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6 space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-950/50 px-3 py-1 text-xs font-semibold text-amber-300">
                 <Terminal className="h-3.5 w-3.5" />
                 <span>Natural Language Policy Engine</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-ink">
                 Create Complex Supply Chain Rules in Plain English
               </h2>
               <p className="text-sm leading-relaxed text-slate-300">
@@ -288,7 +288,7 @@ export default function PlatformPage() {
 
             <div className="lg:col-span-6">
               <div className="rounded-2xl border border-amber-500/30 bg-slate-900/90 p-6 font-mono text-xs shadow-2xl space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-white/10 text-slate-400">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-300/10 text-slate-400">
                   <span className="flex items-center gap-2">
                     <span className="h-2.5 w-2.5 rounded-full bg-amber-400 animate-pulse" />
                     POLICY EDITOR
@@ -301,7 +301,7 @@ export default function PlatformPage() {
                   &quot;If an ocean container dwell at Port of Long Beach exceeds 48 hours and contains tier-1 automotive components, notify the logistics broker, reserve priority team-driver drayage, and expedite Inland Rail delivery.&quot;
                 </div>
 
-                <div className="rounded-xl bg-slate-950 p-4 border border-white/5 text-slate-300 space-y-1.5 text-[11px]">
+                <div className="rounded-xl bg-slate-950 p-4 border border-slate-300/5 text-slate-300 space-y-1.5 text-[11px]">
                   <div className="text-sky-400 font-bold">✓ COMPILED INTO 3 AUTOMATED EVENT AGENTS:</div>
                   <div>• Event Trigger: AIS Port Dwell &gt; 48.0 hrs on BOM Class &apos;Tier-1&apos;</div>
                   <div>• Action 1: Dispatched API Webhook to Drayage Partner #CH-9912</div>
@@ -330,7 +330,7 @@ export default function PlatformPage() {
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
             Ready to Experience the Autonomous Platform?
           </h2>
           <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">

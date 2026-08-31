@@ -83,7 +83,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mx-auto max-w-5xl text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1]"
+            className="mx-auto max-w-5xl text-4xl font-black tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1]"
           >
             One Intelligent Platform.{" "}
             <span className="block mt-2 bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">
@@ -118,7 +118,7 @@ export default function HomePage() {
 
             <Link
               href="#simulator"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-slate-900/80 px-8 py-4 text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-white hover:border-cyan-500/30 transition-all duration-200 backdrop-blur-xl"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-300/15 bg-slate-900/80 px-8 py-4 text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-ink hover:border-cyan-500/30 transition-all duration-200 backdrop-blur-xl"
             >
               <Play className="h-4 w-4 text-cyan-400 fill-cyan-400" />
               <span>Try Interactive Simulator</span>
@@ -146,7 +146,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 rounded-3xl border border-white/10 bg-slate-950/60 p-6 md:p-8 backdrop-blur-2xl shadow-2xl"
+            className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 rounded-3xl border border-slate-300/10 bg-slate-950/60 p-6 md:p-8 backdrop-blur-2xl shadow-2xl"
           >
             <StatsCounter value="70%" label="EDI Workload Reduction" sublabel="Autonomous self-healing" />
             <StatsCounter value="95%+" label="Prediction Accuracy" sublabel="Neural transit models" />
@@ -178,14 +178,14 @@ export default function HomePage() {
               <div className="mt-6 text-[10px] font-mono font-bold uppercase tracking-wider text-cyan-400">
                 DECISIVE INTELLIGENCE
               </div>
-              <h3 className="mt-2 text-xl font-black text-white tracking-tight">
+              <h3 className="mt-2 text-xl font-black text-ink tracking-tight">
                 Where Data Meets Decisions
               </h3>
               <p className="mt-4 text-xs sm:text-sm leading-relaxed text-slate-300">
                 Data is everywhere—knowing what to do with it is what protects your margins. HiView transforms fragmented operational data into connected intelligence, helping businesses understand their operations, identify what matters, and take the right action at the right time.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-mono font-bold text-cyan-300">
+            <div className="mt-6 pt-4 border-t border-slate-300/10 flex items-center gap-2 text-xs font-mono font-bold text-cyan-300">
               <CheckCircle2 className="h-4 w-4 text-cyan-400" />
               <span>Right Action • Right Time</span>
             </div>
@@ -200,14 +200,14 @@ export default function HomePage() {
               <div className="mt-6 text-[10px] font-mono font-bold uppercase tracking-wider text-sky-400">
                 PREDICTIVE OUTCOMES
               </div>
-              <h3 className="mt-2 text-xl font-black text-white tracking-tight">
+              <h3 className="mt-2 text-xl font-black text-ink tracking-tight">
                 Think Beyond Data
               </h3>
               <p className="mt-4 text-xs sm:text-sm leading-relaxed text-slate-300">
                 Data tells you what is happening. HiView helps you understand why it matters and what to do next. By connecting business data with AI, processes, and people, we turn information into intelligent action before disruptions cascade.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-mono font-bold text-sky-300">
+            <div className="mt-6 pt-4 border-t border-slate-300/10 flex items-center gap-2 text-xs font-mono font-bold text-sky-300">
               <CheckCircle2 className="h-4 w-4 text-sky-400" />
               <span>Contextual Root Cause • Next Move</span>
             </div>
@@ -222,14 +222,14 @@ export default function HomePage() {
               <div className="mt-6 text-[10px] font-mono font-bold uppercase tracking-wider text-blue-400">
                 UNIFIED OPERATIONS
               </div>
-              <h3 className="mt-2 text-xl font-black text-white tracking-tight">
+              <h3 className="mt-2 text-xl font-black text-ink tracking-tight">
                 Connect the Dots. See the Difference.
               </h3>
               <p className="mt-4 text-xs sm:text-sm leading-relaxed text-slate-300">
                 HiView connects data, systems, processes, and people to create a complete 360° view of your operations. With intelligent automation and AI-powered insights, we help businesses identify opportunities and act with total confidence.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-mono font-bold text-blue-300">
+            <div className="mt-6 pt-4 border-t border-slate-300/10 flex items-center gap-2 text-xs font-mono font-bold text-blue-300">
               <CheckCircle2 className="h-4 w-4 text-blue-400" />
               <span>360° Operations • Flawless Execution</span>
             </div>
@@ -346,14 +346,14 @@ export default function HomePage() {
               <GlowCard key={prod.id} className="group flex flex-col justify-between h-full p-6">
                 <div>
                   {/* Crisp Product Photo Frame */}
-                  <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden rounded-t-2xl border-b border-white/10 bg-slate-950">
+                  <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden rounded-t-2xl border-b border-slate-300/10 bg-slate-950">
                     <img
                       src={prod.image}
                       alt={`${prod.name} — ${prod.tagline}`}
                       loading="lazy"
                       className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 filter brightness-95 contrast-110"
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0B0F19] via-[#0B0F19]/40 to-transparent" />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
                     
                     {/* Floating live badge */}
                     <div className="absolute top-3 right-3">
@@ -373,7 +373,7 @@ export default function HomePage() {
                     </span>
                   </div>
 
-                  <h3 className="mt-4 text-xl font-black tracking-tight text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="mt-4 text-xl font-black tracking-tight text-ink group-hover:text-cyan-300 transition-colors">
                     {prod.name}
                   </h3>
                   <div className="mt-1 text-xs font-bold text-cyan-400 font-mono tracking-tight">
@@ -384,7 +384,7 @@ export default function HomePage() {
                     {prod.description}
                   </p>
 
-                  <div className="mt-5 pt-4 border-t border-white/10 space-y-2">
+                  <div className="mt-5 pt-4 border-t border-slate-300/10 space-y-2">
                     {prod.features.slice(0, 3).map((feat, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-slate-200">
                         <CheckCircle2 className="h-3.5 w-3.5 text-cyan-400 shrink-0 mt-0.5" />
@@ -394,7 +394,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                <div className="mt-6 pt-4 border-t border-slate-300/10 flex items-center justify-between">
                   <div className="rounded-lg bg-cyan-950/60 px-2.5 py-1 text-[11px] font-mono font-black text-cyan-300 border border-cyan-500/30 shadow-sm">
                     {prod.metrics[0]?.value} {prod.metrics[0]?.label}
                   </div>
@@ -442,14 +442,14 @@ export default function HomePage() {
 
       {/* 8. GLOBAL RECOGNITION & TRUST STRIP */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-8 md:p-12 backdrop-blur-xl relative overflow-hidden">
+        <div className="rounded-3xl border border-slate-300/10 bg-slate-950/80 p-8 md:p-12 backdrop-blur-xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/50 px-3 py-1 text-xs font-semibold text-sky-300">
                 <Award className="h-4 w-4 text-sky-400" />
                 <span>Industry Recognition</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-ink">
                 Recognized Among Georgia&apos;s Top 40 Most Innovative Tech Companies (TAG 2026)
               </h3>
               <p className="text-sm leading-relaxed text-slate-300 max-w-2xl">
@@ -465,7 +465,7 @@ export default function HomePage() {
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
               <Link
                 href="/about"
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 border border-white/15 px-6 py-3.5 text-xs font-bold text-white hover:bg-slate-800 transition text-center"
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 border border-slate-300/15 px-6 py-3.5 text-xs font-bold text-ink hover:bg-slate-800 transition text-center"
               >
                 Meet Executive Leadership & Team
               </Link>
@@ -492,7 +492,7 @@ export default function HomePage() {
               <span>Ready to Transform Your Supply Chain?</span>
             </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink tracking-tight">
               See HiView AI In Action With Your Own Data
             </h2>
 
@@ -510,7 +510,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-slate-900/80 px-8 py-4 text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-white transition"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-300/15 bg-slate-900/80 px-8 py-4 text-sm font-bold text-slate-200 hover:bg-slate-800 hover:text-ink transition"
               >
                 <span>Contact Global Sales Team</span>
               </Link>

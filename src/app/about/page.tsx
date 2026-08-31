@@ -37,7 +37,7 @@ export default function AboutPage() {
             <span>Built by Supply Chain Veterans. Powered by AI Researchers.</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             Architecting The Decision Infrastructure For{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Autonomous Supply Chains
@@ -75,7 +75,7 @@ export default function AboutPage() {
             <div className="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">
               Our Core Mission
             </div>
-            <h3 className="text-2xl font-bold text-white">
+            <h3 className="text-2xl font-bold text-ink">
               Precision Decision Infrastructure
             </h3>
             <p className="text-sm leading-relaxed text-slate-300">
@@ -90,7 +90,7 @@ export default function AboutPage() {
             <div className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
               Our Long-Term Vision
             </div>
-            <h3 className="text-2xl font-bold text-white">
+            <h3 className="text-2xl font-bold text-ink">
               Intelligent Execution Networks
             </h3>
             <p className="text-sm leading-relaxed text-slate-300">
@@ -102,14 +102,14 @@ export default function AboutPage() {
 
       {/* Founding Story & TAG Award */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-8 sm:p-12 backdrop-blur-xl">
+        <div className="rounded-3xl border border-slate-300/10 bg-slate-950/80 p-8 sm:p-12 backdrop-blur-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/50 px-3.5 py-1 text-xs font-semibold text-sky-300">
                 <Award className="h-4 w-4 text-sky-400" />
                 <span>TAG 2026 Top 40 Tech Innovator</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-ink">
                 The Story Behind HiView AI
               </h2>
               <p className="text-sm leading-relaxed text-slate-300">
@@ -124,7 +124,7 @@ export default function AboutPage() {
               <div className="font-mono text-5xl font-extrabold text-sky-400">
                 2026
               </div>
-              <div className="text-xs uppercase font-bold text-white tracking-wider">
+              <div className="text-xs uppercase font-bold text-ink tracking-wider">
                 Top 40 Innovative Companies Award
               </div>
               <p className="text-xs text-slate-400">
@@ -162,7 +162,7 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white">
+                <h3 className="text-xl font-bold text-ink">
                   {leader.name}
                 </h3>
                 <div className="text-xs font-semibold text-sky-400 mt-0.5">
@@ -197,14 +197,14 @@ export default function AboutPage() {
                 <Globe2 className="h-4 w-4 text-slate-500" />
               </div>
 
-              <h4 className="mt-4 text-lg font-bold text-white">
+              <h4 className="mt-4 text-lg font-bold text-ink">
                 {office.city}
               </h4>
               <div className="text-xs text-slate-400 font-medium mt-0.5">
                 {office.region}
               </div>
 
-              <div className="mt-3 text-xs text-slate-300 border-t border-white/5 pt-3">
+              <div className="mt-3 text-xs text-slate-300 border-t border-slate-300/5 pt-3">
                 <strong className="text-slate-400 block text-[11px] uppercase">Focus:</strong>
                 {office.focus}
               </div>
@@ -220,7 +220,7 @@ export default function AboutPage() {
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
             Join the Next Evolution of Supply Chain Intelligence
           </h2>
           <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">
@@ -236,7 +236,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/careers"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-slate-900 px-6 py-3 text-xs font-bold text-slate-300 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-300/10 bg-slate-900 px-6 py-3 text-xs font-bold text-slate-300 hover:text-ink"
             >
               <span>Explore Open Careers</span>
             </Link>

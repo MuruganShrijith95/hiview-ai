@@ -92,7 +92,7 @@ export default function CareersPage() {
             <span>Join Our Global Team</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             Build The Future Of{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Autonomous Logistics AI
@@ -119,7 +119,7 @@ export default function CareersPage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-sky-400">
               <Zap className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-white">Innovation First</h4>
+            <h4 className="text-base font-bold text-ink">Innovation First</h4>
             <p className="text-xs text-slate-300 leading-relaxed">
               We apply bleeding-edge transformer models and agentic workflows to industries historically neglected by modern technology.
             </p>
@@ -129,7 +129,7 @@ export default function CareersPage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400">
               <Sparkles className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-white">Execution Over Talk</h4>
+            <h4 className="text-base font-bold text-ink">Execution Over Talk</h4>
             <p className="text-xs text-slate-300 leading-relaxed">
               We measure our platform not by vanity dashboard metrics, but by hard millions saved in detention, spoilage, and downtime.
             </p>
@@ -139,7 +139,7 @@ export default function CareersPage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-sky-400">
               <Heart className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-white">Customer Obsession</h4>
+            <h4 className="text-base font-bold text-ink">Customer Obsession</h4>
             <p className="text-xs text-slate-300 leading-relaxed">
               We build alongside supply chain operators on the warehouse floor and logistics managers in dispatch control towers.
             </p>
@@ -149,7 +149,7 @@ export default function CareersPage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400">
               <Globe2 className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-white">Global Collaboration</h4>
+            <h4 className="text-base font-bold text-ink">Global Collaboration</h4>
             <p className="text-xs text-slate-300 leading-relaxed">
               Seamlessly operating across Atlanta HQ, Dubai, and our R&D centers in Coimbatore and Bhubaneswar.
             </p>
@@ -167,7 +167,7 @@ export default function CareersPage() {
         />
 
         {/* Filter Pills */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 pb-6 border-b border-white/10">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 pb-6 border-b border-slate-300/10">
           {departments.map((dept) => (
             <button
               key={dept}
@@ -175,7 +175,7 @@ export default function CareersPage() {
               className={`rounded-xl px-4 py-2 text-xs font-semibold transition ${
                 selectedDept === dept
                   ? "bg-sky-500 text-slate-950 font-bold"
-                  : "bg-slate-900 text-slate-400 hover:text-white border border-white/5"
+                  : "bg-slate-900 text-slate-400 hover:text-ink border border-slate-300/5"
               }`}
             >
               {dept}
@@ -189,7 +189,7 @@ export default function CareersPage() {
             <GlowCard key={idx} className="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h4 className="text-base font-bold text-white">{role.title}</h4>
+                  <h4 className="text-base font-bold text-ink">{role.title}</h4>
                   <span className="rounded bg-sky-950 px-2 py-0.5 text-[10px] font-mono text-sky-300 border border-sky-500/30">
                     {role.type}
                   </span>

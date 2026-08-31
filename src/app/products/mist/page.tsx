@@ -35,7 +35,7 @@ export default function MistProductPage() {
             <span>Multi-Echelon Inventory Optimization</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             {product.detailedContent.heroTitle}
           </h1>
 
@@ -69,7 +69,7 @@ export default function MistProductPage() {
             />
           </div>
 
-          <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 rounded-3xl border border-white/10 bg-slate-950/60 p-6 backdrop-blur-2xl">
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 rounded-3xl border border-slate-300/10 bg-slate-950/60 p-6 backdrop-blur-2xl">
             {product.metrics.map((m, i) => (
               <StatsCounter key={i} value={m.value} label={m.label} />
             ))}
@@ -84,7 +84,7 @@ export default function MistProductPage() {
             <div className="text-xs font-mono font-bold uppercase tracking-wider text-rose-400">
               The Inventory Dilemma
             </div>
-            <h3 className="mt-2 text-2xl font-bold text-white">
+            <h3 className="mt-2 text-2xl font-bold text-ink">
               Trapped Capital & Chronic Stockouts
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-slate-300">
@@ -96,7 +96,7 @@ export default function MistProductPage() {
             <div className="text-xs font-mono font-bold uppercase tracking-wider text-amber-300">
               The MIST Neural Engine
             </div>
-            <h3 className="mt-2 text-2xl font-bold text-white">
+            <h3 className="mt-2 text-2xl font-bold text-ink">
               Dynamic Safety Stock & Multi-Echelon Rebalancing
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-slate-200">
@@ -121,7 +121,7 @@ export default function MistProductPage() {
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400 border border-amber-500/30">
                 <Sliders className="h-5 w-5" />
               </div>
-              <h4 className="text-lg font-bold text-white">{cap.title}</h4>
+              <h4 className="text-lg font-bold text-ink">{cap.title}</h4>
               <p className="text-xs leading-relaxed text-slate-300">{cap.desc}</p>
             </GlowCard>
           ))}
@@ -139,11 +139,11 @@ export default function MistProductPage() {
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {product.detailedContent.workflowSteps.map((ws, i) => (
-            <div key={i} className="rounded-2xl border border-white/10 bg-slate-900/40 p-6 relative">
+            <div key={i} className="rounded-2xl border border-slate-300/10 bg-slate-900/40 p-6 relative">
               <div className="font-mono text-3xl font-extrabold text-amber-400/40">
                 {ws.step}
               </div>
-              <h5 className="mt-3 text-sm font-bold text-white">{ws.title}</h5>
+              <h5 className="mt-3 text-sm font-bold text-ink">{ws.title}</h5>
               <p className="mt-2 text-xs leading-relaxed text-slate-400">{ws.detail}</p>
             </div>
           ))}
@@ -153,7 +153,7 @@ export default function MistProductPage() {
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-amber-500/30 bg-gradient-to-r from-amber-950/50 via-slate-950/80 to-orange-950/50 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
             Unlock Millions in Trapped Working Capital
           </h2>
           <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">

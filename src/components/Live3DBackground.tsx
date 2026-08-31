@@ -12,7 +12,7 @@ export default function Live3DBackground() {
 
     // 1. Scene, Camera, Renderer
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x18233f, 0.0007);
+    scene.fog = new THREE.FogExp2(0xffffff, 0.0009);
 
     const camera = new THREE.PerspectiveCamera(
       60,
@@ -30,7 +30,7 @@ export default function Live3DBackground() {
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setClearColor(0x18233f, 0);
+    renderer.setClearColor(0xffffff, 0);
     container.appendChild(renderer.domElement);
 
     // 2. Global Logistics Holographic 3D Globe with Trade Arcs
@@ -41,10 +41,10 @@ export default function Live3DBackground() {
     // Globe Core Sphere Wireframe
     const globeGeometry = new THREE.SphereGeometry(180, 36, 36);
     const globeMaterial = new THREE.MeshBasicMaterial({
-      color: 0x00f0ff,
+      color: 0x0284c7,
       wireframe: true,
       transparent: true,
-      opacity: 0.3
+      opacity: 0.22
     });
     const globeMesh = new THREE.Mesh(globeGeometry, globeMaterial);
     globeGroup.add(globeMesh);
@@ -52,9 +52,9 @@ export default function Live3DBackground() {
     // Inner Glow Sphere
     const innerGeo = new THREE.SphereGeometry(175, 24, 24);
     const innerMat = new THREE.MeshBasicMaterial({
-      color: 0x061a33,
+      color: 0xdbeafe,
       transparent: true,
-      opacity: 0.45
+      opacity: 0.55
     });
     const innerMesh = new THREE.Mesh(innerGeo, innerMat);
     globeGroup.add(innerMesh);
@@ -81,17 +81,17 @@ export default function Live3DBackground() {
 
       // Color variation (Cyan to Gold to Electric Blue)
       if (i % 4 === 0) {
-        globeColors[i * 3] = 0.0; // R
-        globeColors[i * 3 + 1] = 0.94; // G
-        globeColors[i * 3 + 2] = 1.0; // B (Cyan)
+        globeColors[i * 3] = 0.01; // R
+        globeColors[i * 3 + 1] = 0.52; // G
+        globeColors[i * 3 + 2] = 0.78; // B (Sky 600)
       } else if (i % 6 === 0) {
-        globeColors[i * 3] = 0.96; // R
-        globeColors[i * 3 + 1] = 0.62; // G
-        globeColors[i * 3 + 2] = 0.04; // B (Amber/Gold)
+        globeColors[i * 3] = 0.11; // R
+        globeColors[i * 3 + 1] = 0.31; // G
+        globeColors[i * 3 + 2] = 0.85; // B (Blue 700)
       } else {
-        globeColors[i * 3] = 0.23; // R
-        globeColors[i * 3 + 1] = 0.55; // G
-        globeColors[i * 3 + 2] = 0.98; // B (Blue)
+        globeColors[i * 3] = 0.38; // R
+        globeColors[i * 3 + 1] = 0.65; // G
+        globeColors[i * 3 + 2] = 0.98; // B (Blue 400)
       }
     }
 
@@ -100,10 +100,10 @@ export default function Live3DBackground() {
     globeParticleGeo.setAttribute("color", new THREE.BufferAttribute(globeColors, 3));
 
     const globeParticleMat = new THREE.PointsMaterial({
-      size: 4.6,
+      size: 3.6,
       vertexColors: true,
       transparent: true,
-      opacity: 1.0
+      opacity: 0.8
     });
     const globePoints = new THREE.Points(globeParticleGeo, globeParticleMat);
     globeGroup.add(globePoints);
@@ -135,9 +135,9 @@ export default function Live3DBackground() {
       const curveGeo = new THREE.BufferGeometry().setFromPoints(points);
 
       const curveMat = new THREE.LineBasicMaterial({
-        color: k % 2 === 0 ? 0x00f0ff : 0xf59e0b,
+        color: k % 2 === 0 ? 0x0284c7 : 0x1d4ed8,
         transparent: true,
-        opacity: 0.65 + Math.random() * 0.35
+        opacity: 0.32 + Math.random() * 0.22
       });
 
       const line = new THREE.Line(curveGeo, curveMat);
@@ -161,9 +161,9 @@ export default function Live3DBackground() {
 
         // Gradient coloring
         const ratio = iy / waveRows;
-        waveColors[index] = 0.0 + ratio * 0.1;
-        waveColors[index + 1] = 0.5 + ratio * 0.45;
-        waveColors[index + 2] = 0.9 + ratio * 0.1;
+        waveColors[index] = 0.05 + ratio * 0.2;
+        waveColors[index + 1] = 0.45 - ratio * 0.14;
+        waveColors[index + 2] = 0.85 - ratio * 0.03;
       }
     }
 
@@ -172,10 +172,10 @@ export default function Live3DBackground() {
     waveGeometry.setAttribute("color", new THREE.BufferAttribute(waveColors, 3));
 
     const waveMaterial = new THREE.PointsMaterial({
-      size: 3.8,
+      size: 2.8,
       vertexColors: true,
       transparent: true,
-      opacity: 0.85
+      opacity: 0.5
     });
 
     const wavePoints = new THREE.Points(waveGeometry, waveMaterial);
@@ -188,10 +188,10 @@ export default function Live3DBackground() {
 
     for (let c = 0; c < cubeCount; c++) {
       const cubeMat = new THREE.MeshBasicMaterial({
-        color: c % 3 === 0 ? 0x00f0ff : c % 3 === 1 ? 0xa855f7 : 0x10b981,
+        color: c % 3 === 0 ? 0x0284c7 : c % 3 === 1 ? 0x1d4ed8 : 0x60a5fa,
         wireframe: true,
         transparent: true,
-        opacity: 0.6 + Math.random() * 0.35
+        opacity: 0.3 + Math.random() * 0.25
       });
       const cube = new THREE.Mesh(cubeGeo, cubeMat);
 
@@ -308,7 +308,7 @@ export default function Live3DBackground() {
   return (
     <div
       ref={containerRef}
-      className="pointer-events-none fixed inset-0 z-0 overflow-hidden opacity-100"
+      className="pointer-events-none fixed inset-0 z-0 overflow-hidden opacity-90"
     />
   );
 }

@@ -43,7 +43,7 @@ export default function ContactPage() {
             <span>Global Presence & Support</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             Connect With Our Global{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Supply Chain Team
@@ -63,23 +63,23 @@ export default function ContactPage() {
           <div className="lg:col-span-6 space-y-6">
             {/* Quick Contact Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-5 backdrop-blur-xl">
+              <div className="rounded-2xl border border-slate-300/10 bg-slate-900/60 p-5 backdrop-blur-xl">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-sky-400 mb-3">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div className="text-[11px] font-mono uppercase font-bold text-slate-400">Direct Inquiries</div>
-                <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-sm font-bold text-white hover:text-sky-400 transition block mt-0.5">
+                <a href={`mailto:${COMPANY_INFO.contact.email}`} className="text-sm font-bold text-ink hover:text-sky-400 transition block mt-0.5">
                   {COMPANY_INFO.contact.email}
                 </a>
                 <div className="text-[11px] text-slate-500 mt-1">Average response &lt; 2 hrs</div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-5 backdrop-blur-xl">
+              <div className="rounded-2xl border border-slate-300/10 bg-slate-900/60 p-5 backdrop-blur-xl">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400 mb-3">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div className="text-[11px] font-mono uppercase font-bold text-slate-400">Phone Support</div>
-                <a href={`tel:${COMPANY_INFO.contact.phone}`} className="text-sm font-bold text-white hover:text-amber-400 transition block mt-0.5 font-mono">
+                <a href={`tel:${COMPANY_INFO.contact.phone}`} className="text-sm font-bold text-ink hover:text-amber-400 transition block mt-0.5 font-mono">
                   {COMPANY_INFO.contact.phoneDisplay}
                 </a>
                 <div className="text-[11px] text-slate-500 mt-1">{COMPANY_INFO.contact.phone}</div>
@@ -87,8 +87,8 @@ export default function ContactPage() {
             </div>
 
             {/* Direct Message Form */}
-            <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-8 backdrop-blur-xl shadow-2xl">
-              <h3 className="text-xl font-bold text-white mb-1">
+            <div className="rounded-3xl border border-slate-300/10 bg-slate-950/80 p-8 backdrop-blur-xl shadow-2xl">
+              <h3 className="text-xl font-bold text-ink mb-1">
                 Send Us A Message
               </h3>
               <p className="text-xs text-slate-400 mb-6">
@@ -100,7 +100,7 @@ export default function ContactPage() {
                   <div className="flex h-12 w-12 mx-auto items-center justify-center rounded-full bg-sky-500/20 text-sky-400">
                     <CheckCircle2 className="h-6 w-6" />
                   </div>
-                  <h4 className="text-lg font-bold text-white">Message Sent Successfully</h4>
+                  <h4 className="text-lg font-bold text-ink">Message Sent Successfully</h4>
                   <p className="text-xs text-slate-300">
                     Thank you, {formData.name}. Our enterprise logistics specialists will respond shortly.
                   </p>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Alex Morgan"
-                      className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                      className="w-full rounded-xl border border-slate-300/10 bg-slate-900 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                     />
                   </div>
 
@@ -127,7 +127,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="a.morgan@company.com"
-                      className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                      className="w-full rounded-xl border border-slate-300/10 bg-slate-900 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                     />
                   </div>
 
@@ -136,7 +136,7 @@ export default function ContactPage() {
                     <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-2.5 text-xs text-white focus:border-sky-400 focus:outline-none"
+                      className="w-full rounded-xl border border-slate-300/10 bg-slate-900 px-4 py-2.5 text-xs text-ink focus:border-sky-400 focus:outline-none"
                     >
                       <option value="General Inquiry">General Enterprise Inquiry</option>
                       <option value="ERP / WMS Integration">Custom ERP / WMS Integration</option>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="How can our supply chain AI team assist you?"
-                      className="w-full rounded-xl border border-white/10 bg-slate-900 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none resize-none"
+                      className="w-full rounded-xl border border-slate-300/10 bg-slate-900 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none resize-none"
                     />
                   </div>
 
@@ -177,10 +177,10 @@ export default function ContactPage() {
 
             {COMPANY_INFO.offices.map((office, idx) => (
               <GlowCard key={idx} className="p-6">
-                <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-300/10">
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-sky-400" />
-                    <span className="font-bold text-white text-base">{office.city}</span>
+                    <span className="font-bold text-ink text-base">{office.city}</span>
                   </div>
                   <span className="text-[10px] font-mono font-bold rounded bg-slate-800 px-2.5 py-0.5 text-sky-400">
                     {office.badge}
@@ -191,15 +191,15 @@ export default function ContactPage() {
                   {office.address}
                 </div>
 
-                <div className="mt-3 text-xs text-slate-400 bg-slate-950/60 p-3 rounded-xl border border-white/5">
+                <div className="mt-3 text-xs text-slate-400 bg-slate-950/60 p-3 rounded-xl border border-slate-300/5">
                   <strong className="text-slate-300 block text-[10px] uppercase font-mono mb-0.5">Primary Focus:</strong>
                   {office.focus}
                 </div>
               </GlowCard>
             ))}
 
-            <div className="rounded-2xl border border-white/10 bg-slate-900/40 p-5 text-xs text-slate-400 space-y-2">
-              <div className="font-bold text-white">Partner & Field Presences:</div>
+            <div className="rounded-2xl border border-slate-300/10 bg-slate-900/40 p-5 text-xs text-slate-400 space-y-2">
+              <div className="font-bold text-ink">Partner & Field Presences:</div>
               <div className="flex flex-wrap gap-2 text-[11px] font-mono">
                 {COMPANY_INFO.partnerPresences.map((p, i) => (
                   <span key={i} className="rounded bg-slate-800 px-2 py-1 text-slate-300">

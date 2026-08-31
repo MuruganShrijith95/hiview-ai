@@ -170,19 +170,19 @@ export default function InteractiveSimulator() {
   };
 
   return (
-    <div className="relative rounded-3xl border border-white/10 bg-gradient-to-b from-slate-900/90 via-[#0B0F19]/95 to-[#070A12]/95 p-6 md:p-10 backdrop-blur-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_16px_40px_rgba(0,0,0,0.6)] overflow-hidden">
+    <div className="relative rounded-3xl border border-slate-300/10 bg-gradient-to-b from-white via-white to-slate-900 p-6 md:p-10 backdrop-blur-2xl shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)] overflow-hidden">
       {/* Decorative background glow */}
       <div className="pointer-events-none absolute -right-20 -top-20 h-96 w-96 rounded-full bg-cyan-500/15 blur-3xl" />
       <div className="pointer-events-none absolute -left-20 -bottom-20 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl" />
 
       {/* Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-white/10">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-slate-300/10">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-950/60 px-3.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider text-cyan-300 shadow-[0_0_15px_rgba(0,240,255,0.15)]">
             <Cpu className="h-3.5 w-3.5 text-cyan-400 animate-spin" style={{ animationDuration: "6s" }} />
             <span>Interactive Disruption Simulator</span>
           </div>
-          <h3 className="mt-3 text-2xl font-black text-white sm:text-3xl tracking-tight">
+          <h3 className="mt-3 text-2xl font-black text-ink sm:text-3xl tracking-tight">
             See How HiView AI <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">Scores, Then Acts</span> In Real-Time
           </h3>
           <p className="mt-1 text-xs sm:text-sm text-slate-300">
@@ -200,7 +200,7 @@ export default function InteractiveSimulator() {
                 className={`rounded-xl px-4 py-2.5 text-xs font-black transition-all duration-200 flex items-center gap-2 ${
                   isSelected
                     ? "bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/25 border border-cyan-400"
-                    : "bg-slate-900/90 text-slate-300 hover:bg-slate-800 hover:text-white border border-white/10"
+                    : "bg-slate-900/90 text-slate-300 hover:bg-slate-800 hover:text-ink border border-slate-300/10"
                 }`}
               >
                 <span className={`h-2 w-2 rounded-full ${isSelected ? "bg-slate-950" : "bg-cyan-400"}`} />
@@ -226,15 +226,15 @@ export default function InteractiveSimulator() {
               </span>
             </div>
 
-            <h4 className="mt-4 text-lg font-black text-white tracking-tight">
+            <h4 className="mt-4 text-lg font-black text-ink tracking-tight">
               {currentScenario.title}
             </h4>
             
             <div className="mt-4 space-y-2 text-xs">
-              <div className="rounded-xl bg-slate-950/80 p-3.5 font-mono text-slate-200 border border-white/10">
+              <div className="rounded-xl bg-slate-950/80 p-3.5 font-mono text-slate-200 border border-slate-300/10">
                 <span className="text-rose-400 font-bold">SIGNAL:</span> {currentScenario.anomaly.rawSignal}
               </div>
-              <div className="rounded-xl bg-slate-950/80 p-3.5 font-mono text-slate-200 border border-white/10">
+              <div className="rounded-xl bg-slate-950/80 p-3.5 font-mono text-slate-200 border border-slate-300/10">
                 <span className="text-amber-400 font-bold">ROOT CAUSE:</span> {currentScenario.anomaly.rootCause}
               </div>
             </div>
@@ -251,7 +251,7 @@ export default function InteractiveSimulator() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-4 text-xs text-slate-300 flex items-center justify-between font-mono">
+          <div className="rounded-2xl border border-slate-300/10 bg-slate-900/60 p-4 text-xs text-slate-300 flex items-center justify-between font-mono">
             <span className="flex items-center gap-2">
               <ShieldCheck className="h-4 w-4 text-cyan-400" />
               Governed by Human-in-the-Loop Policies
@@ -262,9 +262,9 @@ export default function InteractiveSimulator() {
 
         {/* Right Column: Autonomous Action Engine */}
         <div className="lg:col-span-7">
-          <div className="rounded-2xl border border-cyan-500/30 bg-slate-900/95 p-6 md:p-8 backdrop-blur-2xl relative overflow-hidden shadow-[inset_0_1px_0_rgba(255,255,255,0.15),0_16px_40px_rgba(0,0,0,0.6)]">
+          <div className="rounded-2xl border border-cyan-500/30 bg-slate-900/95 p-6 md:p-8 backdrop-blur-2xl relative overflow-hidden shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)]">
             {/* Header info */}
-            <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10">
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-300/10">
               <div className="flex items-center gap-2">
                 <Zap className="h-4 w-4 text-cyan-400" />
                 <span className="text-xs font-black uppercase tracking-wider text-cyan-300 font-mono">
@@ -303,7 +303,7 @@ export default function InteractiveSimulator() {
                     className={`flex items-start gap-3 rounded-xl p-3.5 text-xs transition-all ${
                       isExecuted
                         ? "bg-slate-800/90 border border-cyan-500/40 text-slate-100 shadow-sm"
-                        : "bg-slate-950/50 border border-white/5 text-slate-500"
+                        : "bg-slate-950/50 border border-slate-300/5 text-slate-500"
                     }`}
                   >
                     <div className="mt-0.5">

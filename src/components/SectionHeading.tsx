@@ -45,7 +45,7 @@ export default function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.08 }}
-        className="text-2xl font-black tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15]"
+        className="text-2xl font-black tracking-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15]"
       >
         {title}{" "}
         {highlightText && (

@@ -50,7 +50,7 @@ export default function DemoPage() {
             <span>Personalized 1-on-1 Enterprise Demonstration</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
             See HiView AI In Action With{" "}
             <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Your Supply Chain Data
@@ -68,7 +68,7 @@ export default function DemoPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: What to Expect */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-8 backdrop-blur-xl space-y-6">
+            <div className="rounded-3xl border border-slate-300/10 bg-slate-950/80 p-8 backdrop-blur-xl space-y-6">
               <div className="text-xs font-mono font-bold uppercase tracking-wider text-sky-400">
                 What to Expect During Your Demo
               </div>
@@ -92,7 +92,7 @@ export default function DemoPage() {
                 </li>
               </ul>
 
-              <div className="pt-4 border-t border-white/10 space-y-2 text-xs text-slate-400">
+              <div className="pt-4 border-t border-slate-300/10 space-y-2 text-xs text-slate-400">
                 <div className="flex items-center gap-2">
                   <Award className="h-4 w-4 text-sky-400" />
                   <span>TAG 2026 Top 40 Most Innovative Technology Company</span>
@@ -113,7 +113,7 @@ export default function DemoPage() {
                   <div className="flex h-16 w-16 mx-auto items-center justify-center rounded-full bg-sky-500/20 text-sky-400 border border-sky-500/30">
                     <CheckCircle2 className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-2xl font-bold text-ink">
                     Demonstration Request Received!
                   </h3>
                   <p className="text-sm text-slate-300 max-w-md mx-auto">
@@ -121,14 +121,14 @@ export default function DemoPage() {
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="mt-4 rounded-xl bg-slate-800 px-6 py-2.5 text-xs font-semibold text-slate-300 hover:text-white"
+                    className="mt-4 rounded-xl bg-slate-800 px-6 py-2.5 text-xs font-semibold text-slate-300 hover:text-ink"
                   >
                     Submit Another Inquiry
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-300/10">
                     <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
                       Step 1 of 1: Enterprise Information
                     </span>
@@ -148,7 +148,7 @@ export default function DemoPage() {
                         value={formData.firstName}
                         onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                         placeholder="Sarah"
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                       />
                     </div>
                     <div>
@@ -161,7 +161,7 @@ export default function DemoPage() {
                         value={formData.lastName}
                         onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                         placeholder="Jenkins"
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -177,7 +177,7 @@ export default function DemoPage() {
                         value={formData.workEmail}
                         onChange={(e) => setFormData({ ...formData, workEmail: e.target.value })}
                         placeholder="s.jenkins@enterprise.com"
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                       />
                     </div>
                     <div>
@@ -190,7 +190,7 @@ export default function DemoPage() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="Global Logistics Corp"
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -205,7 +205,7 @@ export default function DemoPage() {
                         value={formData.jobTitle}
                         onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
                         placeholder="VP of Supply Chain"
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                       />
                     </div>
                     <div>
@@ -217,7 +217,7 @@ export default function DemoPage() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+1 (555) 019-2834"
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none"
                       />
                     </div>
                   </div>
@@ -230,7 +230,7 @@ export default function DemoPage() {
                       <select
                         value={formData.primaryInterest}
                         onChange={(e) => setFormData({ ...formData, primaryInterest: e.target.value })}
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink focus:border-sky-400 focus:outline-none"
                       >
                         {PRODUCTS.map((p) => (
                           <option key={p.id} value={p.name}>
@@ -248,7 +248,7 @@ export default function DemoPage() {
                       <select
                         value={formData.industry}
                         onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                        className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white focus:border-sky-400 focus:outline-none"
+                        className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink focus:border-sky-400 focus:outline-none"
                       >
                         {INDUSTRIES.map((ind) => (
                           <option key={ind.id} value={ind.name}>
@@ -269,7 +269,7 @@ export default function DemoPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="e.g. Experiencing high demurrage fees at West Coast ports and frequent EDI 856 ASN transaction failures..."
-                      className="w-full rounded-xl border border-white/10 bg-slate-950 px-4 py-2.5 text-xs text-white placeholder-slate-600 focus:border-sky-400 focus:outline-none resize-none"
+                      className="w-full rounded-xl border border-slate-300/10 bg-slate-950 px-4 py-2.5 text-xs text-ink placeholder-slate-600 focus:border-sky-400 focus:outline-none resize-none"
                     />
                   </div>
 

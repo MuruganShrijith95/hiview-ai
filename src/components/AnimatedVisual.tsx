@@ -93,7 +93,7 @@ export default function AnimatedVisual({
           rotateY
         }}
         transition={{ type: "spring", damping: 22, stiffness: 220 }}
-        className={`relative overflow-hidden rounded-3xl border border-white/15 bg-slate-950 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_20px_60px_rgba(0,0,0,0.7)] backdrop-blur-2xl ${aspectClasses[aspectRatio]}`}
+        className={`relative overflow-hidden rounded-3xl border border-slate-300/15 bg-slate-950 shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)] backdrop-blur-2xl ${aspectClasses[aspectRatio]}`}
       >
         {/* Animated Photographic Background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -146,7 +146,7 @@ export default function AnimatedVisual({
                 },
                 opacity: { duration: 0.4, delay: 0.2 + idx * 0.1 }
               }}
-              className={`absolute ${posClass} z-20 hidden sm:flex items-center gap-3 rounded-2xl border border-white/15 bg-slate-950/90 p-3.5 shadow-2xl backdrop-blur-2xl transition-all duration-300 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)]`}
+              className={`absolute ${posClass} z-20 hidden sm:flex items-center gap-3 rounded-2xl border border-slate-300/15 bg-slate-950/90 p-3.5 shadow-2xl backdrop-blur-2xl transition-all duration-300 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)]`}
             >
               <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
                 {badge.icon ? <badge.icon className="h-4 w-4" /> : <Activity className="h-4 w-4" />}
@@ -155,7 +155,7 @@ export default function AnimatedVisual({
                 <div className="text-[10px] font-mono uppercase font-bold text-slate-400 tracking-wider">
                   {badge.title}
                 </div>
-                <div className="text-xs sm:text-sm font-mono font-black text-white">
+                <div className="text-xs sm:text-sm font-mono font-black text-ink">
                   {badge.value}
                 </div>
               </div>
