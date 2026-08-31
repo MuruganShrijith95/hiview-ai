@@ -68,6 +68,16 @@ export default function HomePage() {
             <ChevronRight className="h-3.5 w-3.5 text-sky-400" />
           </motion.div>
 
+          {/* Eyebrow / Category Kicker */}
+          <motion.p
+            initial={{ opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-sky-400/90 sm:text-sm"
+          >
+            Unified Supply Chain Execution
+          </motion.p>
+
           {/* Main H1 Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
