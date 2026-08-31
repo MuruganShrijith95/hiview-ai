@@ -154,7 +154,7 @@ export default function AboutPage() {
                     alt={leader.name}
                     className="h-full w-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent opacity-90" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between">
                     <span className="text-[10px] font-mono font-bold uppercase rounded bg-sky-950/80 px-2 py-0.5 text-sky-300 border border-sky-500/30">
                       Leadership
