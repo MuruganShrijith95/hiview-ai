@@ -68,9 +68,10 @@ export default function HomePage() {
             <ChevronRight className="h-3.5 w-3.5 text-sky-400" />
           </motion.div>
 
-          {/* Eyebrow / Category Kicker — highlighter marker treatment.
-              A chip would echo the award pill directly above, so the
-              emphasis here is a wipe-in highlight plus flanking rules. */}
+          {/* Eyebrow / Category Kicker — a rule draws under the words
+              once on arrival, then rests. Deliberately not a perpetual
+              loop: this sits directly above the H1, and anything still
+              moving there competes with the headline for attention. */}
           <motion.div
             initial="hidden"
             animate="show"
@@ -79,30 +80,11 @@ export default function HomePage() {
             <motion.span
               aria-hidden="true"
               variants={{ hidden: { scaleX: 0, opacity: 0 }, show: { scaleX: 1, opacity: 1 } }}
-              transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden h-px w-8 origin-right bg-gradient-to-r from-transparent to-sky-400 sm:block sm:w-12"
+              transition={{ duration: 0.5, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden h-px w-8 origin-right bg-gradient-to-r from-transparent to-sky-400/70 sm:block sm:w-12"
             />
 
-            <span className="relative inline-block">
-              {/* Blue highlighter travelling above the words, left to
-                  right and back. Separate from the text, so the letters
-                  are never clipped and stay fully visible. */}
-              <motion.span
-                aria-hidden="true"
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
-                transition={{ duration: 0.4, delay: 0.55 }}
-                className="pointer-events-none absolute -top-2.5 left-0 right-0 h-[3px] overflow-hidden rounded-full bg-sky-400/15"
-              >
-                <span className="eyebrow-sweep absolute inset-y-0 left-0 w-1/3 rounded-full bg-gradient-to-r from-sky-400/0 via-sky-500 to-sky-400/0" />
-              </motion.span>
-
-              {/* Highlighter band, drawn left-to-right behind the words */}
-              <motion.span
-                aria-hidden="true"
-                variants={{ hidden: { scaleX: 0 }, show: { scaleX: 1 } }}
-                transition={{ duration: 0.6, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute inset-x-[-10px] bottom-[0.05em] h-[0.6em] origin-left rounded-[3px] bg-sky-400/20"
-              />
+            <span className="relative inline-block pb-2">
               <motion.span
                 variants={{ hidden: { opacity: 0, y: -6 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.55, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -110,13 +92,23 @@ export default function HomePage() {
               >
                 Unified Supply Chain Execution
               </motion.span>
+
+              {/* The underline: sweeps left-to-right once, then holds.
+                  Slightly heavier at its leading edge so the draw reads
+                  as a stroke rather than a bar being revealed. */}
+              <motion.span
+                aria-hidden="true"
+                variants={{ hidden: { scaleX: 0 }, show: { scaleX: 1 } }}
+                transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute bottom-0 left-0 right-0 h-[2px] origin-left rounded-full bg-gradient-to-r from-sky-400/60 via-sky-500 to-blue-600"
+              />
             </span>
 
             <motion.span
               aria-hidden="true"
               variants={{ hidden: { scaleX: 0, opacity: 0 }, show: { scaleX: 1, opacity: 1 } }}
-              transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden h-px w-8 origin-left bg-gradient-to-l from-transparent to-sky-400 sm:block sm:w-12"
+              transition={{ duration: 0.5, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden h-px w-8 origin-left bg-gradient-to-l from-transparent to-sky-400/70 sm:block sm:w-12"
             />
           </motion.div>
 
