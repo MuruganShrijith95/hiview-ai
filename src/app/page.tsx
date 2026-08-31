@@ -94,7 +94,7 @@ export default function HomePage() {
               <motion.span
                 variants={{ hidden: { opacity: 0, y: -6 }, show: { opacity: 1, y: 0 } }}
                 transition={{ duration: 0.55, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-                className="eyebrow-shimmer relative inline-block text-xs font-extrabold uppercase tracking-[0.3em] sm:text-sm"
+                className="relative inline-block text-xs font-extrabold uppercase tracking-[0.3em] text-sky-500 sm:text-sm"
               >
                 Unified Supply Chain Execution
               </motion.span>

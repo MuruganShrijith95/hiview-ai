@@ -145,51 +145,6 @@ body {
   background-image: radial-gradient(rgba(2, 132, 199, 0.18) 1px, transparent 1px);
 }
 
-/* --- Hero eyebrow ------------------------------------------
-   A slow specular sweep across the letters. The gradient is
-   clipped to the glyphs, so nothing moves in the layout — it
-   draws the eye without competing with the H1 beneath it.     */
-.eyebrow-shimmer {
-  background-image: linear-gradient(
-    100deg,
-    #0369a1 0%,
-    #0369a1 38%,
-    #38bdf8 50%,
-    #0369a1 62%,
-    #0369a1 100%
-  );
-  background-size: 250% 100%;
-  background-position: 130% 0;
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: eyebrowShimmer 6s ease-in-out 1.4s infinite;
-}
-
-@keyframes eyebrowShimmer {
-  0% {
-    background-position: 130% 0;
-  }
-  42% {
-    background-position: -30% 0;
-  }
-  100% {
-    background-position: -30% 0;
-  }
-}
-
-/* Motion is decoration here, so it goes away entirely on request. */
-@media (prefers-reduced-motion: reduce) {
-  .eyebrow-shimmer {
-    animation: none;
-    background-image: none;
-    color: #0369a1;
-    -webkit-text-fill-color: #0369a1;
-  }
-}
-
 @keyframes pulseGlow {
   0%, 100% {
     opacity: 0.28;
