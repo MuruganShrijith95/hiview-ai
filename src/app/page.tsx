@@ -84,6 +84,18 @@ export default function HomePage() {
             />
 
             <span className="relative inline-block">
+              {/* Blue highlighter travelling above the words, left to
+                  right and back. Separate from the text, so the letters
+                  are never clipped and stay fully visible. */}
+              <motion.span
+                aria-hidden="true"
+                variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
+                transition={{ duration: 0.4, delay: 0.55 }}
+                className="pointer-events-none absolute -top-2.5 left-0 right-0 h-[3px] overflow-hidden rounded-full bg-sky-400/15"
+              >
+                <span className="eyebrow-sweep absolute inset-y-0 left-0 w-1/3 rounded-full bg-gradient-to-r from-sky-400/0 via-sky-500 to-sky-400/0" />
+              </motion.span>
+
               {/* Highlighter band, drawn left-to-right behind the words */}
               <motion.span
                 aria-hidden="true"
