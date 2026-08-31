@@ -68,15 +68,45 @@ export default function HomePage() {
             <ChevronRight className="h-3.5 w-3.5 text-sky-400" />
           </motion.div>
 
-          {/* Eyebrow / Category Kicker */}
-          <motion.p
-            initial={{ opacity: 0, y: -6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-            className="mb-5 text-xs font-bold uppercase tracking-[0.28em] text-sky-400/90 sm:text-sm"
+          {/* Eyebrow / Category Kicker — highlighter marker treatment.
+              A chip would echo the award pill directly above, so the
+              emphasis here is a wipe-in highlight plus flanking rules. */}
+          <motion.div
+            initial="hidden"
+            animate="show"
+            className="mb-6 flex items-center justify-center gap-3 sm:gap-4"
           >
-            Unified Supply Chain Execution
-          </motion.p>
+            <motion.span
+              aria-hidden="true"
+              variants={{ hidden: { scaleX: 0, opacity: 0 }, show: { scaleX: 1, opacity: 1 } }}
+              transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden h-px w-8 origin-right bg-gradient-to-r from-transparent to-sky-400 sm:block sm:w-12"
+            />
+
+            <span className="relative inline-block">
+              {/* Highlighter band, drawn left-to-right behind the words */}
+              <motion.span
+                aria-hidden="true"
+                variants={{ hidden: { scaleX: 0 }, show: { scaleX: 1 } }}
+                transition={{ duration: 0.6, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute inset-x-[-10px] bottom-[0.05em] h-[0.6em] origin-left rounded-[3px] bg-sky-400/20"
+              />
+              <motion.span
+                variants={{ hidden: { opacity: 0, y: -6 }, show: { opacity: 1, y: 0 } }}
+                transition={{ duration: 0.55, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="eyebrow-shimmer relative inline-block text-xs font-extrabold uppercase tracking-[0.3em] sm:text-sm"
+              >
+                Unified Supply Chain Execution
+              </motion.span>
+            </span>
+
+            <motion.span
+              aria-hidden="true"
+              variants={{ hidden: { scaleX: 0, opacity: 0 }, show: { scaleX: 1, opacity: 1 } }}
+              transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden h-px w-8 origin-left bg-gradient-to-l from-transparent to-sky-400 sm:block sm:w-12"
+            />
+          </motion.div>
 
           {/* Main H1 Headline */}
           <motion.h1
