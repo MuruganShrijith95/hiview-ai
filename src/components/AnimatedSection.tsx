@@ -1,7 +1,7 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import { motion, MotionProps } from "framer-motion";
+import { motion, MotionProps, useReducedMotion } from "framer-motion";
 
 interface AnimatedSectionProps extends MotionProps {
   children: ReactNode;
@@ -17,13 +17,21 @@ export default function AnimatedSection({
   id,
   ...props
 }: AnimatedSectionProps) {
+  const reduce = useReducedMotion();
+
   return (
     <motion.section
       id={id}
-      initial={{ opacity: 0, y: 28 }}
+      // Content must still arrive under reduced motion — it just fades
+      // in place instead of travelling.
+      initial={reduce ? { opacity: 0 } : { opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{
+        duration: reduce ? 0.3 : 0.7,
+        delay: reduce ? 0 : delay,
+        ease: [0.16, 1, 0.3, 1]
+      }}
       className={className}
       {...props}
     >

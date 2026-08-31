@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import GlowCard from "@/components/GlowCard";
+import { StaggerGroup, StaggerItem } from "@/components/Stagger";
 import StatsCounter from "@/components/StatsCounter";
 import SectionHeading from "@/components/SectionHeading";
 import InteractiveSimulator from "@/components/InteractiveSimulator";
@@ -114,14 +115,30 @@ export default function HomePage() {
 
           {/* Main H1 Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            initial="hidden"
+            animate="show"
+            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } } }}
             className="mx-auto max-w-5xl text-4xl font-black tracking-tight text-ink sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1]"
           >
-            One Intelligent Platform.{" "}
-            <span className="block mt-2 bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">
-              Every System in Sync.
+            {/* Each line clips to its own box and rises into it, so the
+                headline resolves as a sequence rather than one slab. */}
+            <span className="block overflow-hidden pb-1">
+              <motion.span
+                variants={{ hidden: { y: "110%" }, show: { y: "0%" } }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="block"
+              >
+                One Intelligent Platform.
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden pb-2 mt-1">
+              <motion.span
+                variants={{ hidden: { y: "110%" }, show: { y: "0%" } }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="block bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent"
+              >
+                Every System in Sync.
+              </motion.span>
             </span>
           </motion.h1>
 
@@ -202,8 +219,9 @@ export default function HomePage() {
           subtitle="Transforming raw operational noise into decisive, margin-protecting execution."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <StaggerGroup className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6" stagger={0.1}>
           {/* Pillar 1 */}
+          <StaggerItem className="h-full">
           <GlowCard className="p-8 flex flex-col justify-between h-full">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 shadow-[0_0_15px_rgba(0,240,255,0.2)]">
@@ -224,8 +242,10 @@ export default function HomePage() {
               <span>Right Action • Right Time</span>
             </div>
           </GlowCard>
+          </StaggerItem>
 
           {/* Pillar 2 */}
+          <StaggerItem className="h-full">
           <GlowCard className="p-8 flex flex-col justify-between h-full">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-500/20 text-sky-400 border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
@@ -246,8 +266,10 @@ export default function HomePage() {
               <span>Contextual Root Cause • Next Move</span>
             </div>
           </GlowCard>
+          </StaggerItem>
 
           {/* Pillar 3 */}
+          <StaggerItem className="h-full">
           <GlowCard className="p-8 flex flex-col justify-between h-full">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-400 border border-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
@@ -268,7 +290,8 @@ export default function HomePage() {
               <span>360° Operations • Flawless Execution</span>
             </div>
           </GlowCard>
-        </div>
+          </StaggerItem>
+        </StaggerGroup>
       </AnimatedSection>
 
       {/* 2. THE INTELLIGENCE GAP: PROBLEM VS HIVIEW */}
@@ -373,11 +396,12 @@ export default function HomePage() {
           subtitle="Deploy individually as modular solutions or together as a unified autonomous supply chain control tower."
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerGroup className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PRODUCTS.map((prod) => {
             const IconComponent = productIcons[prod.id] || Network;
             return (
-              <GlowCard key={prod.id} className="group flex flex-col justify-between h-full p-6">
+              <StaggerItem key={prod.id} className="h-full">
+              <GlowCard className="group flex flex-col justify-between h-full p-6">
                 <div>
                   {/* Crisp Product Photo Frame */}
                   <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden rounded-t-2xl border-b border-slate-300/10 bg-slate-950">
@@ -441,9 +465,10 @@ export default function HomePage() {
                   </Link>
                 </div>
               </GlowCard>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerGroup>
       </AnimatedSection>
 
       {/* 6. ECOSYSTEM & 100+ ENTERPRISE CONNECTORS */}
