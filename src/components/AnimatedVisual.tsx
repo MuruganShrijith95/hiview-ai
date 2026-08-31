@@ -3,7 +3,6 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Sparkles, ShieldCheck, Activity, CheckCircle2, Zap } from "lucide-react";
-import MagnifierImage from "./MagnifierImage";
 
 export interface FloatingBadge {
   title: string;
@@ -35,10 +34,9 @@ export default function AnimatedVisual({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [rotateX, setRotateX] = useState<number>(0);
   const [rotateY, setRotateY] = useState<number>(0);
-  const [zooming, setZooming] = useState<boolean>(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current || zooming) return;
+    if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
@@ -91,39 +89,33 @@ export default function AnimatedVisual({
       {/* 3D Tilted Viewport Card */}
       <motion.div
         animate={{
-          rotateX: zooming ? 0 : rotateX,
-          rotateY: zooming ? 0 : rotateY
+          rotateX,
+          rotateY
         }}
         transition={{ type: "spring", damping: 22, stiffness: 220 }}
         className={`relative overflow-hidden rounded-3xl border border-slate-300/15 bg-slate-950 shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)] backdrop-blur-2xl ${aspectClasses[aspectRatio]}`}
       >
-        {/* Photographic background — hover (or press-and-hold) to magnify */}
-        <MagnifierImage
-          src={src}
-          alt={alt}
-          className="absolute inset-0"
-          imgClassName={`h-full w-full object-cover object-center transition-transform duration-700 ease-out filter contrast-105 ${
-            zooming ? "" : "group-hover:scale-105"
-          }`}
-          onActiveChange={setZooming}
-        />
+        {/* Animated Photographic Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={src}
+            alt={alt}
+            className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 filter brightness-90 contrast-115"
+          />
+        </div>
 
         {/* Ambient Dark Overlay Gradients */}
-        <div
-          className={`pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 via-white/15 to-transparent transition-opacity duration-300 ${
-            zooming ? "opacity-0" : "opacity-100"
-          }`}
-        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 via-white/15 to-transparent" />
 
         {/* Cyber Scanning Grid Overlay */}
-        <div className={`pointer-events-none absolute inset-0 grid-pattern transition-opacity duration-300 ${zooming ? "opacity-0" : "opacity-30"}`} />
+        <div className="pointer-events-none absolute inset-0 grid-pattern opacity-30" />
 
         {/* Top Razor Sheen Line */}
         <div className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60 animate-pulse" />
 
         {/* Top Tag Pill */}
         {badgeText && (
-          <div className="pointer-events-none absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
+          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
             <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-slate-950/85 px-3.5 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-cyan-300 backdrop-blur-xl shadow-xl">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
@@ -153,7 +145,7 @@ export default function AnimatedVisual({
                 },
                 opacity: { duration: 0.4, delay: 0.2 + idx * 0.1 }
               }}
-              className={`pointer-events-none absolute ${posClass} z-20 hidden sm:flex items-center gap-3 rounded-2xl border border-slate-300/15 bg-slate-950/90 p-3.5 shadow-2xl backdrop-blur-2xl transition-all duration-300 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)]`}
+              className={`absolute ${posClass} z-20 hidden sm:flex items-center gap-3 rounded-2xl border border-slate-300/15 bg-slate-950/90 p-3.5 shadow-2xl backdrop-blur-2xl transition-all duration-300 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)]`}
             >
               <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
                 {badge.icon ? <badge.icon className="h-4 w-4" /> : <Activity className="h-4 w-4" />}

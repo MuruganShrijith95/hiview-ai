@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import GlowCard from "@/components/GlowCard";
-import MagnifierImage from "@/components/MagnifierImage";
 import StatsCounter from "@/components/StatsCounter";
 import SectionHeading from "@/components/SectionHeading";
 import InteractiveSimulator from "@/components/InteractiveSimulator";
@@ -348,13 +347,11 @@ export default function HomePage() {
                 <div>
                   {/* Crisp Product Photo Frame */}
                   <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden rounded-t-2xl border-b border-slate-300/10 bg-slate-950">
-                    <MagnifierImage
+                    <img
                       src={prod.image}
                       alt={`${prod.name} — ${prod.tagline}`}
-                      className="absolute inset-0"
-                      imgClassName="h-full w-full object-cover transition-transform duration-500 ease-out filter contrast-105"
-                      zoom={2.2}
-                      lensSize={150}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 filter brightness-95 contrast-110"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent" />
                     

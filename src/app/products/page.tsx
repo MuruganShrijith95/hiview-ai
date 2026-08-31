@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import SectionHeading from "@/components/SectionHeading";
 import GlowCard from "@/components/GlowCard";
-import MagnifierImage from "@/components/MagnifierImage";
 import { PRODUCTS } from "@/lib/constants";
 import { 
   Network, 
@@ -67,14 +66,12 @@ export default function ProductsPage() {
               <GlowCard key={prod.id} className="group flex flex-col justify-between h-full p-8">
                 <div>
                   {/* Product photo header with hover zoom */}
-                  <div className="relative -mx-8 -mt-8 mb-6 aspect-[21/9]">
-                    <MagnifierImage
+                  <div className="img-zoom relative -mx-8 -mt-8 mb-6 aspect-[21/9]">
+                    <img
                       src={prod.image}
                       alt={`${prod.name} — ${prod.tagline}`}
-                      className="absolute inset-0"
-                      imgClassName="h-full w-full object-cover"
-                      zoom={2.4}
-                      lensSize={170}
+                      loading="lazy"
+                      className="h-full w-full object-cover"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/70 via-transparent to-transparent" />
                   </div>
