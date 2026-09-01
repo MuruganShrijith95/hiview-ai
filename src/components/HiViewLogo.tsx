@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface HiViewLogoProps {
   size?: "sm" | "md" | "lg" | "xl";
@@ -25,13 +26,21 @@ export default function HiViewLogo({
   const currentHeight = sizeMap[size] || sizeMap.md;
 
   const LogoContent = (
-    <div className={`inline-flex items-center group cursor-pointer select-none ${className}`}>
+    <motion.div 
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.97 }}
+      transition={{ type: "spring", stiffness: 350, damping: 22 }}
+      className={`relative inline-flex items-center group cursor-pointer select-none ${className}`}
+    >
+      {/* Subtle Ambient Glowing Aura Behind Globe on Hover */}
+      <div className="pointer-events-none absolute -left-1 top-1/2 -translate-y-1/2 h-8 w-8 rounded-full bg-gradient-to-r from-[#1D9AE1]/30 via-[#7CC8F1]/20 to-[#9333ea]/15 blur-md opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
       <img
         src="/images/hiview-logo.png"
         alt="hiview AI"
-        className={`${currentHeight} w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03]`}
+        className={`${currentHeight} w-auto object-contain transition-all duration-300 drop-shadow-[0_2px_8px_rgba(29,154,225,0.08)] group-hover:drop-shadow-[0_4px_16px_rgba(29,154,225,0.25)]`}
       />
-    </div>
+    </motion.div>
   );
 
   if (href) {
