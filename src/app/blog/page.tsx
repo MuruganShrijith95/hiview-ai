@@ -16,6 +16,8 @@ import {
   Cpu 
 } from "lucide-react";
 
+import HeroBackgroundEffects from "@/components/HeroBackgroundEffects";
+
 interface Article {
   title: string;
   category: string;
@@ -67,25 +69,26 @@ export default function BlogPage() {
   const otherArticles = ARTICLES.slice(1);
 
   return (
-    <div className="space-y-24 sm:space-y-32 pb-24">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* Hero */}
-      <section className="relative pt-12 pb-16 text-center">
-        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[750px] rounded-full bg-sky-500/15 blur-3xl" />
+      <section className="relative pt-10 pb-12 text-center overflow-hidden">
+        {/* Animated Network Stream & Floating Flank Cockpits */}
+        <HeroBackgroundEffects variant="blog" />
 
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md mb-6">
-            <BookOpen className="h-3.5 w-3.5 text-sky-400" />
+        <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#cfe6ff] bg-[#e8f3ff] px-4 py-1.5 text-xs font-bold text-[#1D9AE1] shadow-sm mb-6">
+            <BookOpen className="h-3.5 w-3.5 text-[#1D9AE1]" />
             <span>Research & Industry Insights</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0e1b34] tracking-tight leading-[1.15]">
             Supply Chain AI{" "}
-            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#1D9AE1] via-[#59b4ff] to-[#1D9AE1] bg-clip-text text-transparent">
               Whitepapers & Thought Leadership
             </span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[#547099] leading-relaxed max-w-2xl mx-auto">
             Deep technical architecture guides, operational research, and case studies on autonomous supply chain execution.
           </p>
         </div>
@@ -93,36 +96,36 @@ export default function BlogPage() {
 
       {/* Featured Whitepaper */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <GlowCard className="p-8 sm:p-12 relative overflow-hidden">
+        <GlowCard className="p-7 sm:p-12 relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-sky-500/20 px-3 py-1 text-xs font-mono font-bold text-sky-300 border border-sky-500/30">
+                <span className="rounded-full bg-[#e8f3ff] px-3.5 py-1 text-xs font-mono font-bold text-[#1D9AE1] border border-[#cfe6ff]">
                   FEATURED WHITEPAPER
                 </span>
-                <span className="text-xs text-slate-400 flex items-center gap-1 font-mono">
-                  <Clock className="h-3.5 w-3.5" /> {featuredArticle.readTime}
+                <span className="text-xs text-[#547099] flex items-center gap-1 font-mono font-medium">
+                  <Clock className="h-3.5 w-3.5 text-[#1D9AE1]" /> {featuredArticle.readTime}
                 </span>
-                <span className="text-xs text-slate-500 font-mono">• {featuredArticle.date}</span>
+                <span className="text-xs text-[#547099] font-mono">• {featuredArticle.date}</span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-ink leading-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0e1b34] leading-tight">
                 {featuredArticle.title}
               </h2>
 
-              <p className="text-sm text-slate-300 leading-relaxed max-w-2xl">
+              <p className="text-sm text-[#547099] leading-relaxed max-w-2xl">
                 {featuredArticle.excerpt}
               </p>
 
-              <div className="text-xs text-sky-400 font-semibold pt-2">
+              <div className="text-xs text-[#1D9AE1] font-bold pt-2">
                 By {featuredArticle.author}
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex justify-end">
+            <div className="lg:col-span-4 flex lg:justify-end">
               <Link
                 href="/demo"
-                className="hover-shine inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3.5 text-xs font-bold text-white shadow-lg"
+                className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#7CC8F1] to-[#1D9AE1] px-6 py-3.5 text-xs font-bold text-white shadow-[0_10px_24px_-8px_rgba(29,154,225,0.55)] hover:shadow-[0_18px_32px_-10px_rgba(29,154,225,0.7)] transition"
               >
                 <span>Read Full Whitepaper</span>
                 <ArrowRight className="h-3.5 w-3.5" />
@@ -134,27 +137,27 @@ export default function BlogPage() {
 
       {/* Articles Grid */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {otherArticles.map((art, idx) => (
             <GlowCard key={idx} className="p-6 flex flex-col justify-between h-full space-y-4">
               <div>
-                <div className="flex items-center justify-between text-xs text-slate-400 pb-3 border-b border-slate-300/5 font-mono">
-                  <span className="text-sky-400 font-semibold">{art.category}</span>
+                <div className="flex items-center justify-between text-xs text-[#547099] pb-3 border-b border-[#cfe6ff] font-mono">
+                  <span className="text-[#1D9AE1] font-bold">{art.category}</span>
                   <span>{art.readTime}</span>
                 </div>
 
-                <h3 className="mt-4 text-lg font-bold text-ink leading-snug">
+                <h3 className="mt-4 text-lg font-extrabold text-[#0e1b34] leading-snug">
                   {art.title}
                 </h3>
 
-                <p className="mt-2 text-xs text-slate-300 leading-relaxed">
+                <p className="mt-2.5 text-xs sm:text-sm text-[#547099] leading-relaxed">
                   {art.excerpt}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-300/5 flex items-center justify-between text-xs">
-                <span className="text-slate-500 font-mono">{art.date}</span>
-                <Link href="/demo" className="text-sky-400 hover:text-sky-300 font-bold flex items-center gap-1">
+              <div className="pt-4 border-t border-[#cfe6ff] flex items-center justify-between text-xs">
+                <span className="text-[#547099] font-mono">{art.date}</span>
+                <Link href="/demo" className="text-[#1D9AE1] hover:text-[#0e1b34] font-bold flex items-center gap-1">
                   <span>Read</span>
                   <ArrowRight className="h-3 w-3" />
                 </Link>

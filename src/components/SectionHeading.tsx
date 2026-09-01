@@ -30,11 +30,11 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className={`inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-950/60 px-3.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider text-cyan-300 shadow-[0_0_15px_rgba(0,240,255,0.15)] backdrop-blur-xl ${centered ? "mx-auto" : ""} mb-4`}
+          className={`inline-flex items-center gap-2 rounded-full border border-[#cfe6ff] bg-[#e8f3ff] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#1D9AE1] ${centered ? "mx-auto" : ""} mb-3.5`}
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1D9AE1] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1D9AE1]"></span>
           </span>
           <span>{badge}</span>
         </motion.div>
@@ -45,11 +45,11 @@ export default function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.08 }}
-        className="text-2xl font-black tracking-tight text-ink sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15]"
+        className="text-2xl font-extrabold tracking-tight text-[#0e1b34] sm:text-3xl md:text-4xl lg:text-5xl leading-[1.15]"
       >
         {title}{" "}
         {highlightText && (
-          <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#1D9AE1] via-[#59b4ff] to-[#1D9AE1] bg-clip-text text-transparent">
             {highlightText}
           </span>
         )}
@@ -61,7 +61,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-4 text-sm sm:text-base leading-relaxed text-slate-300 font-normal"
+          className="mt-3 text-sm sm:text-base leading-relaxed text-[#6b7a99] font-normal"
         >
           {subtitle}
         </motion.p>

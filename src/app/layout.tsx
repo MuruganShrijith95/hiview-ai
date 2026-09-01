@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GlobalBackgroundGrid from "@/components/GlobalBackgroundGrid";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -48,7 +49,8 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${plusJakarta.variable} scroll-smooth`}
     >
-      <body className="min-h-screen bg-white text-slate-300 antialiased flex flex-col selection:bg-sky-400/20 selection:text-ink">
+      <body className="min-h-screen bg-[#f8fbff] text-[#334155] antialiased flex flex-col selection:bg-[#1D9AE1]/20 selection:text-[#0e1b34] relative">
+        <GlobalBackgroundGrid />
         <Navbar />
         <main className="flex-1 relative z-10 pt-20">
           {children}

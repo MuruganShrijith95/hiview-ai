@@ -93,33 +93,33 @@ export default function AnimatedVisual({
           rotateY
         }}
         transition={{ type: "spring", damping: 22, stiffness: 220 }}
-        className={`relative overflow-hidden rounded-3xl border border-slate-300/15 bg-slate-950 shadow-[0_1px_2px_rgba(11,27,58,0.05),0_14px_36px_rgba(11,27,58,0.09)] backdrop-blur-2xl ${aspectClasses[aspectRatio]}`}
+        className={`relative overflow-hidden rounded-3xl border border-[#cfe6ff] bg-[#0e1b34] shadow-[0_12px_36px_-18px_rgba(29,154,225,0.22)] backdrop-blur-2xl ${aspectClasses[aspectRatio]}`}
       >
         {/* Animated Photographic Background */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={src}
             alt={alt}
-            className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 filter brightness-90 contrast-115"
+            className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
           />
         </div>
 
-        {/* Ambient Dark Overlay Gradients */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white/80 via-white/15 to-transparent" />
+        {/* Subtle Bottom Ambient Gradient for HUD Readability (No White Shadow) */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
         {/* Cyber Scanning Grid Overlay */}
-        <div className="pointer-events-none absolute inset-0 grid-pattern opacity-30" />
+        <div className="pointer-events-none absolute inset-0 grid-pattern opacity-20" />
 
         {/* Top Razor Sheen Line */}
-        <div className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60 animate-pulse" />
+        <div className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1D9AE1] to-transparent opacity-75 animate-pulse" />
 
         {/* Top Tag Pill */}
         {badgeText && (
           <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
-            <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/40 bg-slate-950/85 px-3.5 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-cyan-300 backdrop-blur-xl shadow-xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#1D9AE1]/40 bg-[#0e1b34]/90 px-3.5 py-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-[#7CC8F1] backdrop-blur-xl shadow-lg">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1D9AE1] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1D9AE1]" />
               </span>
               <span>{badgeText}</span>
             </span>
@@ -145,16 +145,16 @@ export default function AnimatedVisual({
                 },
                 opacity: { duration: 0.4, delay: 0.2 + idx * 0.1 }
               }}
-              className={`absolute ${posClass} z-20 hidden sm:flex items-center gap-3 rounded-2xl border border-slate-300/15 bg-slate-950/90 p-3.5 shadow-2xl backdrop-blur-2xl transition-all duration-300 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(0,240,255,0.25)]`}
+              className={`absolute ${posClass} z-20 hidden sm:flex items-center gap-3 rounded-2xl border border-white/20 bg-[#0e1b34]/90 p-3.5 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-[#1D9AE1] hover:scale-105`}
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+              <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#1D9AE1]/20 text-[#7CC8F1] border border-[#1D9AE1]/30">
                 {badge.icon ? <badge.icon className="h-4 w-4" /> : <Activity className="h-4 w-4" />}
               </div>
               <div className="text-left">
-                <div className="text-[10px] font-mono uppercase font-bold text-slate-400 tracking-wider">
+                <div className="text-[10px] font-mono uppercase font-bold text-[#7CC8F1] tracking-wider">
                   {badge.title}
                 </div>
-                <div className="text-xs sm:text-sm font-mono font-black text-ink">
+                <div className="text-xs sm:text-sm font-mono font-extrabold text-white">
                   {badge.value}
                 </div>
               </div>
@@ -163,7 +163,7 @@ export default function AnimatedVisual({
         })}
 
         {/* Dynamic Luminous Border Tracing */}
-        <div className="pointer-events-none absolute inset-0 rounded-3xl border border-cyan-500/0 transition-colors duration-500 group-hover:border-cyan-500/40" />
+        <div className="pointer-events-none absolute inset-0 rounded-3xl border border-[#1D9AE1]/0 transition-colors duration-500 group-hover:border-[#1D9AE1]/40" />
       </motion.div>
     </motion.div>
   );

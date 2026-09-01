@@ -23,6 +23,8 @@ import {
   Layers
 } from "lucide-react";
 
+import HeroBackgroundEffects from "@/components/HeroBackgroundEffects";
+
 export default function SolutionsPage() {
   const [activeTab, setActiveTab] = useState<string>("manufacturing");
 
@@ -126,25 +128,26 @@ export default function SolutionsPage() {
   const IconComponent = icons[currentInd.id] || Factory;
 
   return (
-    <div className="space-y-24 sm:space-y-32 pb-24">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* Hero */}
-      <section className="relative pt-12 pb-16 text-center">
-        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[750px] rounded-full bg-sky-500/15 blur-3xl" />
+      <section className="relative pt-10 pb-12 text-center overflow-hidden">
+        {/* Animated Network Stream & Floating Flank Cockpits */}
+        <HeroBackgroundEffects variant="solutions" />
 
-        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md mb-6">
-            <Layers className="h-3.5 w-3.5 text-sky-400" />
+        <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#cfe6ff] bg-[#e8f3ff] px-4 py-1.5 text-xs font-bold text-[#1D9AE1] shadow-sm mb-6">
+            <Layers className="h-3.5 w-3.5 text-[#1D9AE1]" />
             <span>Tailored Enterprise Solutions</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0e1b34] tracking-tight leading-[1.15]">
             Engineered For Your Industry&apos;s{" "}
-            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#1D9AE1] via-[#59b4ff] to-[#1D9AE1] bg-clip-text text-transparent">
               Specific Supply Chain Vulnerabilities
             </span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[#547099] leading-relaxed max-w-3xl mx-auto">
             Discover how HiView AI addresses unique compliance, transit, inventory, and margin challenges across manufacturing, healthcare, automotive, retail, and tech.
           </p>
         </div>
@@ -152,8 +155,8 @@ export default function SolutionsPage() {
 
       {/* Industry Tabs Selector & Deep Dive */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Horizontal Industry Switcher */}
-        <div className="flex flex-wrap items-center justify-center gap-3 pb-8 border-b border-slate-300/10">
+        {/* Horizontal Industry Switcher with Hover Activation */}
+        <div className="flex flex-wrap items-center justify-center gap-3 pb-8 border-b border-[#cfe6ff]">
           {detailedIndustries.map((ind) => {
             const isSelected = activeTab === ind.id;
             const TabIcon = icons[ind.id] || Factory;
@@ -161,13 +164,14 @@ export default function SolutionsPage() {
               <button
                 key={ind.id}
                 onClick={() => setActiveTab(ind.id)}
-                className={`flex items-center gap-2.5 rounded-2xl px-5 py-3 text-xs font-bold transition-all duration-300 ${
+                onMouseEnter={() => setActiveTab(ind.id)}
+                className={`flex items-center gap-2.5 rounded-2xl px-5 py-3 text-xs font-extrabold transition-all duration-200 cursor-pointer ${
                   isSelected
-                    ? "bg-sky-500 text-slate-950 shadow-lg shadow-sky-500/25"
-                    : "bg-slate-900/80 text-slate-300 hover:bg-slate-800 hover:text-ink border border-slate-300/5"
+                    ? "bg-[#e0efff] text-[#0e1b34] border-2 border-[#1D9AE1] shadow-md shadow-sky-500/15 scale-[1.02]"
+                    : "bg-[#edf5fd] text-[#1e3256] border border-[#cfe6ff] hover:bg-[#e4f0fc] hover:border-[#b8dcff]"
                 }`}
               >
-                <TabIcon className="h-4 w-4" />
+                <TabIcon className="h-4 w-4 text-[#1D9AE1]" />
                 <span>{ind.name}</span>
               </button>
             );
@@ -175,67 +179,67 @@ export default function SolutionsPage() {
         </div>
 
         {/* Tab Content Display */}
-        <div className="mt-10">
+        <div className="mt-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentInd.id}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-10"
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="space-y-8"
             >
               {/* Main Headline & Description */}
-              <div className="rounded-3xl border border-sky-500/30 bg-slate-900/80 p-8 sm:p-12 backdrop-blur-2xl shadow-2xl">
-                <div className="flex items-center gap-3 text-sky-400 pb-4 border-b border-slate-300/10">
-                  <IconComponent className="h-6 w-6" />
+              <div className="rounded-3xl border-2 border-[#cfe6ff] bg-gradient-to-b from-[#f4f9ff] via-[#f8fbff] to-white p-7 sm:p-12 shadow-[0_12px_36px_-18px_rgba(29,154,225,0.18)]">
+                <div className="flex items-center gap-3 text-[#1D9AE1] pb-4 border-b border-[#cfe6ff]">
+                  <IconComponent className="h-6 w-6 text-[#1D9AE1]" />
                   <span className="text-xs font-mono font-bold uppercase tracking-wider">
                     {currentInd.name} Solution Blueprint
                   </span>
                 </div>
 
-                <h2 className="mt-5 text-2xl sm:text-3xl font-extrabold text-ink leading-tight">
+                <h2 className="mt-5 text-2xl sm:text-3xl font-extrabold text-[#0e1b34] leading-tight">
                   {currentInd.headline}
                 </h2>
 
-                <p className="mt-4 text-base text-slate-300 leading-relaxed max-w-3xl">
+                <p className="mt-3 text-base text-[#547099] leading-relaxed max-w-3xl">
                   {currentInd.desc}
                 </p>
 
-                {/* Hard Metrics */}
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 rounded-2xl border border-slate-300/10 bg-slate-950/60 p-6">
+                {/* Hard Metrics with Blue Strip */}
+                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 rounded-2xl border border-[#cfe6ff] bg-gradient-to-b from-[#eef6ff] to-white p-6 shadow-xs">
                   {currentInd.stats.map((st, i) => (
                     <StatsCounter key={i} value={st.value} label={st.label} />
                   ))}
                 </div>
 
                 {/* Specific Capabilities Delivered */}
-                <div className="mt-10 pt-8 border-t border-slate-300/10">
-                  <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-4">
+                <div className="mt-8 pt-6 border-t border-[#cfe6ff]">
+                  <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#547099] mb-4">
                     Enterprise Capabilities Delivered
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     {currentInd.solutionsProvided.map((sol, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-3 rounded-xl border border-slate-300/5 bg-slate-950/40 p-4 text-xs text-slate-200"
+                        className="flex items-start gap-3 rounded-2xl border border-[#cfe6ff] bg-[#eef6ff] p-4 text-xs font-bold text-[#0e1b34] shadow-sm hover:bg-[#e4f0fc] transition-colors"
                       >
-                        <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
-                        <span>{sol}</span>
+                        <CheckCircle2 className="h-4 w-4 text-[#1fb877] shrink-0 mt-0.5" />
+                        <span className="leading-snug">{sol}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Action CTA */}
-                <div className="mt-10 pt-6 border-t border-slate-300/10 flex flex-wrap items-center justify-between gap-4">
-                  <div className="text-xs text-slate-400 flex items-center gap-2">
-                    <ShieldCheck className="h-4 w-4 text-sky-400" />
+                <div className="mt-8 pt-6 border-t border-[#cfe6ff] flex flex-wrap items-center justify-between gap-4">
+                  <div className="text-xs text-[#547099] flex items-center gap-2 font-medium">
+                    <ShieldCheck className="h-4 w-4 text-[#1D9AE1]" />
                     <span>Includes industry-specific pre-built connectors & compliance presets.</span>
                   </div>
                   <Link
                     href="/demo"
-                    className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3 text-xs font-bold text-white shadow-lg shadow-sky-500/25"
+                    className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#7CC8F1] to-[#1D9AE1] px-7 py-3 text-xs font-bold text-white shadow-[0_10px_24px_-8px_rgba(29,154,225,0.55)] hover:shadow-[0_18px_32px_-10px_rgba(29,154,225,0.7)] transition"
                   >
                     <span>Request Industry Blueprint Demo</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -249,21 +253,23 @@ export default function SolutionsPage() {
 
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
-            Don&apos;t See Your Exact Vertical?
-          </h2>
-          <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">
-            HiView AI adapts to any multi-tier supply chain network with configurable rules and custom connectors.
-          </p>
-          <div className="mt-6">
-            <Link
-              href="/contact"
-              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
-            >
-              <span>Speak With A Supply Chain Architect</span>
-              <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+        <div className="relative overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eaf4ff] via-[#ffffff] to-[#eef6ff] p-8 sm:p-14 text-center shadow-[0_24px_48px_-18px_rgba(23,72,143,0.18)]">
+          <div className="relative z-10 max-w-3xl mx-auto space-y-4">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0e1b34]">
+              Don&apos;t See Your Exact Vertical?
+            </h2>
+            <p className="text-sm sm:text-base text-[#547099] max-w-2xl mx-auto leading-relaxed">
+              HiView AI adapts to any multi-tier supply chain network with configurable rules and custom connectors.
+            </p>
+            <div className="pt-2">
+              <Link
+                href="/contact"
+                className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#7CC8F1] to-[#1D9AE1] px-7 py-3.5 text-xs font-bold text-white shadow-[0_10px_24px_-8px_rgba(29,154,225,0.55)] hover:shadow-[0_18px_32px_-10px_rgba(29,154,225,0.7)] transition"
+              >
+                <span>Speak With A Supply Chain Architect</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           </div>
         </div>
       </AnimatedSection>

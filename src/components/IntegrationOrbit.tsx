@@ -16,19 +16,19 @@ export default function IntegrationOrbit() {
     : INTEGRATIONS.filter((item) => item.category.toLowerCase().includes(selectedCategory.toLowerCase()));
 
   return (
-    <div className="rounded-3xl border border-slate-300/10 bg-slate-950/60 p-6 md:p-10 backdrop-blur-xl">
+    <div className="rounded-2xl border border-[#e4edf8] bg-white p-6 md:p-10 shadow-[0_1px_2px_rgba(16,42,86,0.04),0_8px_24px_-18px_rgba(16,42,86,0.18)]">
       {/* Category Pills */}
-      <div className="flex flex-wrap items-center justify-center gap-2 pb-8 border-b border-slate-300/10">
+      <div className="flex flex-wrap items-center justify-center gap-2 pb-7 border-b border-[#eef4fc]">
         {CATEGORIES.map((cat) => {
           const isSelected = selectedCategory === cat;
           return (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`rounded-xl px-4 py-2 text-xs font-semibold transition-all duration-200 ${
+              className={`rounded-xl px-4 py-2 text-xs font-bold transition-all duration-200 ${
                 isSelected
-                  ? "bg-sky-500 text-slate-950 shadow-md shadow-sky-500/25 font-bold"
-                  : "bg-slate-900/80 text-slate-400 hover:bg-slate-800 hover:text-ink border border-slate-300/5"
+                  ? "bg-[#1D9AE1] text-white shadow-sm font-bold"
+                  : "bg-white text-[#33456b] hover:bg-[#f8fafc] hover:border-[#cfe6ff] border border-[#e4edf8]"
               }`}
             >
               {cat}
@@ -45,9 +45,9 @@ export default function IntegrationOrbit() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.25, delay: idx * 0.03 }}
-            className="group flex flex-col items-center justify-center rounded-2xl border border-slate-300/5 bg-slate-900/40 p-5 text-center transition-all duration-300 hover:border-sky-500/30 hover:bg-slate-800/80 hover:shadow-lg hover:shadow-sky-500/10"
+            className="group flex flex-col items-center justify-center rounded-xl border border-[#e4edf8] bg-[#f8fafc] p-5 text-center transition-all duration-200 hover:border-[#cfe6ff] hover:bg-white hover:shadow-md"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-800 text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#e8f3ff] text-[#1D9AE1] group-hover:bg-[#1D9AE1] group-hover:text-white transition-colors">
               {item.category === "ERP" && <Database className="h-6 w-6" />}
               {item.category === "WMS" && <Warehouse className="h-6 w-6" />}
               {item.category === "Telematics" && <Radio className="h-6 w-6" />}
@@ -55,10 +55,10 @@ export default function IntegrationOrbit() {
               {item.category === "EDI Protocols" && <Network className="h-6 w-6" />}
               {item.category === "Data Lake" && <Layers className="h-6 w-6" />}
             </div>
-            <div className="mt-3 text-xs font-bold text-slate-200 group-hover:text-ink">
+            <div className="mt-3 text-xs font-extrabold text-[#0e1b34] group-hover:text-[#1D9AE1] transition-colors">
               {item.name}
             </div>
-            <div className="mt-0.5 text-[10px] font-mono text-slate-500 uppercase">
+            <div className="mt-0.5 text-[10px] font-mono text-[#6b7a99] uppercase font-bold">
               {item.category}
             </div>
           </motion.div>
@@ -66,14 +66,14 @@ export default function IntegrationOrbit() {
       </div>
 
       {/* Footer reassurance banner */}
-      <div className="mt-8 pt-6 border-t border-slate-300/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+      <div className="mt-8 pt-6 border-t border-[#eef4fc] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6b7a99]">
         <div className="flex items-center gap-2">
-          <CheckCircle2 className="h-4 w-4 text-cyan-400" />
+          <CheckCircle2 className="h-4 w-4 text-[#1fb877]" />
           <span>Don&apos;t see your ERP/WMS? HiView rapidly delivers bespoke connectors tailored to your enterprise architecture.</span>
         </div>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 font-semibold"
+          className="inline-flex items-center gap-1.5 text-[#1D9AE1] hover:text-[#0e1b34] font-bold"
         >
           Request Integration Specs <ArrowRight className="h-3 w-3" />
         </Link>

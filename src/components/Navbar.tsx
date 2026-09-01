@@ -59,8 +59,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-950/80 backdrop-blur-xl border-b border-slate-300/10 py-3 shadow-2xl"
-          : "bg-transparent py-5"
+          ? "bg-white/92 backdrop-blur-md border-b border-[#e4edf8] py-2.5 shadow-[0_16px_36px_-22px_rgba(16,42,86,0.15)]"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -76,9 +76,9 @@ export default function Navbar() {
               onMouseEnter={() => setActiveDropdown("products")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-300 hover:text-ink transition">
+              <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-semibold text-[#0f1420] hover:text-[#1D9AE1] transition">
                 <span>Products</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "products" ? "rotate-180 text-sky-400" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "products" ? "rotate-180 text-[#1D9AE1]" : ""}`} />
               </button>
 
               <AnimatePresence>
@@ -88,7 +88,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[680px] rounded-2xl border border-slate-300/10 bg-slate-950/95 p-5 shadow-2xl backdrop-blur-2xl grid grid-cols-2 gap-3"
+                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[680px] rounded-2xl border border-[#e4edf8] bg-white p-5 shadow-[0_24px_48px_-12px_rgba(16,42,86,0.18)] grid grid-cols-2 gap-3"
                   >
                     {PRODUCTS.map((prod) => {
                       const IconComponent = productIcons[prod.id] || Network;
@@ -96,23 +96,23 @@ export default function Navbar() {
                         <Link
                           key={prod.id}
                           href={prod.href}
-                          className="flex items-start gap-3 rounded-xl p-3 hover:bg-slate-900 transition border border-transparent hover:border-slate-300/5 group"
+                          className="flex items-start gap-3 rounded-xl p-3 hover:bg-[#f4f9ff] transition border border-transparent hover:border-[#cfe6ff] group"
                         >
-                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-850 text-sky-400 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#e8f3ff] text-[#1D9AE1] group-hover:bg-[#1D9AE1] group-hover:text-white transition-colors">
                             <IconComponent className="h-4 w-4" />
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2">
-                              <span className="text-xs font-bold text-ink group-hover:text-sky-300 transition-colors">
+                              <span className="text-xs font-bold text-[#0e1b34] group-hover:text-[#1D9AE1] transition-colors">
                                 {prod.name}
                               </span>
                               {prod.badge && (
-                                <span className="text-[9px] font-mono font-semibold rounded bg-sky-950/60 px-1.5 py-0.5 text-sky-400 border border-sky-500/20">
+                                <span className="text-[9px] font-mono font-semibold rounded bg-[#e8f3ff] px-1.5 py-0.5 text-[#1D9AE1] border border-[#cfe6ff]">
                                   {prod.badge}
                                 </span>
                               )}
                             </div>
-                            <p className="mt-0.5 text-[11px] text-slate-400 line-clamp-1">
+                            <p className="mt-0.5 text-[11px] text-[#6b7a99] line-clamp-1">
                               {prod.tagline}
                             </p>
                           </div>
@@ -120,12 +120,12 @@ export default function Navbar() {
                       );
                     })}
 
-                    <div className="col-span-2 mt-2 pt-3 border-t border-slate-300/10 flex items-center justify-between text-xs text-slate-400 px-2">
+                    <div className="col-span-2 mt-2 pt-3 border-t border-[#eef4fc] flex items-center justify-between text-xs text-[#6b7a99] px-2">
                       <span className="flex items-center gap-1.5">
-                        <Sparkles className="h-3.5 w-3.5 text-sky-400" />
+                        <Sparkles className="h-3.5 w-3.5 text-[#1D9AE1]" />
                         All products unified by the Autonomous Control Tower
                       </span>
-                      <Link href="/products" className="text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1">
+                      <Link href="/products" className="text-[#1D9AE1] hover:text-[#0e1b34] font-bold flex items-center gap-1">
                         View Product Matrix <ArrowRight className="h-3 w-3" />
                       </Link>
                     </div>
@@ -137,8 +137,8 @@ export default function Navbar() {
             {/* Platform */}
             <Link
               href="/platform"
-              className={`link-underline px-3 py-2 text-sm font-medium transition ${
-                pathname === "/platform" ? "text-sky-400" : "text-slate-300 hover:text-ink"
+              className={`px-3 py-2 text-[13.5px] font-semibold transition ${
+                pathname === "/platform" ? "text-[#1D9AE1]" : "text-[#0f1420] hover:text-[#1D9AE1]"
               }`}
             >
               Platform
@@ -150,9 +150,9 @@ export default function Navbar() {
               onMouseEnter={() => setActiveDropdown("solutions")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-300 hover:text-ink transition">
+              <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-semibold text-[#0f1420] hover:text-[#1D9AE1] transition">
                 <span>Solutions</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "solutions" ? "rotate-180 text-sky-400" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "solutions" ? "rotate-180 text-[#1D9AE1]" : ""}`} />
               </button>
 
               <AnimatePresence>
@@ -162,24 +162,24 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[520px] rounded-2xl border border-slate-300/10 bg-slate-950/95 p-4 shadow-2xl backdrop-blur-2xl space-y-2"
+                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[520px] rounded-2xl border border-[#e4edf8] bg-white p-4 shadow-[0_24px_48px_-12px_rgba(16,42,86,0.18)] space-y-2"
                   >
                     {INDUSTRIES.map((ind) => (
                       <Link
                         key={ind.id}
                         href="/solutions"
-                        className="flex items-start gap-3 rounded-xl p-2.5 hover:bg-slate-900 transition border border-transparent hover:border-slate-300/5 group"
+                        className="flex items-start gap-3 rounded-xl p-2.5 hover:bg-[#f4f9ff] transition border border-transparent hover:border-[#cfe6ff] group"
                       >
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-bold text-ink group-hover:text-sky-300 transition-colors">
+                            <span className="text-xs font-bold text-[#0e1b34] group-hover:text-[#1D9AE1] transition-colors">
                               {ind.name}
                             </span>
-                            <span className="text-[10px] font-mono text-sky-400 font-semibold">
+                            <span className="text-[10px] font-mono text-[#1D9AE1] font-semibold">
                               {ind.impact}
                             </span>
                           </div>
-                          <p className="mt-0.5 text-[11px] text-slate-400">
+                          <p className="mt-0.5 text-[11px] text-[#6b7a99]">
                             {ind.tagline}
                           </p>
                         </div>
@@ -196,9 +196,9 @@ export default function Navbar() {
               onMouseEnter={() => setActiveDropdown("company")}
               onMouseLeave={() => setActiveDropdown(null)}
             >
-              <button className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-slate-300 hover:text-ink transition">
+              <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-semibold text-[#0f1420] hover:text-[#1D9AE1] transition">
                 <span>Company</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "company" ? "rotate-180 text-sky-400" : ""}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeDropdown === "company" ? "rotate-180 text-[#1D9AE1]" : ""}`} />
               </button>
 
               <AnimatePresence>
@@ -208,32 +208,32 @@ export default function Navbar() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
                     transition={{ duration: 0.18 }}
-                    className="absolute right-0 top-full mt-2 w-56 rounded-2xl border border-slate-300/10 bg-slate-950/95 p-2 shadow-2xl backdrop-blur-2xl space-y-1"
+                    className="absolute right-0 top-full mt-2 w-56 rounded-2xl border border-[#e4edf8] bg-white p-2 shadow-[0_24px_48px_-12px_rgba(16,42,86,0.18)] space-y-1"
                   >
                     <Link
                       href="/about"
-                      className="block rounded-xl px-3 py-2 text-xs font-semibold text-slate-300 hover:bg-slate-900 hover:text-ink transition"
+                      className="block rounded-xl px-3 py-2 text-xs font-semibold text-[#33456b] hover:bg-[#f4f9ff] hover:text-[#1D9AE1] transition"
                     >
                       About Us & Leadership
                     </Link>
                     <Link
                       href="/careers"
-                      className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-300 hover:bg-slate-900 hover:text-ink transition"
+                      className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-[#33456b] hover:bg-[#f4f9ff] hover:text-[#1D9AE1] transition"
                     >
                       <span>Careers</span>
-                      <span className="rounded bg-sky-950 px-1.5 py-0.5 text-[9px] font-mono text-sky-400 border border-sky-500/20">
+                      <span className="rounded bg-[#e8f3ff] px-1.5 py-0.5 text-[9px] font-mono text-[#1D9AE1] border border-[#cfe6ff]">
                         Hiring
                       </span>
                     </Link>
                     <Link
                       href="/blog"
-                      className="block rounded-xl px-3 py-2 text-xs font-semibold text-slate-300 hover:bg-slate-900 hover:text-ink transition"
+                      className="block rounded-xl px-3 py-2 text-xs font-semibold text-[#33456b] hover:bg-[#f4f9ff] hover:text-[#1D9AE1] transition"
                     >
                       Insights & Whitepapers
                     </Link>
                     <Link
                       href="/contact"
-                      className="block rounded-xl px-3 py-2 text-xs font-semibold text-slate-300 hover:bg-slate-900 hover:text-ink transition"
+                      className="block rounded-xl px-3 py-2 text-xs font-semibold text-[#33456b] hover:bg-[#f4f9ff] hover:text-[#1D9AE1] transition"
                     >
                       Global Offices & Contact
                     </Link>
@@ -244,8 +244,8 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className={`link-underline px-3 py-2 text-sm font-medium transition ${
-                pathname === "/contact" ? "text-sky-400" : "text-slate-300 hover:text-ink"
+              className={`px-3 py-2 text-[13.5px] font-semibold transition ${
+                pathname === "/contact" ? "text-[#1D9AE1]" : "text-[#0f1420] hover:text-[#1D9AE1]"
               }`}
             >
               Contact
@@ -256,16 +256,17 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 rounded-xl border border-sky-500/40 bg-gradient-to-r from-sky-500/10 via-blue-500/10 to-amber-500/10 px-4 py-2 text-xs font-bold text-sky-300 hover:border-sky-400 hover:text-white transition shadow-lg shadow-sky-500/10"
+              className="hover-shine inline-flex items-center gap-2 rounded-lg bg-gradient-to-b from-[#7CC8F1] to-[#1D9AE1] px-4 py-2 text-xs font-bold text-white shadow-[0_10px_24px_-8px_rgba(29,154,225,0.55),inset_0_1px_0_rgba(255,255,255,0.45)] hover:shadow-[0_18px_32px_-10px_rgba(29,154,225,0.7)] hover:-translate-y-0.5 transition"
             >
-              <span>Explore Sandbox</span>
+              <Sparkles className="h-3.5 w-3.5" />
+              <span>Live Demo</span>
             </Link>
+
             <Link
-              href="/demo"
-              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-4 py-2 text-xs font-bold text-white shadow-lg shadow-sky-500/25 hover:from-sky-400 hover:to-blue-500 transition"
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-lg border border-[#e4edf8] bg-white px-4 py-2 text-xs font-semibold text-[#0f1420] hover:text-[#1D9AE1] hover:border-[#cfe6ff] shadow-sm transition"
             >
-              <span>Book Live Demo</span>
-              <ArrowRight className="h-3.5 w-3.5" />
+              <span>Get in Touch</span>
             </Link>
           </div>
 
@@ -273,7 +274,7 @@ export default function Navbar() {
           <div className="lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900 text-slate-300 hover:text-ink border border-slate-300/10"
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[#0e1b34] hover:text-[#1D9AE1] border border-[#e4edf8] shadow-sm"
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -288,10 +289,10 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-b border-slate-300/10 bg-slate-950/95 backdrop-blur-2xl overflow-hidden"
+            className="lg:hidden border-b border-[#e4edf8] bg-white/98 backdrop-blur-2xl overflow-hidden shadow-xl"
           >
             <div className="px-5 py-6 space-y-4 max-h-[80vh] overflow-y-auto">
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#6b7a99]">
                 Products
               </div>
               <div className="grid grid-cols-1 gap-2 pl-2">
@@ -299,32 +300,32 @@ export default function Navbar() {
                   <Link
                     key={p.id}
                     href={p.href}
-                    className="flex items-center justify-between py-1 text-sm font-medium text-slate-200"
+                    className="flex items-center justify-between py-1 text-sm font-semibold text-[#0e1b34] hover:text-[#1D9AE1]"
                   >
                     <span>{p.name}</span>
-                    <span className="text-xs text-slate-500">{p.badge}</span>
+                    <span className="text-xs text-[#1D9AE1] font-mono">{p.badge}</span>
                   </Link>
                 ))}
               </div>
 
-              <div className="pt-2 border-t border-slate-300/10">
-                <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 mb-2">
+              <div className="pt-2 border-t border-[#eef4fc]">
+                <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#6b7a99] mb-2">
                   Navigation
                 </div>
                 <div className="space-y-2 pl-2">
-                  <Link href="/platform" className="block text-sm font-medium text-slate-200">Platform</Link>
-                  <Link href="/solutions" className="block text-sm font-medium text-slate-200">Solutions</Link>
-                  <Link href="/about" className="block text-sm font-medium text-slate-200">About & Leadership</Link>
-                  <Link href="/careers" className="block text-sm font-medium text-slate-200">Careers</Link>
-                  <Link href="/blog" className="block text-sm font-medium text-slate-200">Blog</Link>
-                  <Link href="/contact" className="block text-sm font-medium text-slate-200">Contact</Link>
+                  <Link href="/platform" className="block text-sm font-semibold text-[#0e1b34] hover:text-[#1D9AE1]">Platform</Link>
+                  <Link href="/solutions" className="block text-sm font-semibold text-[#0e1b34] hover:text-[#1D9AE1]">Solutions</Link>
+                  <Link href="/about" className="block text-sm font-semibold text-[#0e1b34] hover:text-[#1D9AE1]">About & Leadership</Link>
+                  <Link href="/careers" className="block text-sm font-semibold text-[#0e1b34] hover:text-[#1D9AE1]">Careers</Link>
+                  <Link href="/blog" className="block text-sm font-semibold text-[#0e1b34] hover:text-[#1D9AE1]">Blog</Link>
+                  <Link href="/contact" className="block text-sm font-semibold text-[#0e1b34] hover:text-[#1D9AE1]">Contact</Link>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-300/10 space-y-2">
+              <div className="pt-4 border-t border-[#eef4fc] space-y-2">
                 <Link
                   href="/demo"
-                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 py-2.5 text-xs font-bold text-white shadow-lg"
+                  className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-b from-[#7CC8F1] to-[#1D9AE1] py-3 text-xs font-bold text-white shadow-[0_10px_24px_-8px_rgba(29,154,225,0.55)]"
                 >
                   Book Live Demo
                 </Link>

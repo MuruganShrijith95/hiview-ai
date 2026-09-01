@@ -119,25 +119,25 @@ export default function PlatformPage() {
   const activeLayer = LAYERS[selectedLayerIndex];
 
   return (
-    <div className="space-y-24 sm:space-y-32 pb-24">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 text-center">
-        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[800px] rounded-full bg-sky-500/15 blur-3xl" />
+      <section className="relative pt-10 pb-12 text-center">
+        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[800px] rounded-full bg-gradient-to-tr from-[#1D9AE1]/10 via-[#7CC8F1]/10 to-transparent blur-3xl" />
 
         <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md mb-6">
-            <Cpu className="h-3.5 w-3.5 text-sky-400" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#cfe6ff] bg-[#e8f3ff] px-4 py-1.5 text-xs font-bold text-[#1D9AE1] shadow-sm mb-6">
+            <Cpu className="h-3.5 w-3.5 text-[#1D9AE1]" />
             <span>The Autonomous Control Tower 2.0</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0e1b34] tracking-tight leading-[1.15]">
             The 5-Layer Architecture of an{" "}
-            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#1D9AE1] via-[#59b4ff] to-[#1D9AE1] bg-clip-text text-transparent">
               Intelligent Execution Network
             </span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[#547099] leading-relaxed max-w-3xl mx-auto">
             Explore how HiView AI converts fragmented supply chain signals into scored, predictive decisions and automated enterprise execution.
           </p>
         </div>
@@ -149,10 +149,10 @@ export default function PlatformPage() {
           badge="Architecture Stack"
           title="Inside The 5-Layer"
           highlightText="Autonomous Platform"
-          subtitle="Click on any architectural layer below to explore its neural components, data ingestion models, and execution capabilities."
+          subtitle="Hover over or click on any architectural layer below to explore its neural components, data ingestion models, and execution capabilities."
         />
 
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Layer Selector Stack (Left) */}
           <div className="lg:col-span-5 space-y-3">
             {LAYERS.map((layer, idx) => {
@@ -162,17 +162,18 @@ export default function PlatformPage() {
                 <button
                   key={layer.layerNumber}
                   onClick={() => setSelectedLayerIndex(idx)}
-                  className={`w-full flex items-start gap-4 rounded-2xl p-5 text-left transition-all duration-300 relative ${
+                  onMouseEnter={() => setSelectedLayerIndex(idx)}
+                  className={`w-full flex items-start gap-4 rounded-2xl p-4 sm:p-5 text-left transition-all duration-200 relative cursor-pointer ${
                     isSelected
-                      ? "bg-slate-900 border border-sky-500/50 shadow-xl shadow-sky-500/10"
-                      : "bg-slate-950/50 border border-slate-300/5 hover:bg-slate-900/60 hover:border-slate-300/15"
+                      ? "bg-[#e0efff] border-2 border-[#1D9AE1] shadow-md shadow-sky-500/15 scale-[1.02]"
+                      : "bg-[#edf5fd] border border-[#cfe6ff] hover:bg-[#e4f0fc] hover:border-[#b8dcff]"
                   }`}
                 >
                   <div
-                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-all duration-200 ${
                       isSelected
-                        ? "bg-sky-500 text-slate-950 font-bold"
-                        : "bg-slate-850 text-slate-400"
+                        ? "bg-[#1D9AE1] text-white shadow-sm font-bold"
+                        : "bg-[#dcedfc] text-[#1D9AE1] group-hover:bg-[#1D9AE1] group-hover:text-white"
                     }`}
                   >
                     <LayerIcon className="h-5 w-5" />
@@ -180,14 +181,14 @@ export default function PlatformPage() {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-mono font-bold tracking-wider text-sky-400 uppercase">
+                      <span className="text-[10px] font-mono font-bold tracking-wider text-[#1D9AE1] uppercase">
                         LAYER {layer.layerNumber}
                       </span>
-                      <span className="text-[10px] font-mono text-slate-500">
+                      <span className="text-[10px] font-mono font-bold text-[#547099]">
                         {layer.metrics}
                       </span>
                     </div>
-                    <div className={`mt-1 text-sm font-bold truncate ${isSelected ? "text-ink" : "text-slate-300"}`}>
+                    <div className={`mt-1 text-sm font-extrabold truncate ${isSelected ? "text-[#0e1b34]" : "text-[#1e3256]"}`}>
                       {layer.name}
                     </div>
                   </div>
@@ -201,53 +202,54 @@ export default function PlatformPage() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeLayer.layerNumber}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-                className="rounded-3xl border border-sky-500/30 bg-slate-900/80 p-8 backdrop-blur-2xl shadow-2xl relative overflow-hidden"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.25 }}
+                className="rounded-3xl border-2 border-[#cfe6ff] bg-gradient-to-b from-[#f4f9ff] via-[#f8fbff] to-white p-6 sm:p-8 shadow-[0_12px_36px_-18px_rgba(29,154,225,0.18)] relative overflow-hidden"
               >
-                <div className="flex items-center justify-between pb-4 border-b border-slate-300/10">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/50 px-3 py-1 text-xs font-semibold text-sky-300">
+                <div className="flex items-center justify-between pb-4 border-b border-[#cfe6ff]">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-[#cfe6ff] bg-[#e2f0fd] px-3.5 py-1 text-xs font-bold text-[#1D9AE1]">
                     <span>{activeLayer.badge}</span>
                   </div>
-                  <span className="font-mono text-xs text-sky-400 font-bold">
+                  <span className="font-mono text-xs text-[#1D9AE1] font-extrabold">
                     {activeLayer.metrics}
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-2xl font-bold text-ink leading-snug">
+                <h3 className="mt-5 text-2xl font-extrabold text-[#0e1b34] leading-snug">
                   {activeLayer.headline}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">
+                <p className="mt-3 text-sm leading-relaxed text-[#547099]">
                   {activeLayer.description}
                 </p>
 
-                <div className="mt-6 pt-6 border-t border-slate-300/10 space-y-3">
-                  <div className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+                {/* 4 Technical Component Boxes with Blue Theme */}
+                <div className="mt-6 pt-5 border-t border-[#cfe6ff] space-y-3">
+                  <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#547099]">
                     Core Technical Components & Protocols
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {activeLayer.techComponents.map((comp, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-2.5 rounded-xl border border-slate-300/5 bg-slate-950/60 p-3 text-xs text-slate-200"
+                        className="flex items-start gap-2.5 rounded-2xl border border-[#cfe6ff] bg-[#eef6ff] p-4 text-xs font-bold text-[#0e1b34] shadow-sm hover:bg-[#e4f0fc] hover:border-[#b8dcff] transition-colors"
                       >
-                        <CheckCircle2 className="h-4 w-4 text-sky-400 shrink-0 mt-0.5" />
-                        <span>{comp}</span>
+                        <CheckCircle2 className="h-4 w-4 text-[#1fb877] shrink-0 mt-0.5" />
+                        <span className="leading-snug">{comp}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-slate-300/10 flex items-center justify-between">
-                  <span className="text-xs text-slate-400">
+                <div className="mt-8 pt-5 border-t border-[#cfe6ff] flex items-center justify-between text-xs text-[#547099]">
+                  <span className="font-medium">
                     Protected by Multi-Tier Security
                   </span>
                   <Link
                     href="/demo"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-sky-300 transition"
+                    className="inline-flex items-center gap-1.5 font-bold text-[#1D9AE1] hover:text-[#0e1b34] transition"
                   >
                     <span>Test This Layer In Sandbox</span>
                     <ArrowRight className="h-3.5 w-3.5" />
@@ -261,48 +263,48 @@ export default function PlatformPage() {
 
       {/* Natural Language Policy Engine Showcase */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-slate-300/10 bg-slate-950/80 p-8 sm:p-12 backdrop-blur-xl">
+        <div className="rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#f4f9ff] via-[#f8fbff] to-white p-8 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-6 space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-950/50 px-3 py-1 text-xs font-semibold text-amber-300">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#fcdba8] bg-[#fff8ec] px-3.5 py-1 text-xs font-bold text-[#8c5000]">
                 <Terminal className="h-3.5 w-3.5" />
                 <span>Natural Language Policy Engine</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-ink">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0e1b34]">
                 Create Complex Supply Chain Rules in Plain English
               </h2>
-              <p className="text-sm leading-relaxed text-slate-300">
+              <p className="text-sm leading-relaxed text-[#547099]">
                 Forget writing brittle SQL scripts or configuring convoluted ERP workflows. With HiView&apos;s Natural Language Policy Engine, supply chain managers define business policies using simple prompts.
               </p>
-              <div className="space-y-2 pt-2 text-xs text-slate-300">
+              <div className="space-y-2 pt-2 text-xs font-medium text-[#0e1b34]">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-amber-400" />
+                  <CheckCircle2 className="h-4 w-4 text-[#1fb877]" />
                   <span>Automatically translated into executable Python & event triggers</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-amber-400" />
+                  <CheckCircle2 className="h-4 w-4 text-[#1fb877]" />
                   <span>Real-time simulation testing against historical shipment data</span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-2xl border border-amber-500/30 bg-slate-900/90 p-6 font-mono text-xs shadow-2xl space-y-4">
-                <div className="flex items-center justify-between pb-3 border-b border-slate-300/10 text-slate-400">
-                  <span className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-amber-400 animate-pulse" />
+              <div className="rounded-2xl border border-[#cfe6ff] bg-[#edf5fd] p-6 font-mono text-xs shadow-sm space-y-4">
+                <div className="flex items-center justify-between pb-3 border-b border-[#cfe6ff] text-[#547099]">
+                  <span className="flex items-center gap-2 font-bold text-[#0e1b34]">
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#f0a63a] animate-pulse" />
                     POLICY EDITOR
                   </span>
-                  <span className="text-amber-400 font-bold">READY TO DEPLOY</span>
+                  <span className="text-[#1D9AE1] font-extrabold">READY TO DEPLOY</span>
                 </div>
 
-                <div className="rounded-xl bg-slate-950 p-4 border border-amber-500/20 text-amber-300">
-                  <span className="text-slate-500 font-bold block mb-1">PROMPT:</span>
+                <div className="rounded-xl bg-white p-4 border border-[#cfe6ff] text-[#0e1b34] font-medium leading-relaxed shadow-xs">
+                  <span className="text-[#1D9AE1] font-bold block mb-1">PROMPT:</span>
                   &quot;If an ocean container dwell at Port of Long Beach exceeds 48 hours and contains tier-1 automotive components, notify the logistics broker, reserve priority team-driver drayage, and expedite Inland Rail delivery.&quot;
                 </div>
 
-                <div className="rounded-xl bg-slate-950 p-4 border border-slate-300/5 text-slate-300 space-y-1.5 text-[11px]">
-                  <div className="text-sky-400 font-bold">✓ COMPILED INTO 3 AUTOMATED EVENT AGENTS:</div>
+                <div className="rounded-xl bg-[#e0efff] p-4 border border-[#cfe6ff] text-[#0e1b34] space-y-1.5 text-[11px] font-medium">
+                  <div className="text-[#1D9AE1] font-bold">✓ COMPILED INTO 3 AUTOMATED EVENT AGENTS:</div>
                   <div>• Event Trigger: AIS Port Dwell &gt; 48.0 hrs on BOM Class &apos;Tier-1&apos;</div>
                   <div>• Action 1: Dispatched API Webhook to Drayage Partner #CH-9912</div>
                   <div>• Action 2: Triggered Priority Rail Slot Reservation in ERP</div>
@@ -322,28 +324,35 @@ export default function PlatformPage() {
           subtitle="Pre-built bi-directional connectors for leading ERP, WMS, TMS, and telematics platforms."
         />
 
-        <div className="mt-12">
+        <div className="mt-8">
           <IntegrationOrbit />
         </div>
       </AnimatedSection>
 
       {/* CTA */}
       <AnimatedSection className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/50 via-slate-950/80 to-amber-950/50 p-8 sm:p-12 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-ink">
-            Ready to Experience the Autonomous Platform?
-          </h2>
-          <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">
-            Schedule a technical deep dive with our solutions architects.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/demo"
-              className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 px-6 py-3 text-xs font-bold text-white shadow-lg"
-            >
-              <span>Schedule Architecture Demo</span>
-              <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+        <div className="relative overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eaf4ff] via-[#ffffff] to-[#eef6ff] p-8 sm:p-14 text-center shadow-[0_24px_48px_-18px_rgba(23,72,143,0.18)]">
+          <div className="relative z-10 max-w-3xl mx-auto space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#cfe6ff] bg-[#e8f3ff] px-4 py-1.5 text-xs font-semibold text-[#1D9AE1] shadow-sm">
+              <Sparkles className="h-3.5 w-3.5 text-[#1D9AE1]" />
+              <span>Experience The Future of SCM</span>
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0e1b34]">
+              Ready to Experience the Autonomous Platform?
+            </h2>
+            <p className="text-sm sm:text-base text-[#547099] max-w-2xl mx-auto leading-relaxed">
+              Schedule a technical deep dive with our solutions architects to explore sample payloads and autonomous workflows.
+            </p>
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href="/demo"
+                className="hover-shine inline-flex items-center gap-2 rounded-xl bg-gradient-to-b from-[#7CC8F1] to-[#1D9AE1] px-7 py-3 text-xs font-bold text-white shadow-[0_10px_24px_-8px_rgba(29,154,225,0.55)] hover:shadow-[0_18px_32px_-10px_rgba(29,154,225,0.7)] transition"
+              >
+                <span>Schedule Architecture Demo</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           </div>
         </div>
       </AnimatedSection>

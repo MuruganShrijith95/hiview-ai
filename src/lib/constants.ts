@@ -30,7 +30,7 @@ export const PRODUCTS: ProductItem[] = [
     href: "/products/edifai",
     iconName: "Network",
     color: "from-sky-500 to-blue-600",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/ai-supply-chain-control-tower.jpg",
     features: [
       "AI-Assisted Adaptive Data Mapping (X12, EDIFACT, XML, JSON)",
       "Pre-processing schema validation & code mismatch prevention",
@@ -230,7 +230,7 @@ export const PRODUCTS: ProductItem[] = [
     href: "/products/wms",
     iconName: "Warehouse",
     color: "from-blue-600 to-sky-600",
-    image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=1200",
+    image: "/images/futuristic-ai-warehouse.jpg",
     features: [
       "Multi-site WMS federation into a single pane of operational glass",
       "Dynamic pick path optimization & automated wave planning",

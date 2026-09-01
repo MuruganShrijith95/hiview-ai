@@ -18,6 +18,8 @@ import {
   Globe2 
 } from "lucide-react";
 
+import HeroBackgroundEffects from "@/components/HeroBackgroundEffects";
+
 interface Role {
   title: string;
   department: string;
@@ -60,7 +62,7 @@ const OPEN_ROLES: Role[] = [
     department: "Product & UI/UX",
     location: "Alpharetta, GA / Remote",
     type: "Full-Time",
-    desc: "Shape our dark-mode glassmorphic control tower interface, data visualizations, and scrollytelling experiences."
+    desc: "Shape our modern control tower interface, data visualizations, and scrollytelling experiences."
   },
   {
     title: "Regional Sales Director — MENA",
@@ -81,25 +83,26 @@ export default function CareersPage() {
     : OPEN_ROLES.filter((r) => r.department === selectedDept);
 
   return (
-    <div className="space-y-24 sm:space-y-32 pb-24">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* Hero */}
-      <section className="relative pt-12 pb-16 text-center">
-        <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[450px] w-[750px] rounded-full bg-sky-500/15 blur-3xl" />
+      <section className="relative pt-10 pb-12 text-center overflow-hidden">
+        {/* Animated Network Stream & Floating Flank Cockpits */}
+        <HeroBackgroundEffects variant="careers" />
 
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-950/40 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md mb-6">
-            <Users className="h-3.5 w-3.5 text-sky-400" />
+        <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#cfe6ff] bg-[#e8f3ff] px-4 py-1.5 text-xs font-bold text-[#1D9AE1] shadow-sm mb-6">
+            <Users className="h-3.5 w-3.5 text-[#1D9AE1]" />
             <span>Join Our Global Team</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-ink tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0e1b34] tracking-tight leading-[1.15]">
             Build The Future Of{" "}
-            <span className="bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#1D9AE1] via-[#59b4ff] to-[#1D9AE1] bg-clip-text text-transparent">
               Autonomous Logistics AI
             </span>
           </h1>
 
-          <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+          <p className="mt-4 text-base sm:text-lg text-[#547099] leading-relaxed max-w-2xl mx-auto">
             We are solving the hardest computational challenges in global supply chains. Join a world-class team of distributed systems engineers and AI researchers.
           </p>
         </div>
@@ -114,43 +117,43 @@ export default function CareersPage() {
           subtitle="Our principles shape how we build algorithms, ship software, and collaborate globally."
         />
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <GlowCard className="p-6 space-y-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-sky-400">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e8f3ff] text-[#1D9AE1] border border-[#cfe6ff]">
               <Zap className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-ink">Innovation First</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h4 className="text-base font-extrabold text-[#0e1b34]">Innovation First</h4>
+            <p className="text-xs sm:text-sm text-[#547099] leading-relaxed">
               We apply bleeding-edge transformer models and agentic workflows to industries historically neglected by modern technology.
             </p>
           </GlowCard>
 
           <GlowCard className="p-6 space-y-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#fff8ec] text-[#8c5000] border border-[#fcdba8]">
               <Sparkles className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-ink">Execution Over Talk</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h4 className="text-base font-extrabold text-[#0e1b34]">Execution Over Talk</h4>
+            <p className="text-xs sm:text-sm text-[#547099] leading-relaxed">
               We measure our platform not by vanity dashboard metrics, but by hard millions saved in detention, spoilage, and downtime.
             </p>
           </GlowCard>
 
           <GlowCard className="p-6 space-y-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-500/20 text-sky-400">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e8f3ff] text-[#1D9AE1] border border-[#cfe6ff]">
               <Heart className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-ink">Customer Obsession</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h4 className="text-base font-extrabold text-[#0e1b34]">Customer Obsession</h4>
+            <p className="text-xs sm:text-sm text-[#547099] leading-relaxed">
               We build alongside supply chain operators on the warehouse floor and logistics managers in dispatch control towers.
             </p>
           </GlowCard>
 
           <GlowCard className="p-6 space-y-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e8f3ff] text-[#1D9AE1] border border-[#cfe6ff]">
               <Globe2 className="h-5 w-5" />
             </div>
-            <h4 className="text-base font-bold text-ink">Global Collaboration</h4>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <h4 className="text-base font-extrabold text-[#0e1b34]">Global Collaboration</h4>
+            <p className="text-xs sm:text-sm text-[#547099] leading-relaxed">
               Seamlessly operating across Atlanta HQ, Dubai, and our R&D centers in Coimbatore and Bhubaneswar.
             </p>
           </GlowCard>
@@ -167,15 +170,15 @@ export default function CareersPage() {
         />
 
         {/* Filter Pills */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 pb-6 border-b border-slate-300/10">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2 pb-6 border-b border-[#cfe6ff]">
           {departments.map((dept) => (
             <button
               key={dept}
               onClick={() => setSelectedDept(dept)}
-              className={`rounded-xl px-4 py-2 text-xs font-semibold transition ${
+              className={`rounded-xl px-4 py-2 text-xs font-bold transition cursor-pointer ${
                 selectedDept === dept
-                  ? "bg-sky-500 text-slate-950 font-bold"
-                  : "bg-slate-900 text-slate-400 hover:text-ink border border-slate-300/5"
+                  ? "bg-[#e0efff] text-[#0e1b34] border-2 border-[#1D9AE1] shadow-xs"
+                  : "bg-[#edf5fd] text-[#1e3256] border border-[#cfe6ff] hover:bg-[#e4f0fc]"
               }`}
             >
               {dept}
@@ -189,22 +192,22 @@ export default function CareersPage() {
             <GlowCard key={idx} className="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h4 className="text-base font-bold text-ink">{role.title}</h4>
-                  <span className="rounded bg-sky-950 px-2 py-0.5 text-[10px] font-mono text-sky-300 border border-sky-500/30">
+                  <h4 className="text-base font-extrabold text-[#0e1b34]">{role.title}</h4>
+                  <span className="rounded-md bg-[#e8f3ff] px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#1D9AE1] border border-[#cfe6ff]">
                     {role.type}
                   </span>
                 </div>
-                <div className="text-xs text-slate-400 flex items-center gap-3">
-                  <span className="text-sky-400 font-mono">{role.department}</span>
+                <div className="text-xs text-[#547099] flex items-center gap-3 font-medium">
+                  <span className="text-[#1D9AE1] font-mono font-bold">{role.department}</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><MapPin className="h-3 w-3 text-slate-500" /> {role.location}</span>
+                  <span className="flex items-center gap-1"><MapPin className="h-3 w-3 text-[#1D9AE1]" /> {role.location}</span>
                 </div>
-                <p className="text-xs text-slate-300 mt-2 max-w-2xl">{role.desc}</p>
+                <p className="text-xs sm:text-sm text-[#547099] mt-2 max-w-2xl">{role.desc}</p>
               </div>
 
               <a
                 href={`mailto:careers@hiview.ai?subject=Application for ${encodeURIComponent(role.title)}`}
-                className="inline-flex items-center gap-1.5 rounded-xl bg-slate-800 hover:bg-sky-500 hover:text-slate-950 px-5 py-2.5 text-xs font-bold text-slate-200 transition shrink-0"
+                className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-b from-[#7CC8F1] to-[#1D9AE1] px-5 py-2.5 text-xs font-bold text-white shadow-[0_10px_24px_-8px_rgba(29,154,225,0.55)] hover:shadow-[0_18px_32px_-10px_rgba(29,154,225,0.7)] transition shrink-0"
               >
                 <span>Apply Now</span>
                 <ArrowRight className="h-3.5 w-3.5" />
