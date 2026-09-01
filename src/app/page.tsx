@@ -176,7 +176,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* 3-column Bento grid with Light Blue Boxes */}
+        {/* 3-column Bento grid with Green Hover Glow */}
         <StaggerGroup className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6" stagger={0.12}>
 
           {/* ── CARD 1 ── */}
@@ -184,18 +184,21 @@ export default function HomePage() {
             <motion.div
               whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="relative h-full overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eef6ff] via-[#f5f9ff] to-white p-7 shadow-[0_8px_24px_-12px_rgba(29,154,225,0.16)] hover:border-[#1D9AE1] hover:shadow-[0_16px_32px_-12px_rgba(29,154,225,0.25)]"
+              className="group relative h-full overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eef6ff] via-[#f5f9ff] to-white p-7 shadow-[0_8px_24px_-12px_rgba(29,154,225,0.16)] transition-all duration-300 hover:border-[#1fb877] hover:shadow-[0_16px_36px_-10px_rgba(31,184,119,0.32)] hover:from-[#f0fdf4] hover:via-[#f7fdf9] hover:to-white"
             >
+              {/* Top Edge Razor Green Highlight */}
+              <div className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1fb877] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
               <div className="relative flex h-full flex-col justify-between">
                 <div className="flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#dcedfc] text-[#1D9AE1] border border-[#cfe6ff]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#dcedfc] text-[#1D9AE1] border border-[#cfe6ff] group-hover:bg-[#e6f9f0] group-hover:text-[#1fb877] group-hover:border-[#a3e9cc] transition-colors duration-200">
                     <Cpu className="h-5 w-5" />
                   </div>
-                  <span className="font-mono text-[11px] font-black tracking-widest text-[#1D9AE1]">01</span>
+                  <span className="font-mono text-[11px] font-black tracking-widest text-[#1D9AE1] group-hover:text-[#1fb877] transition-colors duration-200">01</span>
                 </div>
 
                 <div className="mt-5 flex-1">
-                  <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#1D9AE1]">
+                  <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#1D9AE1] group-hover:text-[#1fb877] transition-colors duration-200">
                     Decisive Intelligence
                   </p>
                   <h3 className="mt-2 text-lg sm:text-xl font-extrabold text-[#0e1b34] leading-snug">
@@ -206,7 +209,7 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center gap-2 border-t border-[#cfe6ff] pt-4 text-[11px] font-mono font-bold text-[#1D9AE1]">
+                <div className="mt-6 flex items-center gap-2 border-t border-[#cfe6ff] pt-4 text-[11px] font-mono font-bold text-[#1D9AE1] group-hover:text-[#128a58] transition-colors duration-200">
                   <CheckCircle2 className="h-3.5 w-3.5 text-[#1fb877] shrink-0" />
                   Right Action • Right Time
                 </div>
@@ -219,18 +222,21 @@ export default function HomePage() {
             <motion.div
               whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="relative h-full overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eef6ff] via-[#f5f9ff] to-white p-7 shadow-[0_8px_24px_-12px_rgba(29,154,225,0.16)] hover:border-[#1D9AE1] hover:shadow-[0_16px_32px_-12px_rgba(29,154,225,0.25)]"
+              className="group relative h-full overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eef6ff] via-[#f5f9ff] to-white p-7 shadow-[0_8px_24px_-12px_rgba(29,154,225,0.16)] transition-all duration-300 hover:border-[#1fb877] hover:shadow-[0_16px_36px_-10px_rgba(31,184,119,0.32)] hover:from-[#f0fdf4] hover:via-[#f7fdf9] hover:to-white"
             >
+              {/* Top Edge Razor Green Highlight */}
+              <div className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1fb877] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
               <div className="relative flex h-full flex-col justify-between">
                 <div className="flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#dcedfc] text-[#1D9AE1] border border-[#cfe6ff]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#dcedfc] text-[#1D9AE1] border border-[#cfe6ff] group-hover:bg-[#e6f9f0] group-hover:text-[#1fb877] group-hover:border-[#a3e9cc] transition-colors duration-200">
                     <Sparkles className="h-5 w-5" />
                   </div>
-                  <span className="font-mono text-[11px] font-black tracking-widest text-[#1D9AE1]">02</span>
+                  <span className="font-mono text-[11px] font-black tracking-widest text-[#1D9AE1] group-hover:text-[#1fb877] transition-colors duration-200">02</span>
                 </div>
 
                 <div className="mt-5 flex-1">
-                  <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#1D9AE1]">
+                  <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#1D9AE1] group-hover:text-[#1fb877] transition-colors duration-200">
                     Predictive Outcomes
                   </p>
                   <h3 className="mt-2 text-lg sm:text-xl font-extrabold text-[#0e1b34] leading-snug">
@@ -241,7 +247,7 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center gap-2 border-t border-[#cfe6ff] pt-4 text-[11px] font-mono font-bold text-[#1D9AE1]">
+                <div className="mt-6 flex items-center gap-2 border-t border-[#cfe6ff] pt-4 text-[11px] font-mono font-bold text-[#1D9AE1] group-hover:text-[#128a58] transition-colors duration-200">
                   <CheckCircle2 className="h-3.5 w-3.5 text-[#1fb877] shrink-0" />
                   Contextual Root Cause • Next Move
                 </div>
@@ -254,18 +260,21 @@ export default function HomePage() {
             <motion.div
               whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 300, damping: 22 }}
-              className="relative h-full overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eef6ff] via-[#f5f9ff] to-white p-7 shadow-[0_8px_24px_-12px_rgba(29,154,225,0.16)] hover:border-[#1D9AE1] hover:shadow-[0_16px_32px_-12px_rgba(29,154,225,0.25)]"
+              className="group relative h-full overflow-hidden rounded-3xl border border-[#cfe6ff] bg-gradient-to-b from-[#eef6ff] via-[#f5f9ff] to-white p-7 shadow-[0_8px_24px_-12px_rgba(29,154,225,0.16)] transition-all duration-300 hover:border-[#1fb877] hover:shadow-[0_16px_36px_-10px_rgba(31,184,119,0.32)] hover:from-[#f0fdf4] hover:via-[#f7fdf9] hover:to-white"
             >
+              {/* Top Edge Razor Green Highlight */}
+              <div className="pointer-events-none absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#1fb877] to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
               <div className="relative flex h-full flex-col justify-between">
                 <div className="flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#dcedfc] text-[#1D9AE1] border border-[#cfe6ff]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#dcedfc] text-[#1D9AE1] border border-[#cfe6ff] group-hover:bg-[#e6f9f0] group-hover:text-[#1fb877] group-hover:border-[#a3e9cc] transition-colors duration-200">
                     <Network className="h-5 w-5" />
                   </div>
-                  <span className="font-mono text-[11px] font-black tracking-widest text-[#1D9AE1]">03</span>
+                  <span className="font-mono text-[11px] font-black tracking-widest text-[#1D9AE1] group-hover:text-[#1fb877] transition-colors duration-200">03</span>
                 </div>
 
                 <div className="mt-5 flex-1">
-                  <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#1D9AE1]">
+                  <p className="text-[10px] font-mono font-bold uppercase tracking-[0.22em] text-[#1D9AE1] group-hover:text-[#1fb877] transition-colors duration-200">
                     Unified Operations
                   </p>
                   <h3 className="mt-2 text-lg sm:text-xl font-extrabold text-[#0e1b34] leading-snug">
@@ -276,7 +285,7 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center gap-2 border-t border-[#cfe6ff] pt-4 text-[11px] font-mono font-bold text-[#1D9AE1]">
+                <div className="mt-6 flex items-center gap-2 border-t border-[#cfe6ff] pt-4 text-[11px] font-mono font-bold text-[#1D9AE1] group-hover:text-[#128a58] transition-colors duration-200">
                   <CheckCircle2 className="h-3.5 w-3.5 text-[#1fb877] shrink-0" />
                   360° Operations • Flawless Execution
                 </div>
